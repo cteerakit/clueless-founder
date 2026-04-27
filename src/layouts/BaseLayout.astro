@@ -1,0 +1,65 @@
+---
+import '../styles/global.css';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import SEO from '../components/SEO.astro';
+
+type Props = {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  /** For pages that define their own head, pass false and include SEO in the slot */
+  showDefaultSeo?: boolean;
+};
+
+const {
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  canonicalPath = '/',
+  showDefaultSeo = true,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="font-sans antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    {
+      Astro.site && (
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={SITE_TITLE}
+          href={new URL('rss.xml', Astro.site).href}
+        />
+      )
+    }
+
+    {showDefaultSeo && <SEO title={title} description={description} canonicalPath={canonicalPath} />}
+    <slot name="head" />
+  </head>
+  <body class="min-h-screen bg-white text-zinc-900">
+    <div class="mx-auto max-w-3xl px-6 py-16">
+      <header class="flex flex-wrap items-baseline justify-between gap-4 border-b border-zinc-100 pb-6">
+        <a href="/" class="font-serif text-2xl italic text-zinc-900 hover:opacity-80">{SITE_TITLE}</a>
+        <nav class="flex gap-8 font-sans text-sm text-zinc-500">
+          <a href="/about/" class="transition-colors hover:text-zinc-900">About</a>
+          <a href="/newsletter/" class="transition-colors hover:text-zinc-900">Newsletter</a>
+        </nav>
+      </header>
+
+      <main class="mt-16">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

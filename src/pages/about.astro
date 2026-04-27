@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+export const prerender = true;
+
+const title = `About — ${SITE_TITLE}`;
+---
+
+<BaseLayout title={title} description={SITE_DESCRIPTION} canonicalPath="/about/">
+  <article class="prose prose-zinc max-w-none prose-headings:font-serif prose-p:text-[18px] prose-p:leading-relaxed prose-p:text-zinc-700">
+    <h1 class="font-serif text-4xl italic text-zinc-900">About</h1>
+    <p class="font-sans text-zinc-700">{SITE_DESCRIPTION}</p>
+    <p class="font-sans text-zinc-700">
+      Built with{' '}
+      <a href="https://astro.build" class="text-zinc-900 underline decoration-zinc-300 underline-offset-4">
+        Astro
+      </a>{' '}
+      and deployed on Cloudflare.
+    </p>
+  </article>
+</BaseLayout>

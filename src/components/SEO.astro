@@ -1,0 +1,74 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type Props = {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  pubDate?: Date;
+  modifiedDate?: Date;
+  image?: string;
+  jsonLd?: 'BlogPosting' | 'WebSite';
+  post?: CollectionEntry<'blog'>;
+};
+
+const {
+  title,
+  description,
+  canonicalPath,
+  pubDate,
+  modifiedDate,
+  image,
+  jsonLd = 'WebSite',
+  post,
+} = Astro.props;
+
+const site = Astro.site ?? new URL('http://localhost:4321');
+const canonical = new URL(canonicalPath.replace(/^\//, ''), site).href;
+const ogImage = image ? new URL(image.replace(/^\//, ''), site).href : undefined;
+
+const postingLd =
+  jsonLd === 'BlogPosting' && post
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.data.title,
+        description: post.data.description,
+        datePublished: post.data.pubDate.toISOString(),
+        dateModified: (modifiedDate ?? post.data.pubDate).toISOString(),
+        author: {
+          '@type': 'Organization',
+          name: 'Clueless Founder',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Clueless Founder',
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': canonical,
+        },
+      }
+    : null;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:type" content={jsonLd === 'BlogPosting' ? 'article' : 'website'} />
+<meta property="og:site_name" content="Clueless Founder" />
+{ogImage && <meta property="og:image" content={ogImage} />}
+{pubDate && <meta property="article:published_time" content={pubDate.toISOString()} />}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{ogImage && <meta name="twitter:image" content={ogImage} />}
+
+{postingLd && (
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(postingLd)} />
+)}

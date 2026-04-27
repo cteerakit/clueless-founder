@@ -1,17 +1,50 @@
 ---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
+export const prerender = true;
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} canonicalPath="/">
+  <section class="mb-20 border-b border-zinc-100 pb-16">
+    <h1 class="font-serif text-6xl italic leading-tight text-zinc-900">{SITE_TITLE}</h1>
+    <p class="mt-6 max-w-xl font-sans text-lg text-zinc-500">{SITE_DESCRIPTION}</p>
+  </section>
+
+  <ul class="divide-y divide-zinc-100">
+    {
+      posts.map((post) => (
+        <li>
+          <a
+            href={`/blog/${post.id}/`}
+            class="-mx-4 flex items-baseline justify-between gap-6 px-4 py-6 transition-colors hover:bg-[#f9f9f9]"
+          >
+            <span class="min-w-0 flex-1 font-serif text-xl font-normal text-zinc-900">{post.data.title}</span>
+            <span class="flex shrink-0 items-center gap-4">
+              <time
+                class="font-sans text-sm tabular-nums text-zinc-400"
+                datetime={post.data.pubDate.toISOString()}
+              >
+                {post.data.pubDate.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                })}
+              </time>
+              <span class="text-zinc-400" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17L17 7M7 7h10v10" />
+                </svg>
+              </span>
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

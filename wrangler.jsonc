@@ -1,0 +1,16 @@
+{
+	"compatibility_date": "2026-04-27",
+	"compatibility_flags": ["global_fetch_strictly_public"],
+	"name": "clueless-founder",
+	"main": "@astrojs/cloudflare/entrypoints/server",
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	"vars": {
+		"PLUNK_PUBLIC_KEY": ""
+	},
+	"observability": {
+		"enabled": true
+	}
+}

@@ -1,0 +1,69 @@
+---
+---
+
+<section class="border-t border-zinc-100 pt-12" aria-labelledby="newsletter-heading">
+  <h2 id="newsletter-heading" class="font-serif text-2xl italic text-zinc-900">Newsletter</h2>
+  <p class="mt-2 font-sans text-sm text-zinc-500">
+    Occasional notes. No spam — unsubscribe anytime.
+  </p>
+
+  <form id="newsletter-form" class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end">
+    <label class="block flex-1 font-sans text-sm text-zinc-600">
+      <span class="sr-only">Email</span>
+      <input
+        type="email"
+        name="email"
+        required
+        autocomplete="email"
+        placeholder="you@example.com"
+        class="w-full border-0 border-b border-zinc-300 bg-transparent py-3 font-sans text-base text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-black"
+      />
+    </label>
+    <button
+      type="submit"
+      class="shrink-0 bg-black px-8 py-3 font-sans text-xs font-medium uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-90"
+    >
+      Subscribe
+    </button>
+  </form>
+
+  <p id="newsletter-success" class="mt-6 hidden font-sans text-sm text-zinc-600">
+    Thanks — you're on the list.
+  </p>
+  <p id="newsletter-error" class="mt-6 hidden font-sans text-sm text-red-600" role="alert"></p>
+</section>
+
+<script>
+  import { actions, isInputError } from 'astro:actions';
+
+  const form = document.getElementById('newsletter-form') as HTMLFormElement | null;
+  const successEl = document.getElementById('newsletter-success');
+  const errorEl = document.getElementById('newsletter-error');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    successEl?.classList.add('hidden');
+    errorEl?.classList.add('hidden');
+
+    const fd = new FormData(form);
+    const email = fd.get('email');
+    const result = await actions.subscribe({
+      email: typeof email === 'string' ? email : '',
+    });
+
+    if (result.error) {
+      let msg = result.error.message;
+      if (isInputError(result.error)) {
+        msg = result.error.fields.email?.join(', ') ?? msg;
+      }
+      if (errorEl) {
+        errorEl.textContent = msg;
+        errorEl.classList.remove('hidden');
+      }
+      return;
+    }
+
+    form?.classList.add('hidden');
+    successEl?.classList.remove('hidden');
+  });
+</script>
