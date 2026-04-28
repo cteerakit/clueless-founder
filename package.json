@@ -11,11 +11,11 @@
     "preview": "astro preview",
     "check": "astro check",
     "astro": "astro",
-    "generate-types": "wrangler types"
+    "deploy:pages": "npm run build && wrangler pages deploy dist --project-name clueless-founder",
+    "deploy:newsletter-worker": "wrangler deploy --config workers/newsletter/wrangler.jsonc"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.2",
-    "@astrojs/cloudflare": "^13.2.1",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@fontsource-variable/newsreader": "^5.2.10",

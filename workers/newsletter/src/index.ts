@@ -1,0 +1,83 @@
+export interface Env {
+  PLUNK_PUBLIC_KEY: string;
+  ALLOWED_ORIGIN?: string;
+}
+
+const json = (body: unknown, init?: ResponseInit) =>
+  new Response(JSON.stringify(body), {
+    ...init,
+    headers: {
+      'Content-Type': 'application/json',
+      ...(init?.headers ?? {}),
+    },
+  });
+
+const getCorsHeaders = (origin: string | null, allowedOrigin?: string) => {
+  const allowOrigin = allowedOrigin ?? origin ?? '*';
+  return {
+    'Access-Control-Allow-Origin': allowOrigin,
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
+};
+
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const origin = request.headers.get('Origin');
+    const isOriginAllowed = !env.ALLOWED_ORIGIN || origin === env.ALLOWED_ORIGIN;
+    const corsHeaders = getCorsHeaders(origin, env.ALLOWED_ORIGIN);
+
+    if (request.method === 'OPTIONS') {
+      if (!isOriginAllowed) {
+        return json({ ok: false, error: 'Origin not allowed' }, { status: 403, headers: corsHeaders });
+      }
+      return new Response(null, { status: 204, headers: corsHeaders });
+    }
+
+    if (request.method !== 'POST') {
+      return json({ ok: false, error: 'Method not allowed' }, { status: 405, headers: corsHeaders });
+    }
+    if (!isOriginAllowed) {
+      return json({ ok: false, error: 'Origin not allowed' }, { status: 403, headers: corsHeaders });
+    }
+
+    const key = env.PLUNK_PUBLIC_KEY;
+    if (!key) {
+      return json({ ok: false, error: 'Server is not configured' }, { status: 500, headers: corsHeaders });
+    }
+
+    const payload = (await request.json().catch(() => null)) as { email?: unknown } | null;
+    const email = typeof payload?.email === 'string' ? payload.email.trim() : '';
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return json({ ok: false, error: 'Please provide a valid email address.' }, { status: 400, headers: corsHeaders });
+    }
+
+    const plunkResponse = await fetch('https://next-api.useplunk.com/v1/track', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${key}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        event: 'newsletter_signup',
+        subscribed: true,
+      }),
+    });
+
+    const data = (await plunkResponse.json().catch(() => ({}))) as {
+      success?: boolean;
+      error?: { message?: string };
+    };
+
+    if (!plunkResponse.ok || data.success === false) {
+      return json(
+        { ok: false, error: data.error?.message ?? 'Could not subscribe right now.' },
+        { status: 400, headers: corsHeaders },
+      );
+    }
+
+    return json({ ok: true }, { status: 200, headers: corsHeaders });
+  },
+};

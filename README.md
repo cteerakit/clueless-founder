@@ -1,6 +1,6 @@
 # Clueless Founder
 
-Minimal blog built with **Astro 6**, **Tailwind CSS v4**, and **Cloudflare Workers**. Newsletter signups go through [Plunk](https://www.useplunk.com/) (`/v1/track`). Optional GitHub Actions workflow drafts **campaigns** in Plunk when you publish eligible posts (see below).
+Minimal blog built with **Astro 6** and **Tailwind CSS v4**. The site is fully pre-rendered and deployed on **Cloudflare Pages**. Newsletter signups are handled by a tiny standalone **Cloudflare Worker** that forwards to [Plunk](https://www.useplunk.com/) (`/v1/track`).
 
 ## Development
 
@@ -26,16 +26,20 @@ npx astro check
 
 [`astro.config.mjs`](astro.config.mjs) sets `site` for canonical URLs, RSS, and the sitemap. Change `https://cluelessfounder.com` to your domain before going live.
 
-### Plunk — newsletter form (Workers)
+### Plunk — newsletter form (Worker endpoint)
 
-The subscribe action calls Plunk’s **public** API with your **public** key (`pk_*`).
+The newsletter modal calls `PUBLIC_NEWSLETTER_ENDPOINT`, which should point to your deployed newsletter Worker URL.
 
-1. Create a Plunk project and copy the **public** API key.
-2. Set **`PLUNK_PUBLIC_KEY`** where Cloudflare/W Workers read env vars:
-   - **Local:** add to [`wrangler.jsonc`](wrangler.jsonc) under `vars`, or use `wrangler secret` / `.dev.vars` per [Wrangler docs](https://developers.cloudflare.com/workers/configuration/environment-variables/).
-   - **Production:** set the variable in the Cloudflare dashboard for your Worker, or via `wrangler deploy` with vars.
+1. Deploy the Worker from [`workers/newsletter/`](workers/newsletter/).
+2. Add secret `PLUNK_PUBLIC_KEY` to that Worker:
 
-After changing bindings, run `npm run generate-types` so `worker-configuration.d.ts` stays in sync.
+```bash
+wrangler secret put PLUNK_PUBLIC_KEY --config workers/newsletter/wrangler.jsonc
+```
+
+3. Set `ALLOWED_ORIGIN` in [`workers/newsletter/wrangler.jsonc`](workers/newsletter/wrangler.jsonc) to your site domain.
+4. In your site environment (Pages), set:
+   - `PUBLIC_NEWSLETTER_ENDPOINT=https://<your-worker-subdomain>.workers.dev`
 
 ### Plunk — broadcast drafts (GitHub Actions)
 
@@ -52,10 +56,18 @@ After changing bindings, run `npm run generate-types` so `worker-configuration.d
 
 ## Deploy (Cloudflare)
 
-Use the generated [`wrangler.jsonc`](wrangler.jsonc) and the [Astro Cloudflare adapter](https://docs.astro.build/en/guides/integrations-guide/cloudflare/). Example:
+### 1) Deploy static site to Pages
 
 ```bash
-npx wrangler deploy
+npm run deploy:pages
 ```
 
-Ensure production env includes `PLUNK_PUBLIC_KEY` if you use the newsletter form.
+Or configure Cloudflare Pages CI:
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+### 2) Deploy newsletter Worker
+
+```bash
+npm run deploy:newsletter-worker
+```

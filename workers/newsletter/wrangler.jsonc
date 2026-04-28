@@ -1,0 +1,11 @@
+{
+  "name": "clueless-founder-newsletter",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-28",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "ALLOWED_ORIGIN": "https://cluelessfounder.com"
+  }
+}

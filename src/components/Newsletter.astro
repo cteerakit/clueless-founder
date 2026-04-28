@@ -61,7 +61,7 @@
 </div>
 
 <script>
-  import { actions, isInputError } from 'astro:actions';
+  const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT;
 
   const modal = document.getElementById('newsletter-modal');
   const overlay = document.getElementById('newsletter-overlay');
@@ -106,17 +106,30 @@
     successEl?.classList.add('hidden');
     errorEl?.classList.add('hidden');
 
+    if (!newsletterEndpoint) {
+      if (errorEl) {
+        errorEl.textContent = 'Newsletter endpoint is not configured.';
+        errorEl.classList.remove('hidden');
+      }
+      return;
+    }
+
     const fd = new FormData(form);
     const email = fd.get('email');
-    const result = await actions.subscribe({
-      email: typeof email === 'string' ? email : '',
-    });
+    const payload = { email: typeof email === 'string' ? email : '' };
 
-    if (result.error) {
-      let msg = result.error.message;
-      if (isInputError(result.error)) {
-        msg = result.error.fields.email?.join(', ') ?? msg;
-      }
+    const response = await fetch(newsletterEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const result = (await response.json().catch(() => ({}))) as {
+      ok?: boolean;
+      error?: string;
+    };
+
+    if (!response.ok || !result.ok) {
+      const msg = result.error ?? 'Could not subscribe. Try again later.';
       if (errorEl) {
         errorEl.textContent = msg;
         errorEl.classList.remove('hidden');
