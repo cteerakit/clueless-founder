@@ -6,6 +6,7 @@
     "enabled": true
   },
   "vars": {
-    "ALLOWED_ORIGIN": "https://cluelessfounder.com"
+    "ALLOWED_ORIGIN": "https://cluelessfounder.com",
+    "ALLOWED_ORIGINS": "https://cluelessfounder.com,https://clueless-founder.pages.dev"
   }
 }

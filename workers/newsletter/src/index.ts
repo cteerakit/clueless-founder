@@ -1,6 +1,7 @@
 export interface Env {
   PLUNK_PUBLIC_KEY: string;
   ALLOWED_ORIGIN?: string;
+  ALLOWED_ORIGINS?: string;
 }
 
 const json = (body: unknown, init?: ResponseInit) =>
@@ -12,8 +13,22 @@ const json = (body: unknown, init?: ResponseInit) =>
     },
   });
 
-const getCorsHeaders = (origin: string | null, allowedOrigin?: string) => {
-  const allowOrigin = allowedOrigin ?? origin ?? '*';
+const parseAllowedOrigins = (env: Env): string[] => {
+  const origins = (env.ALLOWED_ORIGINS ?? '')
+    .split(',')
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+  if (env.ALLOWED_ORIGIN?.trim()) origins.push(env.ALLOWED_ORIGIN.trim());
+  return Array.from(new Set(origins));
+};
+
+const getCorsHeaders = (origin: string | null, allowedOrigins: string[]) => {
+  const allowOrigin =
+    allowedOrigins.length === 0
+      ? origin ?? '*'
+      : origin && allowedOrigins.includes(origin)
+        ? origin
+        : allowedOrigins[0];
   return {
     'Access-Control-Allow-Origin': allowOrigin,
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -24,8 +39,9 @@ const getCorsHeaders = (origin: string | null, allowedOrigin?: string) => {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const origin = request.headers.get('Origin');
-    const isOriginAllowed = !env.ALLOWED_ORIGIN || origin === env.ALLOWED_ORIGIN;
-    const corsHeaders = getCorsHeaders(origin, env.ALLOWED_ORIGIN);
+    const allowedOrigins = parseAllowedOrigins(env);
+    const isOriginAllowed = allowedOrigins.length === 0 || (origin !== null && allowedOrigins.includes(origin));
+    const corsHeaders = getCorsHeaders(origin, allowedOrigins);
 
     if (request.method === 'OPTIONS') {
       if (!isOriginAllowed) {
