@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SEO from '../../components/SEO.astro';
+import BlogListItem from '../../components/BlogListItem.astro';
 import { estimateReadTime } from '../../utils/reading';
 
 export const prerender = true;
@@ -16,6 +17,10 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const continueReadingPosts = posts.filter((entry) => entry.id !== post.id).slice(0, 3);
 
 const canonicalPath = `/blog/${post.id}/`;
 const readTime = estimateReadTime(post.body ?? '');
@@ -34,12 +39,20 @@ const excerpt = post.data.excerpt ?? post.data.description;
   />
 
   <article
-    class="prose prose-neutral max-w-none
-      dark:prose-invert prose-headings:font-serif prose-headings:text-neutral-900 dark:prose-headings:text-neutral-100
-      prose-p:text-neutral-700 dark:prose-p:text-neutral-300 prose-p:text-[18px] prose-p:leading-relaxed prose-p:font-sans
-      prose-blockquote:border-l-2 prose-blockquote:border-black dark:prose-blockquote:border-neutral-200 prose-blockquote:not-italic
-      prose-blockquote:font-serif prose-blockquote:italic prose-blockquote:quotes-none
-      prose-img:w-full prose-img:rounded-sm
+    class="prose prose-neutral max-w-none dark:prose-invert
+      prose-headings:font-serif prose-headings:text-neutral-900 dark:prose-headings:text-neutral-100
+      prose-h2:text-[1.9rem] prose-h2:leading-tight
+      prose-h3:text-[1.55rem] prose-h3:leading-tight
+      prose-h4:text-[1.25rem] prose-h4:leading-snug
+      prose-p:font-sans prose-p:text-[18px] prose-p:leading-relaxed prose-p:text-neutral-700 dark:prose-p:text-neutral-300
+      prose-li:font-sans prose-li:text-[18px] prose-li:leading-relaxed prose-li:text-neutral-700 dark:prose-li:text-neutral-300
+      prose-strong:font-semibold prose-strong:text-[var(--text)]
+      prose-a:font-medium
+      prose-code:font-sans prose-code:text-[0.95em] prose-code:font-medium
+      prose-pre:text-[0.95em]
+      prose-blockquote:border-l-2 prose-blockquote:border-black dark:prose-blockquote:border-neutral-200
+      prose-blockquote:font-serif prose-blockquote:text-[1.08em] prose-blockquote:italic prose-blockquote:quotes-none
+      prose-img:w-full prose-img:rounded-[var(--radius-ui)]
       prose-figcaption:text-sm prose-figcaption:font-sans prose-figcaption:text-neutral-400 dark:prose-figcaption:text-neutral-500"
   >
     <header class="not-prose mb-12">
@@ -64,7 +77,7 @@ const excerpt = post.data.excerpt ?? post.data.description;
           <img
             src={post.data.coverImage}
             alt={post.data.title}
-            class="mt-8 w-full rounded-sm object-cover"
+            class="mt-8 w-full rounded-[var(--radius-ui)] object-cover"
             loading="eager"
           />
         )
@@ -73,4 +86,32 @@ const excerpt = post.data.excerpt ?? post.data.description;
 
     <Content />
   </article>
+
+  <section class="not-prose mt-8">
+    <div class="rounded-[var(--radius-ui)] border border-[var(--line)] bg-[var(--hover)] p-8">
+      <p class="font-sans text-xs uppercase tracking-wider text-[var(--muted)]">Keep in touch</p>
+      <h2 class="mt-3 font-serif text-3xl text-[var(--text)]">Get practical founder notes weekly.</h2>
+      <p class="mt-3 max-w-2xl font-sans text-base text-[var(--muted)]">
+        Real lessons from shipping products, pricing experiments, and honest postmortems.
+      </p>
+      <button
+        type="button"
+        data-newsletter-open
+        class="mt-6 inline-flex items-center rounded-[var(--radius-ui)] bg-[var(--text)] px-6 py-3 font-sans text-xs font-medium uppercase tracking-[0.2em] text-[var(--bg)] transition-opacity hover:opacity-90"
+      >
+        Join the newsletter
+      </button>
+    </div>
+  </section>
+
+  {
+    continueReadingPosts.length > 0 && (
+      <section class="not-prose mt-8">
+        <p class="font-sans text-xs uppercase tracking-wider text-[var(--muted)]">Continue reading</p>
+        <ul class="mt-4 divide-y divide-[var(--line)]">
+          {continueReadingPosts.map((entry) => <BlogListItem post={entry} />)}
+        </ul>
+      </section>
+    )
+  }
 </BaseLayout>

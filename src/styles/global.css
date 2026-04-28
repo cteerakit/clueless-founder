@@ -1,14 +1,143 @@
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/500.css';
-@import '@fontsource/inter/600.css';
-@import '@fontsource-variable/newsreader';
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Use optional display to avoid refresh-time font swap flash. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 400;
+  src: url('@fontsource/inter/files/inter-latin-400-normal.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02BB-02BC,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+0304,
+    U+0308,
+    U+0329,
+    U+2000-206F,
+    U+20AC,
+    U+2122,
+    U+2191,
+    U+2193,
+    U+2212,
+    U+2215,
+    U+FEFF,
+    U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 500;
+  src: url('@fontsource/inter/files/inter-latin-500-normal.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02BB-02BC,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+0304,
+    U+0308,
+    U+0329,
+    U+2000-206F,
+    U+20AC,
+    U+2122,
+    U+2191,
+    U+2193,
+    U+2212,
+    U+2215,
+    U+FEFF,
+    U+FFFD;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 600;
+  src: url('@fontsource/inter/files/inter-latin-600-normal.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02BB-02BC,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+0304,
+    U+0308,
+    U+0329,
+    U+2000-206F,
+    U+20AC,
+    U+2122,
+    U+2191,
+    U+2193,
+    U+2212,
+    U+2215,
+    U+FEFF,
+    U+FFFD;
+}
+
+@font-face {
+  font-family: 'Newsreader Variable';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 200 800;
+  src: url('@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2')
+    format('woff2-variations');
+  unicode-range:
+    U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02BB-02BC,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+0304,
+    U+0308,
+    U+0329,
+    U+2000-206F,
+    U+20AC,
+    U+2122,
+    U+2191,
+    U+2193,
+    U+2212,
+    U+2215,
+    U+FEFF,
+    U+FFFD;
+}
+
+/* Metric-compatible fallbacks reduce visible font-swap flash. */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 107%;
+}
+
+@font-face {
+  font-family: 'Newsreader Fallback';
+  src: local('Georgia');
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+  size-adjust: 102%;
+}
+
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui;
-  --font-serif: 'Newsreader', ui-serif, Georgia;
+  --font-sans: 'Inter', 'Inter Fallback', ui-sans-serif, system-ui;
+  --font-serif: 'Newsreader Variable', 'Newsreader Fallback', ui-serif, Georgia;
 }
 
 :root {
@@ -19,6 +148,7 @@
   --muted: #71717a;
   --line: #f4f4f5;
   --hover: #f9f9f9;
+  --radius-ui: 0.5rem;
 }
 
 .dark {
@@ -38,7 +168,6 @@
 
 :root.theme-reveal::view-transition-new(root) {
   z-index: 2;
-  animation: theme-reveal 660ms linear both;
 }
 
 :root.theme-reveal::view-transition-old(root) {
@@ -49,22 +178,18 @@
   view-transition-name: none !important;
 }
 
-@keyframes theme-reveal {
-  from {
-    clip-path: circle(0 at var(--reveal-x) var(--reveal-y));
-  }
-  to {
-    clip-path: circle(var(--reveal-radius) at var(--reveal-x) var(--reveal-y));
-  }
+/* During theme reveal, keep navbar in root snapshot so it clips with the same circle. */
+:root.theme-reveal #site-header {
+  view-transition-name: none !important;
 }
 
-/* Page transition: fade only the main content area. */
-:root:not(.theme-reveal)::view-transition-old(page-content) {
-  animation: page-fade-out 150ms ease both;
+/* Simple page transition: old page exits faster than new page enters. */
+:root:not(.theme-reveal)::view-transition-old(root) {
+  animation: page-fade-out 280ms ease both;
 }
 
-:root:not(.theme-reveal)::view-transition-new(page-content) {
-  animation: page-fade-in 220ms ease both;
+:root:not(.theme-reveal)::view-transition-new(root) {
+  animation: page-fade-in 420ms ease 280ms both;
 }
 
 @keyframes page-fade-out {
@@ -86,10 +211,23 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-old(page-content),
-  ::view-transition-new(page-content) {
+  :root:not(.theme-reveal)::view-transition-old(root),
+  :root:not(.theme-reveal)::view-transition-new(root) {
     animation: none;
   }
+}
+
+.site-header {
+  transition: transform 220ms ease, opacity 220ms ease, box-shadow 220ms ease;
+  opacity: 1;
+  view-transition-name: site-header;
+}
+
+.site-header.site-header--hidden {
+  transform: translateY(calc(-100% - 0.5rem));
+  opacity: 0;
+  box-shadow: none;
+  pointer-events: none;
 }
 
 button,

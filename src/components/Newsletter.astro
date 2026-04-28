@@ -11,10 +11,10 @@
   <button
     id="newsletter-overlay"
     type="button"
-    class="absolute inset-0 bg-black/50 backdrop-blur-[1px]"
+    class="newsletter-overlay absolute inset-0 bg-black/50 backdrop-blur-[1px]"
     aria-label="Close newsletter modal"
   ></button>
-  <section class="relative w-full max-w-lg border border-[var(--line)] bg-[var(--bg)] p-8 shadow-xl">
+  <section class="newsletter-dialog relative w-full max-w-lg rounded-[var(--radius-ui)] border border-[var(--line)] bg-[var(--bg)] p-8 shadow-xl">
     <div class="flex items-start justify-between gap-4">
       <div>
         <h2 id="newsletter-heading" class="font-serif text-2xl text-[var(--text)]">Subscribe</h2>
@@ -25,14 +25,28 @@
       <button
         id="newsletter-close"
         type="button"
-        class="shrink-0 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)]"
+        class="shrink-0 rounded-full p-1 text-[var(--muted)] transition-colors hover:text-[var(--text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--text)]/40"
         aria-label="Close newsletter modal"
+        title="Close"
       >
-        Close
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-4 w-4"
+          aria-hidden="true"
+        >
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
       </button>
     </div>
 
-    <form id="newsletter-form" class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end">
+    <form id="newsletter-form" class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-stretch">
       <label class="block flex-1 font-sans text-sm text-[var(--muted)]">
         <span class="sr-only">Email</span>
         <input
@@ -42,12 +56,12 @@
           required
           autocomplete="email"
           placeholder="you@example.com"
-          class="w-full border-0 border-b border-[var(--line)] bg-transparent py-3 font-sans text-base text-[var(--text)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--text)]"
+          class="h-12 w-full rounded-[var(--radius-ui)] border border-[var(--line)] bg-transparent px-4 text-base text-[var(--text)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--text)] focus-visible:ring-2 focus-visible:ring-[var(--text)]/20"
         />
       </label>
       <button
         type="submit"
-        class="shrink-0 bg-[var(--text)] px-8 py-3 font-sans text-xs font-medium uppercase tracking-[0.2em] text-[var(--bg)] transition-opacity hover:opacity-90"
+        class="h-12 shrink-0 rounded-[var(--radius-ui)] bg-[var(--text)] px-8 font-sans text-xs font-medium uppercase tracking-[0.2em] text-[var(--bg)] transition-opacity hover:opacity-90 sm:min-w-[180px]"
       >
         Subscribe
       </button>
@@ -60,26 +74,84 @@
   </section>
 </div>
 
+<style>
+  #newsletter-modal .newsletter-overlay {
+    opacity: 0;
+    transition: opacity 220ms ease;
+    will-change: opacity;
+  }
+
+  #newsletter-modal .newsletter-dialog {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease;
+    will-change: opacity, transform;
+  }
+
+  #newsletter-modal.newsletter-modal-open .newsletter-overlay {
+    opacity: 1;
+  }
+
+  #newsletter-modal.newsletter-modal-open .newsletter-dialog {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #newsletter-modal .newsletter-overlay,
+    #newsletter-modal .newsletter-dialog {
+      transition: none;
+    }
+  }
+</style>
+
 <script>
   const newsletterEndpoint = import.meta.env.PUBLIC_NEWSLETTER_ENDPOINT;
 
-  const modal = document.getElementById('newsletter-modal');
-  const overlay = document.getElementById('newsletter-overlay');
-  const closeButton = document.getElementById('newsletter-close');
-  const form = document.getElementById('newsletter-form') as HTMLFormElement | null;
-  const emailInput = document.getElementById('newsletter-email') as HTMLInputElement | null;
-  const successEl = document.getElementById('newsletter-success');
-  const errorEl = document.getElementById('newsletter-error');
+  const MODAL_OPEN_SELECTOR = '[data-newsletter-open]';
+  const NEWSLETTER_SETUP_FLAG = '__newsletterModalSetupDone';
+  const NEWSLETTER_ANIMATION_MS = 220;
+  let closeTimer: number | undefined;
+
+  const getModal = () => document.getElementById('newsletter-modal');
+  const getForm = () => document.getElementById('newsletter-form') as HTMLFormElement | null;
+  const getEmailInput = () => document.getElementById('newsletter-email') as HTMLInputElement | null;
+  const getSuccessEl = () => document.getElementById('newsletter-success');
+  const getErrorEl = () => document.getElementById('newsletter-error');
 
   const setOpen = (open: boolean) => {
+    const modal = getModal();
     if (!modal) return;
-    modal.classList.toggle('hidden', !open);
-    modal.classList.toggle('flex', open);
-    document.body.classList.toggle('overflow-hidden', open);
-    if (open) emailInput?.focus();
+    if (closeTimer) {
+      window.clearTimeout(closeTimer);
+      closeTimer = undefined;
+    }
+
+    if (open) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+      requestAnimationFrame(() => {
+        modal.classList.add('newsletter-modal-open');
+      });
+      getEmailInput()?.focus();
+      return;
+    }
+
+    modal.classList.remove('newsletter-modal-open');
+    document.body.classList.remove('overflow-hidden');
+    closeTimer = window.setTimeout(() => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }, NEWSLETTER_ANIMATION_MS);
   };
 
   const openNewsletterModal = () => {
+    const form = getForm();
+    const successEl = getSuccessEl();
+    const errorEl = getErrorEl();
     form?.classList.remove('hidden');
     form?.reset();
     successEl?.classList.add('hidden');
@@ -87,57 +159,70 @@
     setOpen(true);
   };
 
-  document.querySelectorAll<HTMLElement>('[data-newsletter-open]').forEach((trigger) => {
-    trigger.addEventListener('click', (event) => {
+  const handleOpenClick = (event: Event) => {
+    const target = event.target as Element | null;
+    const trigger = target?.closest?.(MODAL_OPEN_SELECTOR);
+    if (!trigger) return;
+    event.preventDefault();
+    openNewsletterModal();
+  };
+
+  if (!(window as Window & { [NEWSLETTER_SETUP_FLAG]?: boolean })[NEWSLETTER_SETUP_FLAG]) {
+    (window as Window & { [NEWSLETTER_SETUP_FLAG]?: boolean })[NEWSLETTER_SETUP_FLAG] = true;
+    document.addEventListener('click', handleOpenClick);
+    document.addEventListener('click', (event) => {
+      const target = event.target as Element | null;
+      if (!target) return;
+      if (target.closest('#newsletter-overlay') || target.closest('#newsletter-close')) {
+        setOpen(false);
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    });
+    document.addEventListener('submit', async (event) => {
+      const form = event.target as HTMLFormElement | null;
+      if (!form || form.id !== 'newsletter-form') return;
       event.preventDefault();
-      openNewsletterModal();
-    });
-  });
 
-  overlay?.addEventListener('click', () => setOpen(false));
-  closeButton?.addEventListener('click', () => setOpen(false));
+      const successEl = getSuccessEl();
+      const errorEl = getErrorEl();
+      successEl?.classList.add('hidden');
+      errorEl?.classList.add('hidden');
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') setOpen(false);
-  });
-
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    successEl?.classList.add('hidden');
-    errorEl?.classList.add('hidden');
-
-    if (!newsletterEndpoint) {
-      if (errorEl) {
-        errorEl.textContent = 'Newsletter endpoint is not configured.';
-        errorEl.classList.remove('hidden');
+      if (!newsletterEndpoint) {
+        if (errorEl) {
+          errorEl.textContent = 'Newsletter endpoint is not configured.';
+          errorEl.classList.remove('hidden');
+        }
+        return;
       }
-      return;
-    }
 
-    const fd = new FormData(form);
-    const email = fd.get('email');
-    const payload = { email: typeof email === 'string' ? email : '' };
+      const fd = new FormData(form);
+      const email = fd.get('email');
+      const payload = { email: typeof email === 'string' ? email : '' };
 
-    const response = await fetch(newsletterEndpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    const result = (await response.json().catch(() => ({}))) as {
-      ok?: boolean;
-      error?: string;
-    };
+      const response = await fetch(newsletterEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = (await response.json().catch(() => ({}))) as {
+        ok?: boolean;
+        error?: string;
+      };
 
-    if (!response.ok || !result.ok) {
-      const msg = result.error ?? 'Could not subscribe. Try again later.';
-      if (errorEl) {
-        errorEl.textContent = msg;
-        errorEl.classList.remove('hidden');
+      if (!response.ok || !result.ok) {
+        const msg = result.error ?? 'Could not subscribe. Try again later.';
+        if (errorEl) {
+          errorEl.textContent = msg;
+          errorEl.classList.remove('hidden');
+        }
+        return;
       }
-      return;
-    }
 
-    form?.classList.add('hidden');
-    successEl?.classList.remove('hidden');
-  });
+      form.classList.add('hidden');
+      successEl?.classList.remove('hidden');
+    });
+  }
 </script>
