@@ -26,7 +26,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" class="font-sans antialiased">
+<html lang="en" class="font-sans antialiased no-page-transition">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -187,6 +187,19 @@ const {
       };
       const syncThemeToIncomingDocument = (incomingDocument) => {
         incomingDocument.documentElement.classList.toggle('dark', root.classList.contains('dark'));
+        incomingDocument.documentElement.classList.toggle(
+          'no-page-transition',
+          root.classList.contains('no-page-transition')
+        );
+      };
+      const enablePageTransitionsAfterFirstLoad = () => {
+        // Skip first-render transition cost, then keep transitions enabled for all next navigations.
+        if (!root.classList.contains('no-page-transition')) return;
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            root.classList.remove('no-page-transition');
+          });
+        });
       };
       const getThemeButton = () => document.getElementById('theme-toggle');
       const setThemeLabel = () => {
@@ -346,6 +359,8 @@ const {
       setupScrollRestoration();
       applyTheme(getResolvedDark());
       setThemeLabel();
+      document.addEventListener('astro:page-load', enablePageTransitionsAfterFirstLoad, { once: true });
+      enablePageTransitionsAfterFirstLoad();
     </script>
   </body>
 </html>

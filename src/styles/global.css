@@ -184,6 +184,11 @@
 }
 
 /* Simple page transition: old page exits faster than new page enters. */
+:root.no-page-transition::view-transition-old(root),
+:root.no-page-transition::view-transition-new(root) {
+  animation: none !important;
+}
+
 :root:not(.theme-reveal)::view-transition-old(root) {
   animation: page-fade-out 280ms ease both;
 }
