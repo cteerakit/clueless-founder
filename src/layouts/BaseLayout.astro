@@ -60,7 +60,6 @@ const {
 
     {showDefaultSeo && <SEO title={title} description={description} canonicalPath={canonicalPath} />}
     <slot name="head" />
-    <ClientRouter />
   </head>
   <body class="min-h-screen bg-[var(--bg)] text-[var(--text)] transition-colors">
     <div class="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-6 pt-0 pb-12">
@@ -209,21 +208,15 @@ const {
         button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
         button.setAttribute('title', isDark ? 'Light mode' : 'Dark mode');
       };
-      const animateThemeReveal = async (fromEl, nextDark, origin = null) => {
+      const animateThemeReveal = async (nextDark, origin = null) => {
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (prefersReducedMotion || !supportsViewTransition) {
           root.classList.toggle('dark', nextDark);
           return;
         }
 
-        // Use click coordinates when available to avoid a sync layout read on every toggle.
-        const point = origin ?? (() => {
-          const rect = fromEl.getBoundingClientRect();
-          return {
-            x: rect.left + rect.width / 2,
-            y: rect.top + rect.height / 2,
-          };
-        })();
+        // Avoid geometry reads (like getBoundingClientRect) to prevent forced reflow.
+        const point = origin ?? { x: window.innerWidth / 2, y: window.innerHeight / 2 };
         const x = point.x;
         const y = point.y;
         const maxX = Math.max(x, window.innerWidth - x);
@@ -266,7 +259,7 @@ const {
             typeof event.clientY === 'number' &&
             (event.clientX !== 0 || event.clientY !== 0);
           const origin = hasPointerOrigin ? { x: event.clientX, y: event.clientY } : null;
-          await animateThemeReveal(button, nextDark, origin);
+          await animateThemeReveal(nextDark, origin);
           localStorage.setItem('theme', nextDark ? 'dark' : 'light');
           setThemeLabel();
           animating = false;
@@ -372,5 +365,6 @@ const {
       document.addEventListener('astro:page-load', enablePageTransitionsAfterFirstLoad, { once: true });
       enablePageTransitionsAfterFirstLoad();
     </script>
+    <ClientRouter />
   </body>
 </html>

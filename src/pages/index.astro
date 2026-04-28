@@ -9,10 +9,16 @@ export const prerender = true;
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const lcpImageSrc = posts[0]?.data.coverImage;
 
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} canonicalPath="/">
+  {lcpImageSrc && (
+    <Fragment slot="head">
+      <link rel="preload" as="image" href={lcpImageSrc} fetchpriority="high" />
+    </Fragment>
+  )}
   <section class="border-b border-[var(--line)] pb-16 text-center">
     <h1 class="font-serif text-6xl leading-tight text-[var(--text)]">{SITE_TITLE}</h1>
     <p class="mx-auto mt-6 max-w-xl font-sans text-lg text-[var(--muted)]">{SITE_DESCRIPTION}</p>
