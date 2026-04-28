@@ -5,9 +5,10 @@ import { ArrowUpRight } from '@lucide/astro';
 
 type Props = {
   post: CollectionEntry<'blog'>;
+  prioritizeImage?: boolean;
 };
 
-const { post } = Astro.props;
+const { post, prioritizeImage = false } = Astro.props;
 const excerpt = post.data.excerpt ?? post.data.description;
 ---
 
@@ -41,7 +42,8 @@ const excerpt = post.data.excerpt ?? post.data.description;
           src={post.data.coverImage}
           alt={post.data.title}
           class="order-first aspect-video w-full rounded-[var(--radius-ui)] object-cover md:order-none md:w-56"
-          loading="lazy"
+          loading={prioritizeImage ? 'eager' : 'lazy'}
+          fetchpriority={prioritizeImage ? 'high' : 'auto'}
         />
       )
     }

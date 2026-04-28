@@ -8,6 +8,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   output: 'static',
   site: 'https://cluelessfounder.com',
+  build: {
+    inlineStylesheets: 'always',
+  },
 
   vite: {
     plugins: [tailwindcss()],

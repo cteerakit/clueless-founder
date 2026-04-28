@@ -20,7 +20,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 
   <ul class="divide-y divide-[var(--line)]">
     {
-      posts.map((post) => <BlogListItem post={post} />)
+      posts.map((post, index) => <BlogListItem post={post} prioritizeImage={index === 0} />)
     }
   </ul>
 </BaseLayout>
