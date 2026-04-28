@@ -45,12 +45,50 @@
   z-index: 1;
 }
 
+:root.theme-reveal #page-content {
+  view-transition-name: none !important;
+}
+
 @keyframes theme-reveal {
   from {
     clip-path: circle(0 at var(--reveal-x) var(--reveal-y));
   }
   to {
     clip-path: circle(var(--reveal-radius) at var(--reveal-x) var(--reveal-y));
+  }
+}
+
+/* Page transition: fade only the main content area. */
+:root:not(.theme-reveal)::view-transition-old(page-content) {
+  animation: page-fade-out 150ms ease both;
+}
+
+:root:not(.theme-reveal)::view-transition-new(page-content) {
+  animation: page-fade-in 220ms ease both;
+}
+
+@keyframes page-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(page-content),
+  ::view-transition-new(page-content) {
+    animation: none;
   }
 }
 

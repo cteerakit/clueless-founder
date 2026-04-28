@@ -4,7 +4,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import SEO from '../components/SEO.astro';
 import NewsletterModal from '../components/Newsletter.astro';
 import { Moon, Sun } from '@lucide/astro';
-import { Camera, Play, X } from '@lucide/astro';
+import { ClientRouter } from 'astro:transitions';
 
 type Props = {
   title?: string;
@@ -54,6 +54,7 @@ const {
 
     {showDefaultSeo && <SEO title={title} description={description} canonicalPath={canonicalPath} />}
     <slot name="head" />
+    <ClientRouter />
   </head>
   <body class="min-h-screen bg-[var(--bg)] text-[var(--text)] transition-colors">
     <div class="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-6 py-12">
@@ -94,7 +95,7 @@ const {
         </nav>
       </header>
 
-      <main class="mt-16 flex-1">
+      <main id="page-content" class="mt-16 flex-1" transition:name="page-content">
         <slot />
       </main>
 
@@ -118,34 +119,34 @@ const {
           <div>
             <div class="flex flex-wrap items-center gap-4 text-[var(--muted)]">
               <a
-                href="https://x.com/"
+                href="https://www.linkedin.com/in/cteerakit/"
                 target="_blank"
                 rel="noreferrer"
                 class="transition-colors hover:text-[var(--text)]"
-                aria-label="Twitter/X"
-                title="Twitter/X"
+                aria-label="LinkedIn"
+                title="LinkedIn"
               >
-                <X size={16} stroke-width={1.8} />
+                <img src="/linkedin.svg" alt="" class="h-4 w-4" loading="lazy" />
               </a>
               <a
-                href="https://instagram.com/"
+                href="https://medium.com/@cteerakit"
                 target="_blank"
                 rel="noreferrer"
                 class="transition-colors hover:text-[var(--text)]"
-                aria-label="Instagram"
-                title="Instagram"
+                aria-label="Medium"
+                title="Medium"
               >
-                <Camera size={16} stroke-width={1.8} />
+                <img src="https://cdn.simpleicons.org/medium/71717a/d4d4d8" alt="" class="h-4 w-4" loading="lazy" />
               </a>
               <a
-                href="https://youtube.com/"
+                href="https://clueless-founder.substack.com"
                 target="_blank"
                 rel="noreferrer"
                 class="transition-colors hover:text-[var(--text)]"
-                aria-label="YouTube"
-                title="YouTube"
+                aria-label="Substack"
+                title="Substack"
               >
-                <Play size={16} stroke-width={1.8} />
+                <img src="https://cdn.simpleicons.org/substack/71717a/d4d4d8" alt="" class="h-4 w-4" loading="lazy" />
               </a>
             </div>
           </div>
@@ -159,10 +160,10 @@ const {
     <NewsletterModal />
     <script is:inline>
       const root = document.documentElement;
-      const button = document.getElementById('theme-toggle');
-      let animating = false;
       const supportsViewTransition = 'startViewTransition' in document;
+      const getThemeButton = () => document.getElementById('theme-toggle');
       const setThemeLabel = () => {
+        const button = getThemeButton();
         if (!button) return;
         const isDark = root.classList.contains('dark');
         button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
@@ -197,18 +198,28 @@ const {
           root.style.removeProperty('--reveal-radius');
         });
       };
+      const setupThemeToggle = () => {
+        if (window.__themeToggleSetupDone) return;
+        window.__themeToggleSetupDone = true;
+        let animating = false;
+
+        document.addEventListener('click', async (event) => {
+          const button = event.target?.closest?.('#theme-toggle');
+          if (!button || animating) return;
+          animating = true;
+          button.setAttribute('disabled', 'true');
+          const nextDark = !root.classList.contains('dark');
+          await animateThemeReveal(button, nextDark);
+          localStorage.setItem('theme', nextDark ? 'dark' : 'light');
+          setThemeLabel();
+          button.removeAttribute('disabled');
+          animating = false;
+        });
+
+        document.addEventListener('astro:page-load', setThemeLabel);
+      };
+      setupThemeToggle();
       setThemeLabel();
-      button?.addEventListener('click', async () => {
-        if (animating) return;
-        animating = true;
-        button.setAttribute('disabled', 'true');
-        const nextDark = !root.classList.contains('dark');
-        await animateThemeReveal(button, nextDark);
-        localStorage.setItem('theme', nextDark ? 'dark' : 'light');
-        setThemeLabel();
-        button.removeAttribute('disabled');
-        animating = false;
-      });
     </script>
   </body>
 </html>

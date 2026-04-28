@@ -16,7 +16,7 @@ const getExcerpt = (post: (typeof posts)[number]) => post.data.excerpt ?? post.d
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} canonicalPath="/">
   <section class="border-b border-[var(--line)] pb-16 text-center">
-    <h1 class="font-serif text-6xl italic leading-tight text-[var(--text)]">{SITE_TITLE}</h1>
+    <h1 class="font-serif text-6xl leading-tight text-[var(--text)]">{SITE_TITLE}</h1>
     <p class="mx-auto mt-6 max-w-xl font-sans text-lg text-[var(--muted)]">{SITE_DESCRIPTION}</p>
   </section>
 

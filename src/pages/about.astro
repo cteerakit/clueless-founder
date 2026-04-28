@@ -8,15 +8,93 @@ const title = `About — ${SITE_TITLE}`;
 ---
 
 <BaseLayout title={title} description={SITE_DESCRIPTION} canonicalPath="/about/">
-  <article class="prose prose-zinc dark:prose-invert max-w-none prose-headings:font-serif prose-p:text-[18px] prose-p:leading-relaxed prose-p:text-zinc-700 dark:prose-p:text-zinc-300">
-    <h1 class="font-serif text-4xl italic text-[var(--text)]">About</h1>
-    <p class="font-sans text-zinc-700 dark:text-zinc-300">{SITE_DESCRIPTION}</p>
-    <p class="font-sans text-zinc-700 dark:text-zinc-300">
-      Built with{' '}
-      <a href="https://astro.build" class="text-[var(--text)] underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-4">
-        Astro
+  <article class="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-serif prose-p:text-[18px] prose-p:leading-relaxed prose-p:text-neutral-700 dark:prose-p:text-neutral-300">
+    <section class="not-prose mb-10 flex flex-col items-start gap-6 border-b border-[var(--line)] pb-8 md:flex-row md:items-center">
+      <img
+        src="/teerakit-profile.png"
+        alt="Teerakit Chantrakul profile photo"
+        class="h-28 w-28 rounded-full object-cover ring-1 ring-[var(--line)] md:h-32 md:w-32"
+        loading="eager"
+      />
+      <div class="space-y-2">
+        <h1 class="font-serif text-4xl text-[var(--text)]">Teerakit Chantrakul</h1>
+        <p class="font-sans text-base text-[var(--muted)]">
+          Solo Founder | Indie Maker | Hotelier
+        </p>
+        <p class="font-sans text-sm text-[var(--muted)]">
+          Building digital products and managing stays while exploring the latest in tech.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-1">
+          <a
+            href="https://x.com/cteerakit"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] no-underline transition-colors hover:bg-[var(--hover)]"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+            title="X"
+          >
+            <img src="https://cdn.simpleicons.org/x/18181b/e5e7eb" alt="" class="h-4 w-4" loading="lazy" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/cteerakit/"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] no-underline transition-colors hover:bg-[var(--hover)]"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+          >
+            <img src="/linkedin.svg" alt="" class="h-4 w-4" loading="lazy" />
+          </a>
+          <a
+            href="https://github.com/cteerakit"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] no-underline transition-colors hover:bg-[var(--hover)]"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <img src="https://cdn.simpleicons.org/github/18181b/e5e7eb" alt="" class="h-4 w-4" loading="lazy" />
+          </a>
+          <a
+            href="https://www.instagram.com/teerakit/"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] no-underline transition-colors hover:bg-[var(--hover)]"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            title="Instagram"
+          >
+            <img src="https://cdn.simpleicons.org/instagram/18181b/e5e7eb" alt="" class="h-4 w-4" loading="lazy" />
+          </a>
+          <a
+            href="https://www.facebook.com/cteerakit/"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] no-underline transition-colors hover:bg-[var(--hover)]"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            title="Facebook"
+          >
+            <img src="https://cdn.simpleicons.org/facebook/18181b/e5e7eb" alt="" class="h-4 w-4" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <p class="font-sans text-neutral-700 dark:text-neutral-300">
+      I am <strong>Teerakit Chantrakul</strong> - solo founder, indie maker, and hotelier.
+      I build digital products, run communities, and explore practical ways to use new
+      technology every day.
+    </p>
+    <p class="font-sans text-neutral-700 dark:text-neutral-300">
+      I am currently focused on building products for remote workers and independent
+      builders, while balancing online projects with real-world hospitality work.
+    </p>
+
+    <p class="font-sans text-neutral-700 dark:text-neutral-300">
+      More about me and ongoing work at{' '}
+      <a href="https://teerakit.com/" class="text-[var(--text)] underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-4">
+        teerakit.com
       </a>{' '}
-      and deployed on Cloudflare.
+      .
     </p>
   </article>
 </BaseLayout>
