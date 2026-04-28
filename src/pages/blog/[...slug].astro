@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SEO from '../../components/SEO.astro';
+import { estimateReadTime } from '../../utils/reading';
 
 export const prerender = true;
 
@@ -17,6 +18,8 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 
 const canonicalPath = `/blog/${post.id}/`;
+const readTime = estimateReadTime(post.body ?? '');
+const excerpt = post.data.excerpt ?? post.data.description;
 ---
 
 <BaseLayout showDefaultSeo={false}>
@@ -32,28 +35,40 @@ const canonicalPath = `/blog/${post.id}/`;
 
   <article
     class="prose prose-zinc max-w-none
-      prose-headings:font-serif prose-headings:text-zinc-900
-      prose-p:text-zinc-700 prose-p:text-[18px] prose-p:leading-relaxed prose-p:font-sans
-      prose-blockquote:border-l-2 prose-blockquote:border-black prose-blockquote:not-italic
+      dark:prose-invert prose-headings:font-serif prose-headings:text-zinc-900 dark:prose-headings:text-zinc-100
+      prose-p:text-zinc-700 dark:prose-p:text-zinc-300 prose-p:text-[18px] prose-p:leading-relaxed prose-p:font-sans
+      prose-blockquote:border-l-2 prose-blockquote:border-black dark:prose-blockquote:border-zinc-200 prose-blockquote:not-italic
       prose-blockquote:font-serif prose-blockquote:italic prose-blockquote:quotes-none
       prose-img:w-full prose-img:rounded-sm
-      prose-figcaption:text-sm prose-figcaption:font-sans prose-figcaption:text-zinc-400"
+      prose-figcaption:text-sm prose-figcaption:font-sans prose-figcaption:text-zinc-400 dark:prose-figcaption:text-zinc-500"
   >
     <header class="not-prose mb-12">
-      <p class="font-sans text-xs uppercase tracking-wider text-zinc-400">{post.data.category}</p>
-      <h1 class="mt-3 font-serif text-4xl italic text-zinc-900">{post.data.title}</h1>
-      <time
-        class="mt-4 block font-sans text-sm tabular-nums text-zinc-400"
-        datetime={post.data.pubDate.toISOString()}
-      >
-        {
-          post.data.pubDate.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })
-        }
-      </time>
+      <p class="font-sans text-xs uppercase tracking-wider text-[var(--muted)]">{post.data.category}</p>
+      <h1 class="mt-3 font-serif text-4xl italic text-[var(--text)]">{post.data.title}</h1>
+      <p class="mt-4 max-w-2xl font-sans text-base leading-relaxed text-[var(--muted)]">{excerpt}</p>
+      <div class="mt-4 flex items-center gap-1 font-sans text-sm text-[var(--muted)]">
+        <time datetime={post.data.pubDate.toISOString()}>
+          {
+            post.data.pubDate.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })
+          }
+        </time>
+        <span aria-hidden="true">•</span>
+        <span>{readTime} min read</span>
+      </div>
+      {
+        post.data.coverImage && (
+          <img
+            src={post.data.coverImage}
+            alt={post.data.title}
+            class="mt-8 w-full rounded-sm object-cover"
+            loading="eager"
+          />
+        )
+      }
     </header>
 
     <Content />

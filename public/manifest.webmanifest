@@ -1,0 +1,18 @@
+{
+  "name": "Clueless Founder",
+  "short_name": "Clueless",
+  "description": "Notes on building products, mistakes, and what actually matters.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#18181b",
+  "icons": [
+    {
+      "src": "/logo-trans.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
