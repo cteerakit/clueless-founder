@@ -17,63 +17,56 @@ It has to work on a browser. Since I travel a lot, the idea is that it should w
 
 This one is going to be a bit long. Feel free to jump to the area that you are interested in.
 
- 
+
 
 ## Table of Contents
-
-- [1. Productivity](#1-productivity)
+[1. Productivity](#1-productivity)
 
 [Office software: Google Workspace](#office-software-google-workspace)
-
-- [Project management: Todoist](#project-management-todoist)
-- [Team communication: Discord](#team-communication-discord)
-- [Knowledge base: Google Docs + Gitbook](#knowledge-base-google-docs-gitbook)
-- [Note-taking: Google Keep](#notetaking-google-keep)
-- [AI: Gemini + ChatGPT](#ai-gemini-chat-gpt)
-- [Automation: Make + Relay](#automation-make-relay)
-- [2. Product Development](#2-product-development)
+[Project management: Todoist](#project-management-todoist)
+[Team communication: Discord](#team-communication-discord)
+[Knowledge base: Google Docs + Gitbook](#knowledge-base-google-docs-gitbook)
+[Note-taking: Google Keep](#notetaking-google-keep)
+[AI: Gemini + ChatGPT](#ai-gemini-chat-gpt)
+[Automation: Make + Relay](#automation-make-relay)
+[2. Product Development](#2-product-development)
 
 [Front-end: Toddle](#frontend-toddle)
-
-- [Back-end: Supabase](#backend-supabase)
-- [Internal tool: Retool](#internal-tool-retool)
-- [Content Management System (CMS): Hygraph + Content …](#content-management-system-cms-hygra)
-- [Planning: Linear](#planning-linear)
-- [Product analytics: PostHog](#product-analytics-post-hog)
-- [Notification: Mailersend + Loops](#notification-mailersend-loops)
-- [Payment: Stripe](#payment-stripe)
-- [Tag management: Cloudflare Zaraz + Google Tag Mana …](#tag-management-cloudflare-zaraz-goo)
-- [3. Design](#3-design)
+[Back-end: Supabase](#backend-supabase)
+[Internal tool: Retool](#internal-tool-retool)
+[Content Management System (CMS): Hygraph + Content …](#content-management-system-cms-hygra)
+[Planning: Linear](#planning-linear)
+[Product analytics: PostHog](#product-analytics-post-hog)
+[Notification: Mailersend + Loops](#notification-mailersend-loops)
+[Payment: Stripe](#payment-stripe)
+[Tag management: Cloudflare Zaraz + Google Tag Mana …](#tag-management-cloudflare-zaraz-goo)
+[3. Design](#3-design)
 
 [General-purpose: Figma](#generalpurpose-figma)
-
-- [UI Framework: Shadcn/ui](#ui-framework-shadcnui)
-- [Design Materials: Lucide](#design-materials-lucide)
-- [4. Marketing](#4-marketing)
+[UI Framework: Shadcn/ui](#ui-framework-shadcnui)
+[Design Materials: Lucide](#design-materials-lucide)
+[4. Marketing](#4-marketing)
 
 [Marketing analytics: Google Analytics](#marketing-analytics-google-analytic)
-
-- [Email marketing: MailerLite](#email-marketing-mailer-lite)
-- [Search Engine Optimization (SEO): Search Console + …](#search-engine-optimization-seo-sear)
-- [Content marketing: Publer](#content-marketing-publer)
-- [Advertising: Google Ads + Meta](#advertising-google-ads-meta)
-- [Dashboard: Datapad](#dashboard-datapad)
-- [5. Sales & Customer Support](#5-sales-customer-support)
+[Email marketing: MailerLite](#email-marketing-mailer-lite)
+[Search Engine Optimization (SEO): Search Console + …](#search-engine-optimization-seo-sear)
+[Content marketing: Publer](#content-marketing-publer)
+[Advertising: Google Ads + Meta](#advertising-google-ads-meta)
+[Dashboard: Datapad](#dashboard-datapad)
+[5. Sales & Customer Support](#5-sales-customer-support)
 
 [Customer Relationship Management (CRM): Attio](#customer-relationship-management-cr)
-
-- [Outreach: Apollo](#outreach-apollo)
-- [Scheduling: Cal.com](#scheduling-calcom)
-- [Customer support: Helpscout](#customer-support-helpscout)
-- [6. Financial Management](#6-financial-management)
+[Outreach: Apollo](#outreach-apollo)
+[Scheduling: Cal.com](#scheduling-calcom)
+[Customer support: Helpscout](#customer-support-helpscout)
+[6. Financial Management](#6-financial-management)
 
 [Bookkeeping: Peak](#bookkeeping-peak)
+[Banking: K BIZ](#banking-k-biz)
+[eSign: Documenso](#e-sign-documenso)
+[Conclusion](#conclusion)
 
-- [Banking: K BIZ](#banking-k-biz)
-- [eSign: Documenso](#e-sign-documenso)
-- [Conclusion](#conclusion)
 
- 
 
 ## 1. Productivity
 
@@ -93,11 +86,11 @@ I can’t recommend Microsoft 365 from my personal experience. Read more below.
 
 [https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365](https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365)
 
- 
+
 
 [Why I choose Google Workspace over Microsoft 365 www.cluelessfounder.com/p/google-workspace-vs-microsoft-365](https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365)
 
- 
+
 
 [https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365](https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365)
 
@@ -143,7 +136,7 @@ Automation is the key to running a small team as it eliminates routine tasks ent
 
 Make and Relay is a great alternative and I find it more flexible than Zapier in many ways. I also find that some apps integrate better in Relay so I still keep both. But if I were to choose just one, Make is the way to go. Whatever apps you using, Make will likely be able to connect them.
 
- 
+
 
 ## 2. Product Development
 
@@ -165,11 +158,11 @@ If you want to build a simple website, I highly recommend Webflow. I no longer r
 
 [https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024](https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024)
 
- 
+
 
 [STOP using WordPress in 2024 WordPress powers more than 43% of the web. Today I will try to convince you why you shouldn’t use it anymore in 2024. www.cluelessfounder.com/p/stop-using-wordpress-in-2024](https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024)
 
- 
+
 
 [https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024](https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024)
 
@@ -217,7 +210,7 @@ Thanks to these tag management tools, implementing tracking pixels is easier tha
 
 Google Tag Manager (GTM) is client-side which can slow down your website quite a bit. It does offer a server-side option, but it comes with a price. Because of that, I prefer GTM for private pages where SEO doesn’t matter much.
 
- 
+
 
 ## 3. Design
 
@@ -239,7 +232,7 @@ There are other great UI kits like [Untitled UI](https://www.untitledui.com/), [
 
 Clean, customizable, icon packs. Some honorable mentions: [Material Icons](https://fonts.google.com/icons), [Phosphor](https://phosphoricons.com/).
 
- 
+
 
 ## 4. Marketing
 
@@ -279,7 +272,7 @@ I really like the simplicity of Datapad. Just connect the data sources and displ
 
 If you find Datapad too basic, check out [Looker Studio](https://lookerstudio.google.com/).
 
- 
+
 
 ## 5. Sales & Customer Support
 
@@ -305,7 +298,7 @@ I chose Helpscout as a temporary solution because it’s free and looks nice, ha
 
 [Intercom](https://www.intercom.com/) is a bit too expensive. [Tawk.to](http://Tawk.to), [Tidio](https://www.tidio.com/), and [Crisp](https://crisp.chat/) are good options to check out.
 
- 
+
 
 ## 6. Financial Management
 
@@ -323,11 +316,11 @@ I prefer [SCB Business Anywhere](https://www.scb.co.th/th/corporate-banking/digi
 
 [https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand](https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand)
 
- 
+
 
 [I tried to open bank accounts for business in 2024 in Thailand. Here's my experience. I’ve tried opening accounts with 3 banks: SCB, KTB, and KBank. www.cluelessfounder.com/p/bank-accounts-for-business-thailand](https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand)
 
- 
+
 
 [https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand](https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand)
 

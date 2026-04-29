@@ -11,6 +11,7 @@ const blog = defineCollection({
     coverImage: z.url().optional(),
     pubDate: z.coerce.date(),
     category: z.string(),
+    author: z.string().default('Teerakit Chantrakul'),
     newsletter: z.boolean().default(false),
     draft: z.boolean().default(false),
   }),

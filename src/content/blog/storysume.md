@@ -1,5 +1,5 @@
 ---
-title: "Reinventing the Resume for 2025: Introducing Storysume"
+title: "Reinventing the Resume for 2025: Introducing \"Storysume\""
 description: "The resume, a single piece of paper, has been the standard for job applications for an incredibly long time. In fact, the first known document resembling a m..."
 excerpt: "The resume, a single piece of paper, has been the standard for job applications for an incredibly long time. In fact, the first known document resembling a m..."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c912df4a-34c7-40e4-a231-13c74fe03d21/76_1x_shots_so.png"
@@ -8,7 +8,6 @@ category: "Notes"
 newsletter: true
 draft: false
 ---
-
 
 The resume, a single piece of paper, has been the standard for job applications for an incredibly long time. In fact, the first known document resembling a modern resume was created by Leonardo da Vinci in 1482, when he wrote a letter to the Duke of Milan, Ludovico Sforza, outlining his various skills and qualifications in an attempt to secure employment.
 
@@ -48,12 +47,16 @@ Secure: Crucially, it should allow users to opt out of sensitive information lik
 
 ## Introducing "Storysume"
 
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1507c8ae-0926-4bd3-936c-6ad06413e43f/unnamed.png)
+
 This new format isn't meant to replace the traditional resume entirely, especially for large corporations with ATS. However, for the majority of companies that rely on human review, and for situations where you want to quickly share your profile with a human – a friend, a direct recruiter, or even on social media – this format is perfect. It's designed to be easily consumable on any device.
 
 That's why I'm calling it Storysume. It's a mobile-first, secure, and concise way to present your professional profile.
 
-While I believe that in the future, traditional resume formats will be obsolete and digital profiles will become the standard, we're not quite there yet. For now, the expectation remains that a PDF resume is the official document, and you can't simply send your digital profile to a company and expect to get hired. 
+While I believe that in the future, traditional resume formats will be obsolete and digital profiles will become the standard, we're not quite there yet. For now, the expectation remains that a PDF resume is the official document, and you can't simply send your digital profile to a company and expect to get hired.
 
 Telepath shares this vision of ultimately replacing resumes entirely with universally usable digital profiles. But in the meantime, we can leverage something in between for the right situation.
+
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f0ecf911-2b5b-4819-b12f-4e1d41da8334/unnamed.png)
 
 You can generate your [Storysume](https://telepath.work/storysume) today from your profile on Telepath. Check it out and let me know what you think!

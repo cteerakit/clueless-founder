@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 WordPress powers more than 43% of the web. It is, definitely, the most popular website builder on the planet. Today I will try to convince you why you shouldn’t use it anymore in 2024.
 
 I created my first WordPress website when I started freelancing in 2016. At the time, WordPress is the only good way to build a website without code. I continue to develop more websites with WordPress. It was great at the beginning. But things started to get worse.
@@ -31,17 +30,23 @@ WordPress tries to be everything, but not good at anything. If you want to build
 
 ## Webflow — for business websites
 
+![](https://miro.medium.com/v2/resize:fit:700/1*dr9hV-fPp73tTNXz56E5iA.png)
+
 [Webflow](https://webflow.com/) is by far the most powerful website builder. It is sad to see very few people using it in my country. It has all the functionality you need to create a professional website built into the platform. It produces clean code which helps with website speed and SEO.
 
 With all the greatness, here comes the downsides. Webflow is a complex tool with a steep learning curve. You need to have a basic understanding of how web layout works. The interface is quite overwhelming for beginners too. I mean look at the tool, it looks like Photoshop. But once you get past the learning phase, this is the best website builder you can find.
 
 ## Shopify — for e-commerce websites
 
+![](https://miro.medium.com/v2/resize:fit:700/1*mj94055cqOa11HjdVao6PQ.png)
+
 [Shopify](https://www.shopify.com/) is not only a website builder, but an e-commerce platform. While you can use WordPress + WooCommerce, you will get into the maintenance hell again. Shopify removes all those hassles and lets you focus on the most important aspect of e-commerce business, selling.
 
 Since the platform is standardized, you may find it limited in customizability. But for most people, this is much more than good enough to run a stable e-commerce website.
 
 ## Framer — for personal or small business websites
+
+![](https://miro.medium.com/v2/resize:fit:700/1*DyKnzvjTWDzNEPkQPVTZPQ.png)
 
 [Framer](https://www.framer.com/) is the easiest way to design and publish a website. Designers may prefer Framer over Webflow because of the simple design process.
 
@@ -50,6 +55,8 @@ In Webflow, you will need to design your website in another software, in most ca
 Framer is new in town so they still miss a few functionalities. But if you are a designer and looking to create a simple website, you will love it.
 
 ## Ghost — for blogs
+
+![](https://miro.medium.com/v2/resize:fit:700/1*KhiUIK7OOz29CibVLpMYXg.png)
 
 [Ghost](https://ghost.org/) is a powerful app for professional publishers. While WordPress was originally built to be a blogging platform, it lacks many features to call it a modern publishing platform.
 

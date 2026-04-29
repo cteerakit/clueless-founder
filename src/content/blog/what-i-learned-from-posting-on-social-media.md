@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 I recently came to realize how building an audience is an unfair advantage in business, and life in general. Having a strong social media presence is vital for anyone looking to establish a brand, build credibility, or grow a community.
 
 Recognizing this, I’ve decided to actively post on social media. By doing so, I aim to increase visibility for my projects, foster meaningful connections, and engage with like-minded individuals.
@@ -35,13 +34,19 @@ I kept this schedule for 30 days. Here are the results.
 
 I receive a lot of views from LinkedIn. However, this is kinda biased as I have more followers to start with. While on X and Threads, I’m pretty much nobody. Threads doesn’t provide view data sadly so I’m gonna skip this and analyze the other two.
 
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8aaef352-9895-4bfc-8564-44d9ab57471e/graphy-export-1726315293.png)
+
 Overview
 
 LinkedIn seems to have much more exposure. But if we look at the ratio between engagement and views, X is doing a bit better (2% on LinkedIn vs 2.5% on X). Let’s look a bit deeper at each channel.
 
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4a7d8098-0719-436e-af5a-6d9a9e1bdfc5/graphy-export-1726315355.png)
+
 Views on LinkedIn
 
 Now this becomes more interesting. When we break it down by date, LinkedIn has a significant declining trend. The more I post, the fewer views I get. I must be doing something wrong here.
+
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e366662a-36cb-4398-8159-1f737f777674/graphy-export-1726315354.png)
 
 Views on X
 
@@ -49,9 +54,13 @@ On X, it has a similar declining trend but is not very obvious, aligning with th
 
 Let’s have a look at each content type.
 
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/30208e47-2374-440b-b1f3-496de97a70a9/graphy-export-1726319176.png)
+
 LinkedIn content type
 
 On LinkedIn, #thoughts has the most views on average and #bookquote has the most engagement. People didn’t seem to care about the products I shared.
+
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/16548a8a-5138-4848-bf7a-02fef85caf62/graphy-export-1726320048.png)
 
 X content type
 

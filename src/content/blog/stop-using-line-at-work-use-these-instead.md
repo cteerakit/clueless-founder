@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 Chat apps are essential ways to communicate among team members nowadays. It’s fast, convenient, and instant. However, I’m surprised how many teams are still using Line as their day-to-day team communication tool.
 
 Line is very popular in my country and is great for what it is, for personal use with casual chats and some stickers. But let’s admit it, Line sucks when we try to use it at the workplace. It is slow, mixes topics, keeps no history, keeps no files, invades privacy, and much more.
@@ -19,6 +18,8 @@ Regardless of how bad it is, many teams are still using it. This could be becaus
 There are many better tools for this. Let’s see what can we use to communicate with our teammates effectively and professionally.
 
 # Slack
+
+![](https://miro.medium.com/v2/resize:fit:700/0*MHG-l3j9XsiYr92K)
 
 I used [Slack](https://slack.com/) a while ago and still revisit it from time to time. Feature-wise, Slack is probably the best of all. It’s free and easy to use. And it integrates with pretty much any cloud software out there. If you have a good setup, you can do most of your work without leaving Slack.
 
@@ -32,6 +33,8 @@ If you don’t mind juggling between many apps, or you just need a business chat
 
 # Microsoft Teams
 
+![](https://miro.medium.com/v2/resize:fit:700/0*D3j3PfCz9IdJAzMu)
+
 If you already subscribe to Microsoft 365, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) is probably the best option as you get to use it for free. It tightly integrates with the Microsoft ecosystem that most people are familiar with.
 
 However, it is a bit more difficult to set up than other options. Since it comes with Microsoft 365, you can’t just have Teams as a standalone app. You will need to set up the entire software suite which can be complicated for some.
@@ -42,6 +45,8 @@ If you already love Microsoft Word, Excel, and PowerPoint, Teams is a no-brainer
 
 # Google Chat
 
+![](https://miro.medium.com/v2/resize:fit:700/0*ytGBsppxYhfPsUrr)
+
 Similar to Teams, [Google Chat](https://workspace.google.com/products/chat/) comes with Google Workspace, integrating with all of Google’s ecosystem. I find Google’s suite is much better on the web compared to others.
 
 One advantage of Google Chat is, it’s not exclusive to paid Google Workspace users. In fact, every Google account (including Gmail users) already has access to it. This makes connecting with people outside of your organization much easier.
@@ -49,6 +54,8 @@ One advantage of Google Chat is, it’s not exclusive to paid Google Workspace u
 The downside, it’s pretty barebone. You don’t get fancy features like others. If simple chat is all you need, then you will like it.
 
 # Lark
+
+![](https://miro.medium.com/v2/resize:fit:696/0*VWSVbNUg_1TliPiD)
 
 I came across [Lark](https://www.larksuite.com/) not long ago and I’m surprised at how powerful it is. Lark Messenger is a part of Lark Suite. Similar to Microsoft 365 and Google Workspace, Lark Suite has all the tools you need for your daily work, some even more powerful than its competitors.
 
@@ -59,6 +66,8 @@ Unlike Google Workspace, Lark is similar to Microsoft 365 where it works well on
 If you are on a budget but still want powerful software, Lark is definitely a good option to consider.
 
 # Discord
+
+![](https://miro.medium.com/v2/resize:fit:700/0*SptTyf47EYEMlJx4)
 
 [Discord](https://discord.com/) is built for gamers but we can use it for work too. It can be a good free alternative to Slack. It keeps all your chat history. It has powerful voice chat and video calls. And it’s free.
 

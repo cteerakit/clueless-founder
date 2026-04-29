@@ -67,6 +67,19 @@ def html_to_markdown(content_html: str) -> str:
         flags=re.IGNORECASE,
     )
 
+    # Preserve inline content images as markdown before stripping tags.
+    def image_tag_repl(match: re.Match) -> str:
+        tag = match.group(0)
+        src_match = re.search(r'src="([^"]+)"', tag, flags=re.IGNORECASE)
+        if not src_match:
+            return ""
+        alt_match = re.search(r'alt="([^"]*)"', tag, flags=re.IGNORECASE)
+        src = clean_url(html.unescape(src_match.group(1)))
+        alt = normalize_whitespace(strip_tags(html.unescape(alt_match.group(1) if alt_match else "")))
+        return f"\n\n![{alt}]({src})\n\n"
+
+    body = re.sub(r"<img[^>]*>", image_tag_repl, body, flags=re.IGNORECASE)
+
     # Basic block elements.
     body = re.sub(r"<h1[^>]*>([\s\S]*?)</h1>", r"\n# \1\n", body, flags=re.IGNORECASE)
     body = re.sub(r"<h2[^>]*>([\s\S]*?)</h2>", r"\n## \1\n", body, flags=re.IGNORECASE)
@@ -136,9 +149,10 @@ def derive_slug(url: str, title: str) -> str:
 
 def main() -> None:
     if len(sys.argv) < 2:
-        raise SystemExit("Usage: python scripts/import_beehiiv_csv.py <csv_path>")
+        raise SystemExit("Usage: python scripts/import_beehiiv_csv.py <csv_path> [--overwrite]")
 
     csv_path = Path(sys.argv[1]).expanduser()
+    overwrite = "--overwrite" in sys.argv[2:]
     if not csv_path.exists():
         raise SystemExit(f"CSV not found: {csv_path}")
 
@@ -169,10 +183,11 @@ def main() -> None:
 
             base_slug = derive_slug(url, title)
             candidate = out_dir / f"{base_slug}.md"
-            suffix = 2
-            while candidate.exists():
-                candidate = out_dir / f"{base_slug}-{suffix}.md"
-                suffix += 1
+            if not overwrite:
+                suffix = 2
+                while candidate.exists():
+                    candidate = out_dir / f"{base_slug}-{suffix}.md"
+                    suffix += 1
 
             frontmatter = [
                 "---",

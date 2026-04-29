@@ -9,18 +9,19 @@ newsletter: true
 draft: false
 ---
 
-
 Here's the deal: I'm building Telepath, my remote job board. Traffic's going up, and I'm trying to figure out what keywords are working and how visible we are on search engines.
 
 So, I started checking out SEO tools. Turns out, a lot of them are either garbage or way too expensive for a small company. And those "free" tools? Half the time, they're outdated. Like, the blog post says they were free in 2021, but they're not anymore. Or the "free tier" is so limited it's basically a demo with a timer.
 
 But I found some tools that are okay to use.
 
- 
+
 
 ## The "Free" Rank Tracking Tools
 
 ### [Semrush](https://www.semrush.com/)
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdOLaozs-SXF2j4uwgjMhVWnSPXBBrmoGkKcVH_cs5HUdv11CmlQOe4kZ52PTNC8vC5b-Bx21xj_lqTG-hcVdrZ191GbMmBzE2E5vaB0CowJr2HNghLBqhOJ-AfrHCXpVEY05ML3Q)
 
 Semrush Position Tracker
 
@@ -30,6 +31,8 @@ I've been using Semrush's free plan for a while now. But their cheapest paid pla
 
 ### [Mangools](https://mangools.com/)
 
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeSfo7uvUAsTtP-Qby10ydInPxoPQjht8LyHDOjInSlT0zqs-PhMV7X84cCsbPCQgSBVUb5te9YQHivWlSj58iMr4qlr2YTyZM8iBqmKtsf-kq0U71lyvo_Y9BVdtH7WIjuZCLU6A)
+
 Mangools Rank Tracking
 
 Similar deal. You can track 5 keywords, but you've got the same restrictions as Semrush – location, language, device.
@@ -38,11 +41,13 @@ Basically, these are fine if you're tracking keywords for something super small.
 
 After realizing I'd get more actionable insights by blindfolding myself and guessing keywords than relying on most of these tools, I pivoted to Plan B: hacking together free tools in unconventional ways.
 
- 
+
 
 ## Plan B: DIY Rank Tracking (with duct tapes)
 
 ### [Google Search Console](https://search.google.com/search-console) + [Looker Studio](https://lookerstudio.google.com)
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdBEjnOaxBDbpswosHad33ygDGAL7fMb5kAn5hsko2TVWCkU3VPxmFf979CHAyUK466u0HRC_nRAUftaKkW7Wok_nDP3D5Ihx6Wnrl9DwouFB7mFoWlq9E7tI-lTOL_kmLtA_wJ)
 
 Looker Studio
 
@@ -54,13 +59,15 @@ The downside? It takes time to set up and keep updated. But if you’ve got the 
 
 ### [SerpBear](https://docs.serpbear.com/) (Self-hosted, open-source)
 
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfjKU4NIBrzAvFSGXnGVmqvKHQDE9804Zur6d9CeXKDJLTogwOfwtMLJu75tX5ybj73lHW5VZOqXyD2nuQ2Q3ARX7I4-X3dCx4a4tS0VdIBwLK9AyCe6C213K2r7Eidpxq_7J0uww)
+
 SerpBear
 
 This one's for the techy people. SerpBear is an open-source rank tracker that you host yourself. No limits on keywords. No credit system. No BS usage caps.
 
 The catch? You have to set it up, maintain it, and fix it if it breaks. But if you know your way around a VPS, it's the best value I've found, hands down.
 
- 
+
 
 ## Final Thoughts
 

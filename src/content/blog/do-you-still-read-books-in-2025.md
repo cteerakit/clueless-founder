@@ -1,7 +1,7 @@
 ---
 title: "Do You Still Read Books in 2025?"
-description: "Hey everyone! With the internet, podcasts, and a million short videos competing for your attention, you might be wondering, Do you still read books in 2025?..."
-excerpt: "Hey everyone! With the internet, podcasts, and a million short videos competing for your attention, you might be wondering, Do you still read books in 2025?..."
+description: "Hey everyone! With the internet, podcasts, and a million short videos competing for your attention, you might be wondering, \"Do you still read books in 2025?..."
+excerpt: "Hey everyone! With the internet, podcasts, and a million short videos competing for your attention, you might be wondering, \"Do you still read books in 2025?..."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/83b899f3-0fa0-41d3-acfd-9a398b8d68e6/Cover.png"
 pubDate: 2025-09-25
 category: "Notes"
@@ -15,7 +15,7 @@ Today I want to pull back the curtain and show you exactly how I manage my readi
 
 I'm going to walk you through my whole process: from discovering a potential read, to filtering it for the good stuff, to the actual consumption and tracking. Let's dive in!
 
- 
+
 
 ## Why Bother with Books in the Digital Age?
 
@@ -59,7 +59,7 @@ I tried another app called [Literal](https://literal.club/), and it looked a lit
 
 Finally, I discovered [Fable](https://fable.co/), and this is my new home! It’s a book tracking and social app that lets you track TV shows and series, too. The app is snappy, the interface is great, and it feels modern. I'm just getting started with it, but so far, I'm hoping it'll be my long-term solution for tracking all my reading and the important takeaways. I'll keep you all posted on how it goes.
 
- 
+
 
 ## Your Turn!
 

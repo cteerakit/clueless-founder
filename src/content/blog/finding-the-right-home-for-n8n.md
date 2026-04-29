@@ -9,12 +9,13 @@ newsletter: true
 draft: false
 ---
 
-
 Hope you're having a productive week! I wanted to share some insights from my recent explorations into hosting n8n, a fantastic automation platform that helps connect apps and automate tasks online. As you know, at Telepath, we're all about efficiency, and n8n is a key tool in making things run smoothly behind the scenes.
 
 There are several ways to get n8n up and running, and I’ve tried a few. Each has its pros and cons, depending on your technical comfort and budget. Here’s a quick rundown:
 
 ## 1. n8n Cloud: The "Easy Button"
+
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b580e299-232e-4b1c-8dce-461d333dc30b/unnamed.png)
 
 n8n Cloud
 
@@ -32,6 +33,8 @@ Since n8n is open-source, you can host it yourself. A VPS means you rent a virtu
 
 ### 2.1 Unmanaged VPS
 
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/05892703-6471-448b-9547-bd04a76135f9/unnamed.png)
+
 Digital Ocean
 
 This is for the technically savvy. You get a raw server (usually Linux) and handle everything yourself—installation, security, and updates.
@@ -40,6 +43,8 @@ It's cheaper but requires you to be technical. [DigitalOcean](https://www.digita
 
 ### 2.2 Managed VPS (My current setup)
 
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/849a9c30-2986-4ef6-bc1a-a00735cb38bd/unnamed.png)
+
 Railway
 
 This is a great middle ground. A company handles the server setup and much of the maintenance for you, but you still pay less than n8n Cloud. The experience is similar to n8n Cloud but with better pricing for what you get.
@@ -47,6 +52,8 @@ This is a great middle ground. A company handles the server setup and much of th
 I personally use[Railway](https://railway.com/) for this (Start from $5/m and increase based on usage), and it's proven to be a reliable choice.[Render](https://render.com/) is another great option. This is perfect for those who want control and cost savings without deep-dive server administration.
 
 ## 3. Hosting on Your Own Computer: For Testing and Local Use
+
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2b589dc0-4be7-43eb-bec0-abc5b2a0daea/unnamed.png)
 
 Docker Desktop
 

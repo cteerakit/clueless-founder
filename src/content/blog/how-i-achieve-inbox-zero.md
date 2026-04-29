@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 Everyone has an email. But not many of them know how to use it properly. I don’t have many opportunities to peek into other people’s phones. But when I did, I almost always saw 1,000+ unread email badges on their mail app icon.
 
 You need emails for almost everything online. People tend to only use it for signing up for online services, getting all junk mail piling up. And when there is one super important email that they are supposed to read, they have no idea where it is.
@@ -26,6 +25,8 @@ Inbox Zero aims to keep an inbox almost empty at all times. There are 5 steps ac
 
 ## 1. Archive
 
+![](https://miro.medium.com/v2/resize:fit:700/1*RotILfs9xU86HWKs44DBhw.png)
+
 Archive vs. Delete
 
 The first step is to remove unnecessary emails. You can either delete or archive emails you no longer need. Deleting an email will send it to trash box, which will later be deleted forever. Archiving an email will simply remove them from your inbox but still be searchable and available in your All Mail box.
@@ -37,6 +38,8 @@ If you have thousands of emails siting in your inbox right now, you can simply a
 I did this the first time to empty my inbox. Then I continue to check daily and archive emails I no longer need.
 
 ## 2. Unsubscribe
+
+![](https://miro.medium.com/v2/resize:fit:700/1*Cq1B4Y7rq6RairngA_Qq7g.png)
 
 Unsubscribe button
 
@@ -50,6 +53,8 @@ Now that you have an empty inbox, start unsubscribing from incoming marketing em
 
 ## 3. Filter
 
+![](https://miro.medium.com/v2/resize:fit:700/1*hH3fVLyxmkzbUmGhrCB1fw.png)
+
 Filter actions
 
 Some emails will still get to your inbox offering no way to unsubscribe. This may include transactional emails and automatic spam emails. If you keep archiving them, the platform will learn from your choice and will later put them in the spam box. You can also make this process faster by reporting it as spam.
@@ -58,11 +63,15 @@ However, the spam box acts the same as the trash box where emails here will be d
 
 You can create a filter in the ‘Settings > Filters and Blocked Addresses’ in Gmail and similar on other platforms. You can define the criteria to match emails and actions for them. You can also create filter from the mail itself by selecting ‘Filter messages like this’ menu at the top right.
 
+![](https://miro.medium.com/v2/resize:fit:700/1*jP2Rrn3NC22g41_Enx4W3g.png)
+
 Filter messages like this
 
 For example, I have a daily report from the banking system. I don’t read them but I want to be able to search for them whenever I need. I create a filter with a ‘From’ condition ‘@[mybank.com](https://mybank.com)’. Then assign it to ‘Skip the inbox’ and ‘Never mark it as Spam’. This way, all emails from the bank will go straight to the All Mail box.
 
 ## 4. @mention
+
+![](https://miro.medium.com/v2/resize:fit:700/1*dxPbI8y3swFHv3FZr6oXQg.png)
 
 @mention teammates
 
@@ -72,6 +81,8 @@ A better way to do is to reply with @mention. You can simply include people in t
 
 ## 5. Reply all
 
+![](https://miro.medium.com/v2/resize:fit:700/1*Tu9_6oagtFSOdZ6-8xdMEA.png)
+
 Default to Reply all
 
 When there are many people in the email thread, you can choose to ‘Reply’ or ‘Reply All’. If you choose Reply, only people in the From field will receive the mail, while Reply all will also include those in the Cc field.
@@ -80,6 +91,8 @@ Since the ‘Reply’ button is the default one, it is common to see people make
 
 ## 6. Snooze
 
+![](https://miro.medium.com/v2/resize:fit:700/1*GtuRf11G8rJ1m6kgH_Jc1Q.png)
+
 Email snooze
 
 There are some emails that you cannot reply to now but will be able to in the future date. Don’t leave them in your inbox. You can snooze them. Snooze will simply hide the email from your inbox and set it to be visible again at a later date and time.
@@ -87,6 +100,8 @@ There are some emails that you cannot reply to now but will be able to in the fu
 For example, if the management asks me for the monthly report but the report will be ready in the next 3 days. Instead of keeping that email, I will reply to let them know when they can expect this, then snooze the email. This way I have a clean inbox to work on and will receive this email again in the next 3 days, exactly when my report is ready.
 
 ## 7. Create task
+
+![](https://miro.medium.com/v2/resize:fit:700/1*e4S36WzRDD2hUAqDT1D-6g.png)
 
 Asana task import
 

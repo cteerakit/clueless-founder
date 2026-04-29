@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 When I was a kid, I always dreamed of building software that a lot of people enjoy using. I still do today. There is one problem, I don’t know how to code. And learning to code today takes time as modern software development becomes more complex.
 
 Back then when I was in high school, there was a computer class that taught basic web development. HTML and CSS (or Flash 😆) are enough to build a website. Now we have JavaScript, PHP, TypeScript, and a bunch of frameworks. Because of this No-code and Low-code tools (platforms that help you develop software with minimal or no coding) were born.
@@ -38,6 +37,8 @@ As I will be building a prototype, plus my inability to code, and laziness in de
 
 Building a directory with Pory is easy, and free to get started. It connects with Airtable natively. In only a few hours, I created a functional job board. ([https://telepath.pory.app/](https://telepath.pory.app/))
 
+![](https://miro.medium.com/v2/resize:fit:700/1*qDBvaZ_6MQ9lWicitKBJ4w.png)
+
 Job seeker platform
 
 After playing around with it, I found a few problems that come with Pory.
@@ -55,6 +56,8 @@ This part is unnecessary early as you can replace it with a simple Google Form. 
 
 For those reasons, I built the platform using [Glide](https://www.glideapps.com/) as a tool for recruiter to manage their job posts. Glide is perfect for this case. It is easy to build, connects with Airtable, beautifully designed. One downside is the platform you build will not get indexed, which is fine for this use case. ([https://telepath-recruiter.glide.page/](https://telepath-recruiter.glide.page/))
 
+![](https://miro.medium.com/v2/resize:fit:700/1*BMBVn0KamkOHfMoz-UweYg.png)
+
 Recruiter platform
 
 The experience is great so far. I will probably use this for a while until the product needs more complex features.
@@ -62,6 +65,8 @@ The experience is great so far. I will probably use this for a while until the p
 ## 3. Back-end for database
 
 I use [Airtable](https://airtable.com/) as a central database to collect job posts as both of the previous tools connect to it. The database will be small for a while, so I don’t need to worry too much about this.
+
+![](https://miro.medium.com/v2/resize:fit:700/1*8YyViq5g3O3qF62IbYVicA.png)
 
 Airtable Base
 

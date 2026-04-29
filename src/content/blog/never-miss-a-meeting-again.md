@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 As someone who juggles multiple projects and responsibilities, keeping track of meetings is difficult sometimes. So I look for a way to make sure I will always be aware of the upcoming meetings and hopefully never miss one again.
 
 ## The Problem: Calendar Notifications Aren’t Enough
@@ -18,7 +17,9 @@ Google Calendar and other scheduling tools have built-in notifications, but they
 
 ## Enter Buzzkill: A Smarter Way to Get Notified
 
-[Buzzkill](https://play.google.com/store/apps/details) is a notification filtering app that lets you create custom alerts based on specific triggers. Buzzkill can actually do a lot more, but we’ll focus on meeting notifications. 
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/761364f3-feb0-429b-96f2-db7d67c06db8/image.png)
+
+[Buzzkill](https://play.google.com/store/apps/details) is a notification filtering app that lets you create custom alerts based on specific triggers. Buzzkill can actually do a lot more, but we’ll focus on meeting notifications.
 
 Note that Buzzkill is only available on Android phones. If you are an iPhone user, you may want to explore the Shortcut app.
 

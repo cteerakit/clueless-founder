@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 I recently shut down Friday Digital, a digital agency I started 7 years ago. I love this company and the people. They’re like children to me and it’s sad to see them go. But the show must go on. All I can do now is realize my mistakes and move on.
 
 # Why I made the call

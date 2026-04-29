@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 Okay, real talk. Online security is a huge deal. I mean, I didn’t always think so. But then one day, I saw someone get hacked, and it was an absolute disaster. Imagine waking up, trying to log into Facebook, and boom… account gone. Most people would just be like, “Eh, I’ll make a new one.”
 
 But if you run a business online, losing your account is like watching your entire operation go up in flames. That Facebook account? It’s connected to business pages, community groups, ad accounts, tracking pixels, and all sorts of important things. If it gets hacked, you’re basically screwed.

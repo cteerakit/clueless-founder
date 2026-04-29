@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 For the past few weeks, I have dived deep into something called vibe coding. As a no-coder, my curiosity was through the roof. Could I truly leverage AI to build products without writing a single line of code? What did this even mean for someone like me?
 
 Today, I am pulling back the curtain to share what I found: the good, the bad, and the truly eye-opening lessons.
@@ -22,6 +21,8 @@ Since I can only code in basic HTML and CSS, this was a massive draw. My goal wa
 
 ## My Tool of Choice: Lovable
 
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/beff3c18-2c61-4b21-bbc7-b855a34568b4/image.png)
+
 The market is buzzing with "vibe coding" tools right now. As a no-coder, I needed something genuinely accessible. I chose Lovable. It promised a low technical barrier, perfect for someone who just wants to build without getting tangled in code.
 
 To put Lovable to the test, I brainstormed a few product ideas, mostly tools I wished existed. Then I simply prompted Lovable to bring them to life.
@@ -31,6 +32,8 @@ To put Lovable to the test, I brainstormed a few product ideas, mostly tools I w
 My first attempt involved a simple day planning tool. While I am a Todoist user, I wondered if I could create something straightforward for others. Many task managers are too complex, do not support Thai language, and most people simply need an easy way to manage tasks, share them, and keep track of their plate.
 
 I started with a super simple prompt: "Create a task management tool." Lovable responded quickly, generating a UI, a Kanban board, and task adding functionality. Sounds great, right? Not quite.
+
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/78adb4dd-cf9c-41c2-a887-268bf08fe42e/image.png)
 
 The first major hurdle hit immediately: data persistence. My tasks vanished every time I refreshed the page, meaning data was not being saved. Thankfully, Lovable integrates smoothly with Supabase, a PostgreSQL database. Linking my project to Supabase solved this. Now, tasks saved to the app were stored in the database and reappeared on refresh.
 

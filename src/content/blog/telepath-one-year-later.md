@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 It has been nearly a year since I launched Telepath, a job board website designed for remote workers in Thailand. This feels like the right moment to reflect on the journey so far, share achievements, acknowledge challenges, and outline future goals.
 
 Telepath was launched to the public in February 2024. In the beginning, it was a side project with minimal investment and no revenue. Realizing its potential, I sought funding to scale operations. Today, Telepath is a registered company, supported by DEPA (Digital Economy Promotion Agency).
@@ -27,12 +26,10 @@ Here’s what Telepath has accomplished over the past year:
 44,404 community members
 
 ## Challenges
-
 Profitability: Telepath is not yet profitable. The silver lining is that the platform’s maintenance requirements are minimal.
 Growth Strategy: To conserve resources, we rely on organic growth, which demands consistent effort and patience.
 
 ## Lessons Learned
-
 Data Collection is Crucial: In the early days, I chose not to require user registration for job applications, prioritizing user experience. This decision led to a significant loss of valuable data. Moving forward, data collection will be a priority.
 Start Social Media Early: While I successfully grew a Facebook group, I overlooked other platforms such as Instagram, YouTube, and TikTok. Building a social media presence takes time, so it’s best to start as early as possible.
 

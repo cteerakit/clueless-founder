@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 Hey everyone! It’s been about two years since I started my Facebook group journey. Back then, when I was launching [Telepath](https://telepath.work/) (a remote job platform), I was brainstorming ways to bring traffic to the website. One of my big ideas? Facebook groups.
 
 I realized something pretty quickly. There were almost no communities focused on remote work in Thailand. So, I decided to start one.
@@ -77,11 +76,7 @@ And remember, I haven't spent any money on ads for this. Aside from hiring an as
 So, if you’re thinking about starting a group: start in a niche, invite your friends, keep it active, and be patient. It works.
 
 P.S. Here are a few of my communities.
-
-- [https://www.facebook.com/groups/wfhpeople/](https://www.facebook.com/groups/wfhpeople/)
-
-- [https://www.facebook.com/groups/designerjobsth/](https://www.facebook.com/groups/designerjobsth/)
-
-- [https://www.facebook.com/groups/marketingjobsth/](https://www.facebook.com/groups/marketingjobsth/)
-
-- [https://www.facebook.com/groups/managementjobsth/](https://www.facebook.com/groups/managementjobsth/)
+[https://www.facebook.com/groups/wfhpeople/](https://www.facebook.com/groups/wfhpeople/)
+[https://www.facebook.com/groups/designerjobsth/](https://www.facebook.com/groups/designerjobsth/)
+[https://www.facebook.com/groups/marketingjobsth/](https://www.facebook.com/groups/marketingjobsth/)
+[https://www.facebook.com/groups/managementjobsth/](https://www.facebook.com/groups/managementjobsth/)

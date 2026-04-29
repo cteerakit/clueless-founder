@@ -37,8 +37,8 @@ const postingLd =
         datePublished: post.data.pubDate.toISOString(),
         dateModified: (modifiedDate ?? post.data.pubDate).toISOString(),
         author: {
-          '@type': 'Organization',
-          name: 'Clueless Founder',
+          '@type': 'Person',
+          name: post.data.author,
         },
         publisher: {
           '@type': 'Organization',

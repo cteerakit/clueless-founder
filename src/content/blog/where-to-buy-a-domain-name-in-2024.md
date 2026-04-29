@@ -9,8 +9,9 @@ newsletter: true
 draft: false
 ---
 
-
 I had been a [Google Domains](https://domains.google/) customer for years, keeping all domain names for clients and mine. It was probably the best registrar at the time. It was cheap and easy to use. Until this happened…
+
+![](https://miro.medium.com/v2/resize:fit:700/1*Enl4MzRofsjdrwT9lo2MDA.png)
 
 [domains.google](https://domains.google)
 
@@ -23,6 +24,8 @@ Fast forward to 2024, if I want to register a new domain name, let’s see how I
 # Check domain availability
 
 First, you need to check whether the name you want is available. [Namecheap Beast Mode](https://www.namecheap.com/domains/registration/results/) is the easiest way to discover available domain names.
+
+![](https://miro.medium.com/v2/resize:fit:700/1*dPMv58_Iqj3sR1eGe7hYrA.png)
 
 Namecheap Beast Mode
 
@@ -51,6 +54,8 @@ Choosing a registrar will be different for each based on your priorities. Here a
 
 ## Cloudflare
 
+![](https://miro.medium.com/v2/resize:fit:700/1*MOhB8QcqvQZN8bUKm9UHow.png)
+
 Cloudflare Registrar
 
 [Cloudflare](https://www.cloudflare.com/products/registrar/) is my registrar of choice this year. The price is the cheapest in the market as they don’t charge an additional fee ($9.15/y for a .com domain). Additionally, I use their DNS and CDN for all my websites. So it’s an easy choice for me.
@@ -61,6 +66,8 @@ Another is you can’t change the nameserver, basically forcing you to use Cloud
 
 ## Spaceship
 
+![](https://miro.medium.com/v2/resize:fit:700/1*43PcXBuhHoPAHksi7Jjmxg.png)
+
 [spaceship.com](https://spaceship.com)
 
 Spaceship is a new guy in town (It’s owned by Namecheap) with the second-best price ($9.30/y). They arguably have the best user interface among the three.
@@ -68,6 +75,8 @@ Spaceship is a new guy in town (It’s owned by Namecheap) with the second-best 
 The reason I don’t use it is that it is so new that I’m not too sure about how the platform will evolve into.
 
 ## Porkbun
+
+![](https://miro.medium.com/v2/resize:fit:700/1*veJ7PCqeFUePjoXNRg723g.png)
 
 [porkbun.com](https://porkbun.com)
 

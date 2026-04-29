@@ -39,27 +39,29 @@ const excerpt = post.data.excerpt ?? post.data.description;
   />
 
   <article
-    class="prose prose-neutral max-w-none dark:prose-invert
-      prose-headings:font-serif prose-headings:text-neutral-900 dark:prose-headings:text-neutral-100
-      prose-h2:text-[1.9rem] prose-h2:leading-tight
-      prose-h3:text-[1.55rem] prose-h3:leading-tight
-      prose-h4:text-[1.25rem] prose-h4:leading-snug
-      prose-p:font-sans prose-p:text-[18px] prose-p:leading-relaxed prose-p:text-neutral-700 dark:prose-p:text-neutral-300
-      prose-li:font-sans prose-li:text-[18px] prose-li:leading-relaxed prose-li:text-neutral-700 dark:prose-li:text-neutral-300
+    class="prose prose-base md:prose-lg prose-neutral max-w-none dark:prose-invert
+      prose-headings:text-neutral-900 dark:prose-headings:text-neutral-100
+      prose-h2:mt-12 prose-h2:text-2xl prose-h2:font-normal prose-h2:leading-tight md:prose-h2:text-4xl
+      prose-h3:mt-10 prose-h3:text-xl prose-h3:font-normal prose-h3:leading-tight md:prose-h3:text-3xl
+      prose-h4:mt-8 prose-h4:text-lg prose-h4:font-normal prose-h4:leading-snug md:prose-h4:text-2xl
+      prose-p:text-base prose-p:font-normal prose-p:leading-8 prose-p:text-neutral-700 md:prose-p:text-lg dark:prose-p:text-neutral-300
+      prose-li:text-base prose-li:font-normal prose-li:leading-8 prose-li:text-neutral-700 md:prose-li:text-lg dark:prose-li:text-neutral-300
       prose-strong:font-semibold prose-strong:text-[var(--text)]
       prose-a:font-medium
-      prose-code:font-sans prose-code:text-[0.95em] prose-code:font-medium
+      prose-code:text-[0.95em] prose-code:font-medium
       prose-pre:text-[0.95em]
       prose-blockquote:border-l-2 prose-blockquote:border-black dark:prose-blockquote:border-neutral-200
-      prose-blockquote:font-serif prose-blockquote:text-[1.08em] prose-blockquote:italic prose-blockquote:quotes-none
+      prose-blockquote:text-[1.08em] prose-blockquote:italic prose-blockquote:quotes-none
       prose-img:w-full prose-img:rounded-[var(--radius-ui)]
-      prose-figcaption:text-sm prose-figcaption:font-sans prose-figcaption:text-neutral-400 dark:prose-figcaption:text-neutral-500"
+      prose-figcaption:text-sm prose-figcaption:text-neutral-400 dark:prose-figcaption:text-neutral-500"
   >
     <header class="not-prose mb-12">
-      <p class="font-sans text-xs uppercase tracking-wider text-[var(--muted)]">{post.data.category}</p>
-      <h1 class="mt-3 font-serif text-4xl text-[var(--text)]">{post.data.title}</h1>
-      <p class="mt-4 max-w-2xl font-sans text-base leading-relaxed text-[var(--muted)]">{excerpt}</p>
-      <div class="mt-4 flex items-center gap-1 font-sans text-sm text-[var(--muted)]">
+      <p class="text-xs uppercase tracking-wider text-[var(--muted)]">{post.data.category}</p>
+      <h1 class="mt-3 text-3xl font-normal leading-tight text-[var(--text)] md:text-5xl">{post.data.title}</h1>
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">{excerpt}</p>
+      <div class="mt-4 flex flex-wrap items-center gap-x-1 gap-y-1 font-sans text-sm text-[var(--muted)]">
+        <span>{post.data.author}</span>
+        <span aria-hidden="true">•</span>
         <time datetime={post.data.pubDate.toISOString()}>
           {
             post.data.pubDate.toLocaleDateString('en-US', {
@@ -89,15 +91,15 @@ const excerpt = post.data.excerpt ?? post.data.description;
 
   <section class="not-prose mt-8">
     <div class="rounded-[var(--radius-ui)] border border-[var(--line)] bg-[var(--hover)] p-8">
-      <p class="font-sans text-xs uppercase tracking-wider text-[var(--muted)]">Keep in touch</p>
-      <h2 class="mt-3 font-serif text-3xl text-[var(--text)]">Get practical founder notes weekly.</h2>
-      <p class="mt-3 max-w-2xl font-sans text-base text-[var(--muted)]">
+      <p class="text-xs uppercase tracking-wider text-[var(--muted)]">Keep in touch</p>
+      <h2 class="mt-3 text-3xl text-[var(--text)]">Get practical founder notes weekly.</h2>
+      <p class="mt-3 max-w-2xl text-base text-[var(--muted)]">
         Real lessons from shipping products, pricing experiments, and honest postmortems.
       </p>
       <button
         type="button"
         data-newsletter-open
-        class="mt-6 inline-flex items-center rounded-[var(--radius-ui)] bg-[var(--text)] px-6 py-3 font-sans text-xs font-medium uppercase tracking-[0.2em] text-[var(--bg)] transition-opacity hover:opacity-90"
+        class="mt-6 inline-flex items-center rounded-[var(--radius-ui)] bg-[var(--text)] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--bg)] transition-opacity hover:opacity-90"
       >
         Join the newsletter
       </button>
@@ -107,7 +109,7 @@ const excerpt = post.data.excerpt ?? post.data.description;
   {
     continueReadingPosts.length > 0 && (
       <section class="not-prose mt-8">
-        <p class="font-sans text-xs uppercase tracking-wider text-[var(--muted)]">Continue reading</p>
+        <p class="text-xs uppercase tracking-wider text-[var(--muted)]">Continue reading</p>
         <ul class="mt-4 divide-y divide-[var(--line)]">
           {continueReadingPosts.map((entry) => <BlogListItem post={entry} />)}
         </ul>

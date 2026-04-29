@@ -9,10 +9,11 @@ newsletter: true
 draft: false
 ---
 
-
 I recently registered a new company. To continue doing any kind of financial activity, I need a bank account. So I’ve tried opening accounts with 3 banks: SCB, KTB, and KBank. Let’s go through each of them.
 
 ## SCB (Siam Commercial Bank)
+
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cf7c75c4-cf72-4287-ac1c-204fccac3cf6/scb.png)
 
 SCB
 
@@ -32,6 +33,8 @@ For those reasons, despite having great experience with them, I’m unable to co
 
 ## KTB (Krungthai Bank)
 
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/04be2740-c972-40b1-aa45-4d2faf989b52/ktb.png)
+
 KTB
 
 KTB was my next attempt. This one is required for me as I need an account for the Digital Startup program. You can open an account with them regardless of the company's age and registered address, which is cool!
@@ -47,6 +50,8 @@ This makes no sense in my case as a sole owner. It’s kinda ridiculous that I n
 One last thing, you need 500 THB, in cash only. So I must walk to the ATM and withdraw a single 500 note.
 
 ## KBank (Kasikorn Bank)
+
+![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b87ddb68-6a69-4994-ac7d-9dd2bea45c36/kbank.png)
 
 KBANK
 

@@ -9,7 +9,6 @@ newsletter: true
 draft: false
 ---
 
-
 I’ve designed multiple logos throughout my career. Actually, it began way before that. My first logo was a room logo to be used on the yearbook. After that, I designed quite a few e.g. class projects, a dormitory forum, and some of my early business ideas. They were all pretty bad when I look back now. But back then, they were gorgeous✨.
 
 Each time I created a new logo, I would try new techniques, tools, and processes as I saw the flaws of the current one. So I keep learning and adjusting the process over time. Today, I want to share my current process of designing a logo I use for my latest business, Telepath.
@@ -21,6 +20,8 @@ Warning, I’m an indie maker, not a professional designer. I don’t want to sp
 If you want to follow along, I assume you already have a name for your brand, with some meaning behind it as a starting point. Now it’s time to look for inspiration.
 
 There are multiple ways to gather inspiration. What I usually do is search for the name on [Google Images](https://images.google.com/) and append the design keywords I prefer. For example, I may try searching for, “Telepath icon”, Telepath symbol”, “Telepath flat”, “Telepath material”, etc. This helps me solidify the name into shapes or symbols.
+
+![](https://miro.medium.com/v2/resize:fit:700/0*6LEFJbxnsDBb6-nb)
 
 Google Images
 
@@ -36,11 +37,15 @@ After gathering inspiration, it is time to start drawing. The easiest way is to 
 
 What do I mean when they start to repeat? It means when you draw the same or very similar sketch twice. Now highlight those repeating sketches and pick a few more you like. At this point, you may have drawn 10–20 sketches. You have to pick only 4–5 of them.
 
+![](https://miro.medium.com/v2/resize:fit:700/0*oN3aG-bhUzPtFQ0O)
+
 Logo sketches
 
 # Design tool
 
 In the past, the first design tool I learned was Adobe Photoshop (I don’t count Paint🤣). Because it was the only tool I knew at the time, I used it for everything. While it is doable, other tools can be far better and easier for different purposes. Going into that, we need to understand the differences between Bitmap and Vector.
+
+![](https://miro.medium.com/v2/resize:fit:600/0*hKWuR-dVjdT-2zd-)
 
 Source: [https://www.stickeryou.com/blog/post/vector-vs-bitmap](https://www.stickeryou.com/blog/post/vector-vs-bitmap)
 
@@ -50,9 +55,13 @@ Vector images (EPS, PDF, SVG files), on the other hand, are made up of lines, cu
 
 So, what tool do I use for logo design today? [Figma](https://www.figma.com/) is my design tool of choice. It is primarily used for UX design and is not as powerful as Adobe Illustrator. But it is very easy to learn, works on the web, and is free to use. (I use ChromeOS at work, so can’t use any of Abobe’s software anyway🥲)
 
+![](https://miro.medium.com/v2/resize:fit:700/0*JRY1NUT4vcLiligO)
+
 Figma
 
 # Logomark
+
+![](https://miro.medium.com/v2/resize:fit:700/0*H9WG8y220p3iZOuv)
 
 Logomark and logotype
 
@@ -66,11 +75,15 @@ Choosing the font is one of the most time-consuming for many designers, but not 
 
 Keep in mind that the logo font doesn’t have to be the same as the font you use for other stuff. So you can pretty much pick whatever you like. For example, I use Plus Jakarta Sans for the logotype, Noto Sans for headlines, and Noto Serif for body texts.
 
+![](https://miro.medium.com/v2/resize:fit:700/0*zHekO3Xkt-0LLqaK)
+
 Google Fonts
 
 Once the font is selected, you need to choose the case: UPPERCASE, lowercase, or Title Case. There is no right or wrong but I prefer the title case. I think using uppercase and lowercase might be cool for you, but difficult for everyone else.
 
 Let’s give Facebook as an example. Should I write facebook? (the consumer logo) or FACEBOOK? (the enterprise logo) or Facebook? (what Facebook wants us to write). See? It is confusing. (It is now Meta, thank god🤣)
+
+![](https://miro.medium.com/v2/resize:fit:700/0*4wI_V4Ie5f21qXn5)
 
 Facebook logos
 
@@ -82,6 +95,8 @@ At this point, you should have a few pairs of logomarks and logotypes. Take a sc
 
 For example, one of your friends may spot that one of your logos is too similar to a well-known brand in the market. Or one of your logomarks can be misleading or inappropriate to a certain group of people. What is left is for you to make the final decision.
 
+![](https://miro.medium.com/v2/resize:fit:700/0*9GwbTnN1pvWuV6EH)
+
 Final logo design
 
 # Color
@@ -92,9 +107,13 @@ So instead of learning the color theory, it is much easier to just copy from a s
 
 For this project, I use [UntitledUI](https://www.untitledui.com/). Another good thing about using this is they already account for the contrast ratios, so I know when to pair it with white or dark text color.
 
+![](https://miro.medium.com/v2/resize:fit:700/0*T82H04s4oZHB8nO7)
+
 Color palettes
 
 Generally, you will need one or two brand palettes (I prefer only one) plus one gray palette. These palettes will be used throughout your future designs. Usually, I use shade 600–700 of the brand color for the logomark and pair it with shade 900 of gray for the logotype. But for this project specifically, I would like to try gradient.
+
+![](https://miro.medium.com/v2/resize:fit:700/0*pdUdsZSPCLy2sZls)
 
 Logo colors
 
@@ -102,13 +121,19 @@ Logo colors
 
 We’re not done yet? Hell no! We only have one version of our logo, the default version. In this step, we need to expand our logo into different variations including light, dark, white, black, brand, and gray.
 
+![](https://miro.medium.com/v2/resize:fit:700/0*uUApq7ZhkCEYZF57)
+
 Logo variations
 
 There are also situations we need our logo with the background, so pair them with different background colors too. We also need our logo as icons, sometimes pre-cropped in circles.
 
+![](https://miro.medium.com/v2/resize:fit:700/0*J3LkelEWzWYV_01o)
+
 Logo with background combinations
 
 When pairing the logo with the background, you will need to leave some padding (space between the edges and the logo). While you can set this distance in pixels, it is best practice to use the existing element in the logo itself as a guide.
+
+![](https://miro.medium.com/v2/resize:fit:700/0*P7-jDgK0Qd02MU7Q)
 
 Logo padding with background
 
@@ -130,6 +155,8 @@ SVGs are Scalable Vector Graphics or vector files. It has no size and can scale 
 
 Why not use PNG on the website?
 
+![](https://miro.medium.com/v2/resize:fit:700/0*naGmIAXAz6sorFsv)
+
 Logo placement on the website
 
 PNG is a bitmap and not scalable. But your website is (or should be) responsive and scale to any device. Too large images will be slow to load which is bad for SEO. Too small images are blurry and bad for user experience. Unless you have a system to auto-resize images to fit exactly every screen of your users, you will end up serving too large or too small images.
@@ -141,6 +168,8 @@ This doesn’t apply to SVG as it scales to fit any screen size. So instead of s
 As you have a lot of variations, it is best to set some kind of naming convention so that it is easier to find. Then keep them in folders somewhere that is easy to share.
 
 I uploaded all my logos to Google Drive and set the folder to public. The next time I need someone to take care of my design, I can just attach the link to all of my logos.
+
+![](https://miro.medium.com/v2/resize:fit:700/0*CNAZzDKIZvYyAjTQ)
 
 Store logos on Google Drive
 
