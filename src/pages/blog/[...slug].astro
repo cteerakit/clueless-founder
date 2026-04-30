@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -31,6 +31,7 @@ const coverMedium = coverImage?.replace('.webp', '-w896.webp');
 const coverLarge = coverImage?.replace('.webp', '-w1120.webp');
 const categorySlug = slugifySegment(post.data.category);
 const tags = post.data.tags ?? [];
+const tocHeadings = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
 ---
 
 <BaseLayout showDefaultSeo={false}>
@@ -65,6 +66,36 @@ const tags = post.data.tags ?? [];
     ></div>
   </div>
 
+  {
+    tocHeadings.length > 0 && (
+      <aside
+        class="not-prose fixed top-28 left-[calc(50%+27rem)] hidden w-56 2xl:block"
+        aria-label="Table of contents"
+      >
+        <p class="font-sans text-[0.65rem] uppercase tracking-[0.2em] text-[var(--muted)]">On this page</p>
+        <nav class="mt-4 max-h-[calc(100vh-8rem)] overflow-y-auto">
+          <ol class="space-y-2">
+            {tocHeadings.map((heading) => (
+              <li>
+                <a
+                  href={`#${heading.slug}`}
+                  data-toc-link
+                  data-depth={heading.depth}
+                  class:list={[
+                    'block border-l border-transparent pl-3 font-sans text-sm text-[var(--muted)] transition-colors',
+                    heading.depth === 3 && 'pl-6 text-xs',
+                    'hover:text-[var(--text)]',
+                  ]}
+                >
+                  {heading.text}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      </aside>
+    )
+  }
   <article
     class="prose prose-base md:prose-lg prose-neutral max-w-none dark:prose-invert
       prose-headings:text-neutral-900 dark:prose-headings:text-neutral-100
@@ -202,10 +233,72 @@ const tags = post.data.tags ?? [];
         }
       });
     };
+    const setupTableOfContents = () => {
+      const tocLinks = Array.from(document.querySelectorAll('[data-toc-link]'));
+      if (!tocLinks.length) return;
+      if (window.__tocAbortController) {
+        window.__tocAbortController.abort();
+      }
+      const controller = new AbortController();
+      window.__tocAbortController = controller;
+
+      const sections = tocLinks
+        .map((link) => {
+          const id = link.getAttribute('href')?.replace('#', '');
+          if (!id) return null;
+          const heading = document.getElementById(id);
+          return heading ? { link, heading } : null;
+        })
+        .filter(Boolean);
+      if (!sections.length) return;
+
+      const setActiveLink = (id) => {
+        sections.forEach(({ link, heading }) => {
+          const isActive = heading.id === id;
+          link.classList.toggle('text-[var(--text)]', isActive);
+          link.classList.toggle('border-[var(--text)]', isActive);
+          link.classList.toggle('font-medium', isActive);
+        });
+      };
+
+      const onLinkClick = (event) => {
+        const anchor = event.currentTarget;
+        const id = anchor.getAttribute('href')?.replace('#', '');
+        if (!id) return;
+        const heading = document.getElementById(id);
+        if (!heading) return;
+        event.preventDefault();
+        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', `#${id}`);
+      };
+      sections.forEach(({ link }) => {
+        link.addEventListener('click', onLinkClick, { signal: controller.signal });
+      });
+
+      let activeId = sections[0].heading.id;
+      setActiveLink(activeId);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visibleHeadings = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => a.target.offsetTop - b.target.offsetTop);
+          if (visibleHeadings.length > 0) {
+            activeId = visibleHeadings[0].target.id;
+            setActiveLink(activeId);
+          }
+        },
+        { rootMargin: '0px 0px -70% 0px', threshold: 0.1 }
+      );
+
+      sections.forEach(({ heading }) => observer.observe(heading));
+      controller.signal.addEventListener('abort', () => observer.disconnect(), { once: true });
+    };
     setupReadingProgress();
     applyIntrinsicSize();
+    setupTableOfContents();
     document.addEventListener('astro:page-load', setupReadingProgress);
     document.addEventListener('astro:page-load', applyIntrinsicSize);
+    document.addEventListener('astro:page-load', setupTableOfContents);
   </script>
 
   <section class="not-prose mt-8">
