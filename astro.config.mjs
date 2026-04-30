@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import rehypeResponsiveImages from './src/utils/rehypeResponsiveImages.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -37,6 +38,9 @@ export default defineConfig({
   },
   build: {
     inlineStylesheets: 'always',
+  },
+  markdown: {
+    rehypePlugins: [rehypeResponsiveImages],
   },
 
   vite: {
