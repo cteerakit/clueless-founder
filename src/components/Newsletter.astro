@@ -60,6 +60,7 @@
         />
       </label>
       <button
+        id="newsletter-submit"
         type="submit"
         class="h-12 shrink-0 rounded-[var(--radius-ui)] bg-[var(--text)] px-8 text-xs font-medium uppercase tracking-[0.2em] text-[var(--bg)] transition-opacity hover:opacity-90 sm:min-w-[180px]"
       >
@@ -114,12 +115,26 @@
   const NEWSLETTER_SETUP_FLAG = '__newsletterModalSetupDone';
   const NEWSLETTER_ANIMATION_MS = 220;
   let closeTimer: number | undefined;
+  let lastTrigger: HTMLElement | null = null;
 
   const getModal = () => document.getElementById('newsletter-modal');
   const getForm = () => document.getElementById('newsletter-form') as HTMLFormElement | null;
   const getEmailInput = () => document.getElementById('newsletter-email') as HTMLInputElement | null;
   const getSuccessEl = () => document.getElementById('newsletter-success');
   const getErrorEl = () => document.getElementById('newsletter-error');
+  const getSubmitButton = () => document.getElementById('newsletter-submit') as HTMLButtonElement | null;
+  const setSubmitting = (submitting: boolean) => {
+    const form = getForm();
+    const emailInput = getEmailInput();
+    const submitButton = getSubmitButton();
+    if (!form || !emailInput || !submitButton) return;
+    form.setAttribute('aria-busy', submitting ? 'true' : 'false');
+    emailInput.disabled = submitting;
+    submitButton.disabled = submitting;
+    submitButton.classList.toggle('opacity-70', submitting);
+    submitButton.classList.toggle('cursor-not-allowed', submitting);
+    submitButton.textContent = submitting ? 'Subscribing...' : 'Subscribe';
+  };
 
   const setOpen = (open: boolean) => {
     const modal = getModal();
@@ -145,15 +160,18 @@
     closeTimer = window.setTimeout(() => {
       modal.classList.add('hidden');
       modal.classList.remove('flex');
+      lastTrigger?.focus();
     }, NEWSLETTER_ANIMATION_MS);
   };
 
-  const openNewsletterModal = () => {
+  const openNewsletterModal = (trigger: HTMLElement | null = null) => {
+    lastTrigger = trigger;
     const form = getForm();
     const successEl = getSuccessEl();
     const errorEl = getErrorEl();
     form?.classList.remove('hidden');
     form?.reset();
+    setSubmitting(false);
     successEl?.classList.add('hidden');
     errorEl?.classList.add('hidden');
     setOpen(true);
@@ -164,7 +182,7 @@
     const trigger = target?.closest?.(MODAL_OPEN_SELECTOR);
     if (!trigger) return;
     event.preventDefault();
-    openNewsletterModal();
+    openNewsletterModal(trigger as HTMLElement);
   };
 
   if (!(window as Window & { [NEWSLETTER_SETUP_FLAG]?: boolean })[NEWSLETTER_SETUP_FLAG]) {
@@ -198,31 +216,41 @@
         return;
       }
 
-      const fd = new FormData(form);
-      const email = fd.get('email');
-      const payload = { email: typeof email === 'string' ? email : '' };
+      setSubmitting(true);
+      try {
+        const fd = new FormData(form);
+        const email = fd.get('email');
+        const payload = { email: typeof email === 'string' ? email : '' };
 
-      const response = await fetch(newsletterEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      const result = (await response.json().catch(() => ({}))) as {
-        ok?: boolean;
-        error?: string;
-      };
+        const response = await fetch(newsletterEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const result = (await response.json().catch(() => ({}))) as {
+          ok?: boolean;
+          error?: string;
+        };
 
-      if (!response.ok || !result.ok) {
-        const msg = result.error ?? 'Could not subscribe. Try again later.';
+        if (!response.ok || !result.ok) {
+          const msg = result.error ?? 'Could not subscribe. Try again later.';
+          if (errorEl) {
+            errorEl.textContent = msg;
+            errorEl.classList.remove('hidden');
+          }
+          return;
+        }
+
+        form.classList.add('hidden');
+        successEl?.classList.remove('hidden');
+      } catch {
         if (errorEl) {
-          errorEl.textContent = msg;
+          errorEl.textContent = 'Network error. Please try again.';
           errorEl.classList.remove('hidden');
         }
-        return;
+      } finally {
+        setSubmitting(false);
       }
-
-      form.classList.add('hidden');
-      successEl?.classList.remove('hidden');
     });
   }
 </script>

@@ -15,11 +15,11 @@ const INITIAL_POSTS = 10;
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} canonicalPath="/">
   <section class="border-b border-[var(--line)] pb-16 text-center">
-    <h1 class="font-serif text-6xl leading-tight text-[var(--text)]">{SITE_TITLE}</h1>
-    <p class="mx-auto mt-6 max-w-xl text-lg text-[var(--muted)]">{SITE_DESCRIPTION}</p>
+    <h1 class="font-serif text-4xl leading-tight text-[var(--text)] md:text-6xl">{SITE_TITLE}</h1>
+    <p class="mx-auto mt-6 max-w-lg text-base text-[var(--muted)] md:max-w-xl md:text-lg">{SITE_DESCRIPTION}</p>
   </section>
 
-  <ul class="divide-y divide-[var(--line)]">
+  <ul id="post-feed" class="divide-y divide-[var(--line)]">
     {
       posts.map((post, index) => (
         <BlogListItem
@@ -34,10 +34,13 @@ const INITIAL_POSTS = 10;
     <button
       id="load-more-posts"
       type="button"
+      aria-controls="post-feed"
+      aria-describedby="feed-status"
       class="font-sans rounded-[var(--radius-ui)] border border-[var(--line)] px-4 py-2 text-sm font-medium text-[var(--text)] transition-colors hover:bg-[var(--hover)]"
     >
       Load more posts
     </button>
+    <p id="feed-status" class="sr-only" aria-live="polite"></p>
   </div>
   <noscript>
     <style>
@@ -49,8 +52,25 @@ const INITIAL_POSTS = 10;
     const setupLoadMorePosts = () => {
       const hiddenItems = Array.from(document.querySelectorAll("[data-infinite-item='true']"));
       const loadMoreButton = document.getElementById('load-more-posts');
+      const feedStatus = document.getElementById('feed-status');
       const BATCH_SIZE = 5;
       let index = 0;
+      const totalHidden = hiddenItems.length;
+
+      const updateStatus = (message) => {
+        if (!feedStatus) return;
+        feedStatus.textContent = message;
+      };
+
+      const updateButtonLabel = () => {
+        if (!loadMoreButton) return;
+        const remaining = Math.max(totalHidden - index, 0);
+        if (remaining > 0) {
+          loadMoreButton.textContent = `Load more posts (${remaining} remaining)`;
+        } else {
+          loadMoreButton.textContent = 'No more posts';
+        }
+      };
 
       const revealNextBatch = () => {
         const batch = hiddenItems.slice(index, index + BATCH_SIZE);
@@ -60,6 +80,13 @@ const INITIAL_POSTS = 10;
           item.removeAttribute('data-infinite-item');
         });
         index += batch.length;
+        const remaining = Math.max(totalHidden - index, 0);
+        updateStatus(
+          remaining > 0
+            ? `Loaded ${batch.length} more posts. ${remaining} posts remaining.`
+            : `Loaded ${batch.length} more posts. You reached the end of the feed.`
+        );
+        updateButtonLabel();
         if (index >= hiddenItems.length && loadMoreButton) {
           const controls = document.getElementById('feed-controls');
           if (controls) {
@@ -72,8 +99,11 @@ const INITIAL_POSTS = 10;
       };
 
       if (!hiddenItems.length) {
+        updateStatus('All posts are already visible.');
         loadMoreButton?.remove();
       } else if (loadMoreButton) {
+        updateButtonLabel();
+        updateStatus(`${totalHidden} posts are hidden. Use the button to load more posts.`);
         loadMoreButton.addEventListener('click', revealNextBatch, { once: false });
       }
     };

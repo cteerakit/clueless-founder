@@ -250,6 +250,41 @@ select {
   font-family: var(--font-sans);
 }
 
+/* Global keyboard focus styles for all interactive controls. */
+:where(
+    a[href],
+    button,
+    [role='button'],
+    input,
+    textarea,
+    select,
+    summary,
+    [tabindex]:not([tabindex='-1'])
+  ):focus {
+  outline: none;
+}
+
+:where(
+    a[href],
+    button,
+    [role='button'],
+    input,
+    textarea,
+    select,
+    summary,
+    [tabindex]:not([tabindex='-1'])
+  ):focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+/* Extra clarity for text links when keyboard tabbing. */
+a[href]:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 2px;
+}
+
 /* Mobile tap feedback for links. */
 @media (hover: none) and (pointer: coarse) {
   a[href] {
