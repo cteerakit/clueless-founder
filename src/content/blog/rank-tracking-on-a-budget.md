@@ -1,7 +1,7 @@
 ---
 title: "Rank Tracking on a Budget"
-description: "Here's the deal: I'm building Telepath, my remote job board. Traffic's going up, and I'm trying to figure out what keywords are working and how visible we ar..."
-excerpt: "Here's the deal: I'm building Telepath, my remote job board. Traffic's going up, and I'm trying to figure out what keywords are working and how visible we ar..."
+description: "I compare budget-friendly rank tracking options and show how to combine Search Console, Looker Studio, and self-hosted tools when premium SEO suites are costly."
+excerpt: "I compare budget-friendly rank tracking options and show how to combine Search Console, Looker Studio, and self-hosted tools when premium SEO suites are costly."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/d45201d8-36b7-4428-8fdc-e594179b4915/Cover.png"
 pubDate: 2025-05-02
 category: "Notes"

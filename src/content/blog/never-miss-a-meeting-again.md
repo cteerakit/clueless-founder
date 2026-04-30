@@ -1,7 +1,7 @@
 ---
 title: "Never miss a meeting again"
-description: "As someone who juggles multiple projects and responsibilities, keeping track of meetings is difficult sometimes. So I look for a way to make sure I will alwa..."
-excerpt: "As someone who juggles multiple projects and responsibilities, keeping track of meetings is difficult sometimes. So I look for a way to make sure I will alwa..."
+description: "I show how I use Buzzkill with Google Calendar to create loud, persistent meeting alerts on Android that cut through distractions and prevent missed meetings."
+excerpt: "I show how I use Buzzkill with Google Calendar to create loud, persistent meeting alerts on Android that cut through distractions and prevent missed meetings."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c16b9777-7a80-47d0-a148-cccaccf52e3a/336shots_so.png"
 pubDate: 2025-03-02
 category: "Notes"

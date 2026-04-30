@@ -1,7 +1,7 @@
 ---
 title: "Do You Still Read Books in 2025?"
-description: "Hey everyone! With the internet, podcasts, and a million short videos competing for your attention, you might be wondering, \"Do you still read books in 2025?..."
-excerpt: "Hey everyone! With the internet, podcasts, and a million short videos competing for your attention, you might be wondering, \"Do you still read books in 2025?..."
+description: "I explain how I read in 2025 using AI discovery, summary filtering, digital reading tools, and modern tracking habits to learn more while reading fewer books."
+excerpt: "I explain how I read in 2025 using AI discovery, summary filtering, digital reading tools, and modern tracking habits to learn more while reading fewer books."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/83b899f3-0fa0-41d3-acfd-9a398b8d68e6/Cover.png"
 pubDate: 2025-09-25
 category: "Notes"

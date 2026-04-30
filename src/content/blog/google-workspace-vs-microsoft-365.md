@@ -1,7 +1,7 @@
 ---
 title: "Why I choose Google Workspace over Microsoft 365"
-description: "I’m starting a new company and choosing office software for my team. For those who are not familiar with office suites, think of Word, Excel, and PowerPoint...."
-excerpt: "I’m starting a new company and choosing office software for my team. For those who are not familiar with office suites, think of Word, Excel, and PowerPoint...."
+description: "After hands-on testing, I explain why Google Workspace fits my team better than Microsoft 365 for browser-first work, collaboration, and integrations."
+excerpt: "After hands-on testing, I explain why Google Workspace fits my team better than Microsoft 365 for browser-first work, collaboration, and integrations."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/e9816842-d802-4785-8fa5-9840d433e015/Cover.png"
 pubDate: 2024-10-01
 category: "Notes"

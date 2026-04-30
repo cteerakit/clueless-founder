@@ -1,7 +1,7 @@
 ---
 title: "How to get business emails for free"
-description: "The email was invented in 1971 by [Ray Tomlinson](https://www.google.com/search). That was 50 years ago and we still use it today as a formal way to communic..."
-excerpt: "The email was invented in 1971 by [Ray Tomlinson](https://www.google.com/search). That was 50 years ago and we still use it today as a formal way to communic..."
+description: "I break down practical ways to get business email for free, from Lark for teams to Cloudflare Email Routing for solo founders, with key security trade-offs."
+excerpt: "I break down practical ways to get business email for free, from Lark for teams to Cloudflare Email Routing for solo founders, with key security trade-offs."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/bb4a5078-5845-4177-b907-0a9e1c639ffb/image.png"
 pubDate: 2024-02-12
 category: "Notes"

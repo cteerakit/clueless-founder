@@ -357,9 +357,29 @@ const {
         document.addEventListener('astro:page-load', restoreScrollOnReload);
         restoreScrollOnReload();
       };
+      const setupHomepageScrollReset = () => {
+        if (window.__homeScrollResetSetupDone) return;
+        window.__homeScrollResetSetupDone = true;
+
+        const resetIfHomepage = () => {
+          if (window.location.pathname !== '/') return;
+          if (window.location.hash) return;
+
+          // Run more than once to beat late browser/history restoration on back/forward.
+          window.scrollTo(0, 0);
+          requestAnimationFrame(() => {
+            window.scrollTo(0, 0);
+            requestAnimationFrame(() => window.scrollTo(0, 0));
+          });
+        };
+
+        document.addEventListener('astro:page-load', resetIfHomepage);
+        resetIfHomepage();
+      };
       setupThemeToggle();
       setupStickyHeader();
       setupScrollRestoration();
+      setupHomepageScrollReset();
       applyTheme(getResolvedDark());
       setThemeLabel();
       document.addEventListener('astro:page-load', enablePageTransitionsAfterFirstLoad, { once: true });

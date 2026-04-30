@@ -1,7 +1,7 @@
 ---
 title: "My tech stack in 2025"
-description: "Over the years, I’ve tested countless tools and platforms, refining my stack to suit my specific needs. Here’s a look at the tools that power my work in 2025."
-excerpt: "Over the years, I’ve tested countless tools and platforms, refining my stack to suit my specific needs. Here’s a look at the tools that power my work in 2025."
+description: "This is my 2025 tech stack for building and running lean businesses, covering productivity, product, marketing, finance, and the tools I trust most day to day."
+excerpt: "This is my 2025 tech stack for building and running lean businesses, covering productivity, product, marketing, finance, and the tools I trust most day to day."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/2e7bfce6-9d55-4a6c-b2fe-f214489ad271/Cover.png"
 pubDate: 2025-02-02
 category: "Notes"

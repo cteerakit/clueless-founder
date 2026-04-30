@@ -1,7 +1,7 @@
 ---
 title: "What I learned from running a digital agency for 7 years"
-description: "I recently shut down Friday Digital, a digital agency I started 7 years ago. I love this company and the people. They’re like children to me and it’s sad to ..."
-excerpt: "I recently shut down Friday Digital, a digital agency I started 7 years ago. I love this company and the people. They’re like children to me and it’s sad to ..."
+description: "After closing my agency after seven years, I share hard lessons on cash flow, hiring, positioning, client boundaries, and building a business beyond yourself."
+excerpt: "After closing my agency after seven years, I share hard lessons on cash flow, hiring, positioning, client boundaries, and building a business beyond yourself."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/6feaeb25-a8e9-490b-b12e-d6b31a2eb74d/1_ng9bSwY49U848ap7bQzJKg.png"
 pubDate: 2024-01-07
 category: "Notes"

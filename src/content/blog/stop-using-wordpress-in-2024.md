@@ -1,7 +1,7 @@
 ---
 title: "STOP using WordPress in 2024"
-description: "WordPress powers more than 43% of the web. It is, definitely, the most popular website builder on the planet. Today I will try to convince you why you should..."
-excerpt: "WordPress powers more than 43% of the web. It is, definitely, the most popular website builder on the planet. Today I will try to convince you why you should..."
+description: "I explain why I stopped recommending WordPress for new sites, including hidden maintenance costs, plugin dependency risks, and better modern alternatives."
+excerpt: "I explain why I stopped recommending WordPress for new sites, including hidden maintenance costs, plugin dependency risks, and better modern alternatives."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/9a547899-c4be-4bf6-9eeb-6c47a6716e2a/image.png"
 pubDate: 2024-01-29
 category: "Notes"

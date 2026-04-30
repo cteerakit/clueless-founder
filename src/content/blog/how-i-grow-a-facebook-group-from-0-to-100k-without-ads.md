@@ -1,7 +1,7 @@
 ---
 title: "How I grow a Facebook group from 0 to 100K (without ads)"
-description: "Hey everyone! It’s been about two years since I started my Facebook group journey. Back then, when I was launching [Telepath](https://telepath.work/) (a remo..."
-excerpt: "Hey everyone! It’s been about two years since I started my Facebook group journey. Back then, when I was launching [Telepath](https://telepath.work/) (a remo..."
+description: "I grew a Facebook group from zero to 100K without ads by niching down, posting consistently, using smart distribution, and managing trust as it scaled."
+excerpt: "I grew a Facebook group from zero to 100K without ads by niching down, posting consistently, using smart distribution, and managing trust as it scaled."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/7975ffc3-e58e-49ca-ad2f-a2690d3d04cf/Cover.png"
 pubDate: 2025-12-10
 category: "Notes"

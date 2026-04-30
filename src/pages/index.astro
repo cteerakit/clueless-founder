@@ -36,53 +36,58 @@ const lcpImageSrc = posts[0]?.data.coverImage;
       ))
     }
   </ul>
-  <div id="feed-sentinel" class="py-6 text-center text-sm text-[var(--muted)]">Loading more posts...</div>
+  <div id="feed-controls" class="py-6 text-center">
+    <button
+      id="load-more-posts"
+      type="button"
+      class="font-sans rounded-[var(--radius-ui)] border border-[var(--line)] px-4 py-2 text-sm font-medium text-[var(--text)] transition-colors hover:bg-[var(--hover)]"
+    >
+      Load more posts
+    </button>
+  </div>
   <noscript>
     <style>
       [data-infinite-item='true'] { display: list-item !important; }
-      #feed-sentinel { display: none; }
+      #load-more-posts { display: none; }
     </style>
   </noscript>
   <script>
-    const hiddenItems = Array.from(document.querySelectorAll("[data-infinite-item='true']"));
-    const sentinel = document.getElementById('feed-sentinel');
-    const BATCH_SIZE = 4;
-    let index = 0;
+    const setupLoadMorePosts = () => {
+      const hiddenItems = Array.from(document.querySelectorAll("[data-infinite-item='true']"));
+      const loadMoreButton = document.getElementById('load-more-posts');
+      const BATCH_SIZE = 4;
+      let index = 0;
 
-    const revealNextBatch = () => {
-      const batch = hiddenItems.slice(index, index + BATCH_SIZE);
-      batch.forEach((item) => {
-        item.style.display = 'list-item';
-        item.removeAttribute('aria-hidden');
-        item.removeAttribute('data-infinite-item');
-      });
-      index += batch.length;
-      if (index >= hiddenItems.length && sentinel) {
-        sentinel.remove();
+      const revealNextBatch = () => {
+        const batch = hiddenItems.slice(index, index + BATCH_SIZE);
+        batch.forEach((item) => {
+          item.style.display = 'list-item';
+          item.removeAttribute('aria-hidden');
+          item.removeAttribute('data-infinite-item');
+        });
+        index += batch.length;
+        if (index >= hiddenItems.length && loadMoreButton) {
+          const controls = document.getElementById('feed-controls');
+          if (controls) {
+            controls.innerHTML =
+              '<p class="font-sans text-sm text-[var(--muted)]">You made it to the end. Time to build something weird.</p>';
+          } else {
+            loadMoreButton.remove();
+          }
+        }
+      };
+
+      if (!hiddenItems.length) {
+        loadMoreButton?.remove();
+      } else if (loadMoreButton) {
+        loadMoreButton.addEventListener('click', revealNextBatch, { once: false });
       }
     };
 
-    if (!hiddenItems.length) {
-      sentinel?.remove();
-    } else if (!('IntersectionObserver' in window)) {
-      revealNextBatch();
-      while (index < hiddenItems.length) {
-        revealNextBatch();
-      }
-    } else if (sentinel) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          if (!entries.some((entry) => entry.isIntersecting)) {
-            return;
-          }
-          revealNextBatch();
-          if (index >= hiddenItems.length) {
-            observer.disconnect();
-          }
-        },
-        { rootMargin: '200px 0px' },
-      );
-      observer.observe(sentinel);
+    setupLoadMorePosts();
+    if (!window.__loadMorePostsSetupBound) {
+      window.__loadMorePostsSetupBound = true;
+      document.addEventListener('astro:page-load', setupLoadMorePosts);
     }
   </script>
 </BaseLayout>

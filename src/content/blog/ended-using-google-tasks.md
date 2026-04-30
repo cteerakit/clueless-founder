@@ -1,7 +1,7 @@
 ---
 title: "How I ended up using Google Tasks"
-description: "There are literally hundreds of productivity apps trying to help you get things done. Let’s see how I choose one for myself."
-excerpt: "There are literally hundreds of productivity apps trying to help you get things done. Let’s see how I choose one for myself."
+description: "I share why I chose Google Tasks over other to-do apps by prioritizing simplicity, recurring reminders, cross-device access, and Google Calendar integration."
+excerpt: "I share why I chose Google Tasks over other to-do apps by prioritizing simplicity, recurring reminders, cross-device access, and Google Calendar integration."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/e5387444-ea99-49a5-956d-44db064d2395/Cover.png"
 pubDate: 2024-08-10
 category: "Notes"

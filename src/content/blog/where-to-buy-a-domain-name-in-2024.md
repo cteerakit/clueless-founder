@@ -1,7 +1,7 @@
 ---
 title: "Where to buy a domain name in 2024"
-description: "I had been a [Google Domains](https://domains.google/) customer for years, keeping all domain names for clients and mine. It was probably the best registrar ..."
-excerpt: "I had been a [Google Domains](https://domains.google/) customer for years, keeping all domain names for clients and mine. It was probably the best registrar ..."
+description: "I compare domain registrars for 2024, including Cloudflare, Spaceship, and Porkbun, with practical advice on pricing, renewals, usability, and lock-in risks."
+excerpt: "I compare domain registrars for 2024, including Cloudflare, Spaceship, and Porkbun, with practical advice on pricing, renewals, usability, and lock-in risks."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/d00d5f67-5e16-4d71-b919-ac941de474b1/image.png"
 pubDate: 2024-01-20
 category: "Notes"

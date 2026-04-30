@@ -1,7 +1,7 @@
 ---
 title: "I built a job board using no-code tools"
-description: "When I was a kid, I always dreamed of building software that a lot of people enjoy using. I still do today. There is one problem, I don’t know how to code. A..."
-excerpt: "When I was a kid, I always dreamed of building software that a lot of people enjoy using. I still do today. There is one problem, I don’t know how to code. A..."
+description: "I built a working job board prototype with no-code tools, sharing what worked across frontend and backend, where limits appeared, and what I would change next."
+excerpt: "I built a working job board prototype with no-code tools, sharing what worked across frontend and backend, where limits appeared, and what I would change next."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/829a4e75-00ea-40c9-84fd-8855f315d56f/image.png"
 pubDate: 2024-02-05
 category: "Notes"

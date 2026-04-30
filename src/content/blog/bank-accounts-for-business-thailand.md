@@ -1,7 +1,7 @@
 ---
 title: "I tried to open bank accounts for business in 2024 in Thailand. Here's my experience."
-description: "I recently registered a new company. To continue doing any kind of financial activity, I need a bank account. So I’ve tried opening accounts with 3 banks: SC..."
-excerpt: "I recently registered a new company. To continue doing any kind of financial activity, I need a bank account. So I’ve tried opening accounts with 3 banks: SC..."
+description: "I share my real experience opening Thai business bank accounts at SCB, KTB, and KBank, including document requirements, branch restrictions, and app usability."
+excerpt: "I share my real experience opening Thai business bank accounts at SCB, KTB, and KBank, including document requirements, branch restrictions, and app usability."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/795e62da-26d3-469a-bd5d-c95767062693/cover.png"
 pubDate: 2024-11-01
 category: "Notes"

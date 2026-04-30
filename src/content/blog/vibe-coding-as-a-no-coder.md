@@ -1,7 +1,7 @@
 ---
 title: "Vibe Coding as a No-Coder: My Honest Experiment"
-description: "Today, I am pulling back the curtain to share what I found: the good, the bad, and the truly eye-opening lessons."
-excerpt: "Today, I am pulling back the curtain to share what I found: the good, the bad, and the truly eye-opening lessons."
+description: "I tested vibe coding as a non-technical founder and learned where AI helps fast, where it breaks, and what core product and data skills no-coders still need."
+excerpt: "I tested vibe coding as a non-technical founder and learned where AI helps fast, where it breaks, and what core product and data skills no-coders still need."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/53b7bf62-ca61-443b-8685-8cbb560f277e/d.png"
 pubDate: 2025-06-12
 category: "Notes"

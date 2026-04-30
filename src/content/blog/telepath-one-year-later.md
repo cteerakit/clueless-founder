@@ -1,7 +1,7 @@
 ---
 title: "Telepath: One Year Later"
-description: "It has been nearly a year since I launched Telepath, a job board website designed for remote workers in Thailand. This feels like the right moment to reflect..."
-excerpt: "It has been nearly a year since I launched Telepath, a job board website designed for remote workers in Thailand. This feels like the right moment to reflect..."
+description: "One year after launching Telepath, I review growth metrics, key mistakes, and my 2025 focus on organic traffic, stronger data capture, and sustainable revenue."
+excerpt: "One year after launching Telepath, I review growth metrics, key mistakes, and my 2025 focus on organic traffic, stronger data capture, and sustainable revenue."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/6f855092-1dfc-4aa4-b874-c744d766127e/Cover.png"
 pubDate: 2025-01-01
 category: "Notes"

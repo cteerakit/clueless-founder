@@ -1,7 +1,7 @@
 ---
 title: "Finding the Right Home for n8n"
-description: "Hope you're having a productive week! I wanted to share some insights from my recent explorations into hosting n8n, a fantastic automation platform that help..."
-excerpt: "Hope you're having a productive week! I wanted to share some insights from my recent explorations into hosting n8n, a fantastic automation platform that help..."
+description: "I compare n8n hosting options across n8n Cloud, managed and unmanaged VPS, and local setups to help you choose the best mix of cost, control, and simplicity."
+excerpt: "I compare n8n hosting options across n8n Cloud, managed and unmanaged VPS, and local setups to help you choose the best mix of cost, control, and simplicity."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f64a0e73-60d3-429b-8262-65cf0c100864/761shots_so.png"
 pubDate: 2025-07-03
 category: "Notes"

@@ -1,7 +1,7 @@
 ---
 title: "Reinventing the Resume for 2025: Introducing \"Storysume\""
-description: "The resume, a single piece of paper, has been the standard for job applications for an incredibly long time. In fact, the first known document resembling a m..."
-excerpt: "The resume, a single piece of paper, has been the standard for job applications for an incredibly long time. In fact, the first known document resembling a m..."
+description: "Storysume is my mobile-first resume concept for 2025, designed to be concise, readable, and safer to share publicly while bridging static CVs and full profiles."
+excerpt: "Storysume is my mobile-first resume concept for 2025, designed to be concise, readable, and safer to share publicly while bridging static CVs and full profiles."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c912df4a-34c7-40e4-a231-13c74fe03d21/76_1x_shots_so.png"
 pubDate: 2025-07-23
 category: "Notes"

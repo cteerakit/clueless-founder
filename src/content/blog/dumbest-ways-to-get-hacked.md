@@ -1,7 +1,7 @@
 ---
 title: "The Dumbest Ways to Get Hacked (That You’re Probably Doing)"
-description: "Think you're safe online? Think again. From weak passwords to ignoring 2FA, most people make it way too easy for hackers. Here’s how to lock down your accounts before it’s too late."
-excerpt: "Think you're safe online? Think again. From weak passwords to ignoring 2FA, most people make it way too easy for hackers. Here’s how to lock down your accounts before it’s too late."
+description: "This guide covers common security mistakes, from weak passwords to phishing, and gives simple actions you can take today to better protect your online accounts."
+excerpt: "This guide covers common security mistakes, from weak passwords to phishing, and gives simple actions you can take today to better protect your online accounts."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/8a5fc24a-208f-4814-ae1a-ffe8391d7986/Cover.png"
 pubDate: 2025-04-02
 category: "Notes"

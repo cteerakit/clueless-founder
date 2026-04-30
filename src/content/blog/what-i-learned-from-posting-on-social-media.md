@@ -1,7 +1,7 @@
 ---
 title: "I've been posing on social media every day for 30 days. Here's what I learned."
-description: "I recently came to realize how building an audience is an unfair advantage in business, and life in general. Having a strong social media presence is vital f..."
-excerpt: "I recently came to realize how building an audience is an unfair advantage in business, and life in general. Having a strong social media presence is vital f..."
+description: "After posting daily for 30 days on LinkedIn, X, and Threads, I analyzed the data and learned how audience fit and content type changed my reach and engagement."
+excerpt: "After posting daily for 30 days on LinkedIn, X, and Threads, I analyzed the data and learned how audience fit and content type changed my reach and engagement."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/81867a94-b963-452a-b16f-8ce33958d9e8/cover.png"
 pubDate: 2024-09-14
 category: "Notes"

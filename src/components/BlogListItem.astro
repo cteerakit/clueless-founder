@@ -19,7 +19,7 @@ const excerpt = post.data.excerpt ?? post.data.description;
 >
   <a
     href={`/blog/${post.id}/`}
-    class="-mx-4 flex flex-col justify-between gap-4 px-4 py-4 transition-colors hover:bg-[var(--hover)] md:flex-row"
+    class="-mx-4 flex flex-col justify-between gap-4 px-4 py-4 transition-colors hover:bg-[var(--hover)] md:flex-row md:items-center"
   >
     <span class="min-w-0 flex-1">
       <span class="block text-xl font-medium text-[var(--text)]">{post.data.title}</span>

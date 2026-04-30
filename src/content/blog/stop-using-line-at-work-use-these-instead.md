@@ -1,7 +1,7 @@
 ---
 title: "STOP using Line at work! Use these instead"
-description: "Chat apps are essential ways to communicate among team members nowadays. It’s fast, convenient, and instant. However, I’m surprised how many teams are still ..."
-excerpt: "Chat apps are essential ways to communicate among team members nowadays. It’s fast, convenient, and instant. However, I’m surprised how many teams are still ..."
+description: "If your team still relies on Line for work, this post compares better chat options like Slack, Teams, Google Chat, Lark, and Discord with practical trade-offs."
+excerpt: "If your team still relies on Line for work, this post compares better chat options like Slack, Teams, Google Chat, Lark, and Discord with practical trade-offs."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/04540ab0-f92c-49b8-85e1-f966582265a9/image.png"
 pubDate: 2024-02-19
 category: "Notes"
