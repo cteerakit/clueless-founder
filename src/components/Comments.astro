@@ -15,15 +15,18 @@ const giscusReactionsEnabled = import.meta.env.PUBLIC_GISCUS_REACTIONS_ENABLED ?
 const giscusEmitMetadata = import.meta.env.PUBLIC_GISCUS_EMIT_METADATA ?? '0';
 const giscusInputPosition = import.meta.env.PUBLIC_GISCUS_INPUT_POSITION ?? 'top';
 const giscusTheme = import.meta.env.PUBLIC_GISCUS_THEME ?? 'preferred_color_scheme';
+const giscusThemeLight = import.meta.env.PUBLIC_GISCUS_THEME_LIGHT ?? 'light';
+const giscusThemeDark = import.meta.env.PUBLIC_GISCUS_THEME_DARK ?? 'dark_dimmed';
 const giscusLang = import.meta.env.PUBLIC_GISCUS_LANG ?? 'en';
 const hasGiscusConfig = Boolean(giscusRepo && giscusRepoId && giscusCategory && giscusCategoryId);
+const giscusInitialTheme = giscusTheme === 'preferred_color_scheme' ? giscusThemeLight : giscusTheme;
 ---
 
 <section class="not-prose mt-12" aria-label="Comments">
   <p class="text-xs uppercase tracking-wider text-[var(--muted)]">Comments</p>
   {
     hasGiscusConfig ? (
-      <div class="mt-4 rounded-[var(--radius-ui)] border border-[var(--line)] bg-[var(--bg)] p-4 md:p-6">
+      <div class="mt-4 rounded-[var(--radius-ui)] border border-[var(--line)] bg-[var(--hover)] p-4 md:p-6">
         <script
           is:inline
           src="https://giscus.app/client.js"
@@ -37,11 +40,54 @@ const hasGiscusConfig = Boolean(giscusRepo && giscusRepoId && giscusCategory && 
           data-reactions-enabled={giscusReactionsEnabled}
           data-emit-metadata={giscusEmitMetadata}
           data-input-position={giscusInputPosition}
-          data-theme={giscusTheme}
+          data-theme={giscusInitialTheme}
           data-lang={giscusLang}
           crossorigin="anonymous"
           async
         ></script>
+        <script
+          is:inline
+          data-theme={giscusTheme}
+          data-theme-light={giscusThemeLight}
+          data-theme-dark={giscusThemeDark}
+        >
+          (() => {
+            const script = document.currentScript;
+            if (!script) return;
+
+            const selectedTheme = script.getAttribute('data-theme') || 'preferred_color_scheme';
+            if (selectedTheme !== 'preferred_color_scheme') return;
+
+            const lightTheme = script.getAttribute('data-theme-light') || 'light';
+            const darkTheme = script.getAttribute('data-theme-dark') || 'dark_dimmed';
+            const pickTheme = () => (document.documentElement.classList.contains('dark') ? darkTheme : lightTheme);
+
+            const setGiscusTheme = () => {
+              const iframe = document.querySelector('iframe.giscus-frame');
+              if (!iframe) return false;
+              iframe.contentWindow?.postMessage(
+                { giscus: { setConfig: { theme: pickTheme() } } },
+                'https://giscus.app'
+              );
+              return true;
+            };
+
+            // Keep comments theme in sync when site theme changes.
+            const observer = new MutationObserver(() => setGiscusTheme());
+            observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+            // Retry briefly because giscus iframe may load after this script runs.
+            let attempts = 0;
+            const maxAttempts = 20;
+            const retry = () => {
+              attempts += 1;
+              const applied = setGiscusTheme();
+              if (applied || attempts >= maxAttempts) return;
+              setTimeout(retry, 150);
+            };
+            retry();
+          })();
+        </script>
       </div>
     ) : (
       <div class="mt-4 rounded-[var(--radius-ui)] border border-[var(--line)] bg-[var(--hover)] p-4 md:p-6">
