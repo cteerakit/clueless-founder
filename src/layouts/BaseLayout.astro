@@ -31,8 +31,8 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/png" href="/logo-trans.png" />
-    <link rel="shortcut icon" href="/logo-trans.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.svg" />
     <link rel="preload" href={interLatin400Woff2} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={interLatin500Woff2} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={newsreaderLatinWghtWoff2} as="font" type="font/woff2" crossorigin />
@@ -69,7 +69,7 @@ const {
       >
         <header class="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--line)] pb-4">
           <a href="/" class="inline-flex items-center hover:opacity-80" aria-label={`Go to ${SITE_TITLE} home`}>
-            <img src="/logo-trans.png" alt={SITE_TITLE} class="h-8 w-auto dark:invert" width="512" height="512" />
+            <img src="/logo.png" alt={SITE_TITLE} class="h-8 w-auto dark:invert" width="512" height="512" />
           </a>
           <nav class="flex items-center gap-6 font-sans text-sm text-[var(--muted)]">
             <a href="/about/" class="transition-colors hover:text-[var(--text)]">About</a>
