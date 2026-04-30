@@ -1,5 +1,6 @@
 export interface Env {
   PLUNK_PUBLIC_KEY: string;
+  PLUNK_SECRET_KEY?: string;
   ALLOWED_ORIGIN?: string;
   ALLOWED_ORIGINS?: string;
 }
@@ -57,9 +58,12 @@ export default {
       return json({ ok: false, error: 'Origin not allowed' }, { status: 403, headers: corsHeaders });
     }
 
-    const key = env.PLUNK_PUBLIC_KEY;
+    const key = env.PLUNK_SECRET_KEY?.trim() || env.PLUNK_PUBLIC_KEY?.trim();
     if (!key) {
-      return json({ ok: false, error: 'Server is not configured' }, { status: 500, headers: corsHeaders });
+      return json(
+        { ok: false, error: 'Server is not configured (missing Plunk API key).' },
+        { status: 500, headers: corsHeaders },
+      );
     }
 
     const payload = (await request.json().catch(() => null)) as { email?: unknown } | null;
@@ -82,15 +86,33 @@ export default {
       }),
     });
 
-    const data = (await plunkResponse.json().catch(() => ({}))) as {
+    const rawText = await plunkResponse.text();
+    const data = (() => {
+      if (!rawText) return {};
+      try {
+        return JSON.parse(rawText);
+      } catch {
+        return {};
+      }
+    })() as {
       success?: boolean;
-      error?: { message?: string };
+      error?: { message?: string } | string;
+      message?: string;
     };
 
     if (!plunkResponse.ok || data.success === false) {
+      const providerMessage =
+        typeof data.error === 'string'
+          ? data.error
+          : data.error?.message ?? data.message ?? (rawText && !rawText.startsWith('<') ? rawText : undefined);
+      // Keep provider diagnostics in Worker logs for faster issue triage.
+      console.error('Plunk subscription failed', {
+        status: plunkResponse.status,
+        body: rawText,
+      });
       return json(
-        { ok: false, error: data.error?.message ?? 'Could not subscribe right now.' },
-        { status: 400, headers: corsHeaders },
+        { ok: false, error: providerMessage ?? 'Could not subscribe right now.' },
+        { status: plunkResponse.status || 400, headers: corsHeaders },
       );
     }
 
