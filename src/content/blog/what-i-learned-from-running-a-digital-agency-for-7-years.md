@@ -4,7 +4,8 @@ description: "After closing my agency after seven years, I share hard lessons on
 excerpt: "After closing my agency after seven years, I share hard lessons on cash flow, hiring, positioning, client boundaries, and building a business beyond yourself."
 coverImage: "/images/posts/what-i-learned-from-running-a-digital-agency-for-7-years/cover-f2291dcbab.webp"
 pubDate: 2024-01-07
-category: "Notes"
+category: "Entrepreneurship"
+tags: ["agency", "lessons-learned", "client-work", "business-growth"]
 newsletter: true
 draft: false
 ---

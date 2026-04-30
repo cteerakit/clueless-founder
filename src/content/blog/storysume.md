@@ -4,7 +4,8 @@ description: "Storysume is my mobile-first resume concept for 2025, designed to 
 excerpt: "Storysume is my mobile-first resume concept for 2025, designed to be concise, readable, and safer to share publicly while bridging static CVs and full profiles."
 coverImage: "/images/storysume/cover.webp"
 pubDate: 2025-07-23
-category: "Notes"
+category: "Product"
+tags: ["storysume", "resume", "product-launch", "career-tools"]
 newsletter: true
 draft: false
 ---

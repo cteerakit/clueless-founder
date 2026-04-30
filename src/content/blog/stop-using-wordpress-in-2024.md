@@ -4,7 +4,8 @@ description: "I explain why I stopped recommending WordPress for new sites, incl
 excerpt: "I explain why I stopped recommending WordPress for new sites, including hidden maintenance costs, plugin dependency risks, and better modern alternatives."
 coverImage: "/images/posts/stop-using-wordpress-in-2024/cover-dcc862c854.webp"
 pubDate: 2024-01-29
-category: "Notes"
+category: "Product"
+tags: ["wordpress", "website-platform", "performance", "alternatives", "web-development"]
 newsletter: true
 draft: false
 ---

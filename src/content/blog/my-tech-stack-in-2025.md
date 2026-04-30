@@ -4,7 +4,8 @@ description: "This is my 2025 tech stack for building and running lean businesse
 excerpt: "This is my 2025 tech stack for building and running lean businesses, covering productivity, product, marketing, finance, and the tools I trust most day to day."
 coverImage: "/images/posts/my-tech-stack-in-2025/cover-9db2487679.webp"
 pubDate: 2025-02-02
-category: "Notes"
+category: "Productivity"
+tags: ["tools", "saas", "founder-stack", "productivity", "tech-stack"]
 newsletter: true
 draft: false
 ---

@@ -4,7 +4,8 @@ description: "I explain how I read in 2025 using AI discovery, summary filtering
 excerpt: "I explain how I read in 2025 using AI discovery, summary filtering, digital reading tools, and modern tracking habits to learn more while reading fewer books."
 coverImage: "/images/posts/do-you-still-read-books-in-2025/cover-6c1703299a.webp"
 pubDate: 2025-09-25
-category: "Notes"
+category: "Productivity"
+tags: ["reading", "books", "self-improvement", "productivity", "learning"]
 newsletter: true
 draft: false
 ---

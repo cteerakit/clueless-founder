@@ -4,7 +4,8 @@ description: "I compare domain registrars for 2024, including Cloudflare, Spaces
 excerpt: "I compare domain registrars for 2024, including Cloudflare, Spaceship, and Porkbun, with practical advice on pricing, renewals, usability, and lock-in risks."
 coverImage: "/images/posts/where-to-buy-a-domain-name-in-2024/cover-27e113d804.webp"
 pubDate: 2024-01-20
-category: "Notes"
+category: "Product"
+tags: ["domains", "website-setup", "cloudflare", "bootstrapper", "web-development"]
 newsletter: true
 draft: false
 ---

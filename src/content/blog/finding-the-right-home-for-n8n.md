@@ -4,7 +4,8 @@ description: "I compare n8n hosting options across n8n Cloud, managed and unmana
 excerpt: "I compare n8n hosting options across n8n Cloud, managed and unmanaged VPS, and local setups to help you choose the best mix of cost, control, and simplicity."
 coverImage: "/images/posts/finding-the-right-home-for-n8n/cover-ac38af1b79.webp"
 pubDate: 2025-07-03
-category: "Notes"
+category: "Operations"
+tags: ["n8n", "self-hosting", "automation", "infrastructure"]
 newsletter: true
 draft: false
 ---

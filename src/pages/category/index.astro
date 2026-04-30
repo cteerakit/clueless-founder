@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import { slugifySegment } from '../../utils/slugify';
+
+export const prerender = true;
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const categoryCount = new Map<string, number>();
+
+for (const post of posts) {
+  const category = post.data.category.trim();
+  categoryCount.set(category, (categoryCount.get(category) ?? 0) + 1);
+}
+
+const categories = Array.from(categoryCount.entries())
+  .map(([name, count]) => ({ name, count, slug: slugifySegment(name) }))
+  .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+---
+
+<BaseLayout
+  title={`Categories — ${SITE_TITLE}`}
+  description="Browse all writing categories from Clueless Founder."
+  canonicalPath="/category/"
+>
+  <section class="border-b border-[var(--line)] pb-10">
+    <h1 class="font-serif text-4xl text-[var(--text)] md:text-5xl">Categories</h1>
+    <p class="mt-4 max-w-2xl text-base text-[var(--muted)] md:text-lg">
+      Browse posts by category.
+    </p>
+  </section>
+
+  <ul class="mt-8 divide-y divide-[var(--line)]">
+    {
+      categories.map((category) => (
+        <li>
+          <a
+            href={`/category/${category.slug}/`}
+            class="-mx-4 flex items-center justify-between px-4 py-4 transition-colors hover:bg-[var(--hover)]"
+          >
+            <span class="text-lg text-[var(--text)]">{category.name}</span>
+            <span class="font-sans text-sm text-[var(--muted)]">
+              {category.count} {category.count === 1 ? 'post' : 'posts'}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
+

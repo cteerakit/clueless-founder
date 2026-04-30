@@ -4,7 +4,8 @@ description: "After posting daily for 30 days on LinkedIn, X, and Threads, I ana
 excerpt: "After posting daily for 30 days on LinkedIn, X, and Threads, I analyzed the data and learned how audience fit and content type changed my reach and engagement."
 coverImage: "/images/posts/what-i-learned-from-posting-on-social-media/cover-d90915a847.webp"
 pubDate: 2024-09-14
-category: "Notes"
+category: "Marketing"
+tags: ["social-media", "content-creation", "consistency", "growth"]
 newsletter: true
 draft: false
 ---

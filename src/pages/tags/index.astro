@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import { slugifySegment } from '../../utils/slugify';
+
+export const prerender = true;
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const tagCount = new Map<string, number>();
+
+for (const post of posts) {
+  for (const tag of post.data.tags) {
+    const normalized = tag.trim();
+    if (!normalized) continue;
+    tagCount.set(normalized, (tagCount.get(normalized) ?? 0) + 1);
+  }
+}
+
+const tags = Array.from(tagCount.entries())
+  .map(([name, count]) => ({ name, count, slug: slugifySegment(name) }))
+  .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+---
+
+<BaseLayout
+  title={`Tags — ${SITE_TITLE}`}
+  description="Browse all post tags from Clueless Founder."
+  canonicalPath="/tags/"
+>
+  <section class="border-b border-[var(--line)] pb-10">
+    <h1 class="font-serif text-4xl text-[var(--text)] md:text-5xl">Tags</h1>
+    <p class="mt-4 max-w-2xl text-base text-[var(--muted)] md:text-lg">
+      Browse posts by tag.
+    </p>
+  </section>
+
+  {
+    tags.length > 0 ? (
+      <ul class="mt-8 divide-y divide-[var(--line)]">
+        {tags.map((tag) => (
+          <li>
+            <a
+              href={`/tags/${tag.slug}/`}
+              class="-mx-4 flex items-center justify-between px-4 py-4 transition-colors hover:bg-[var(--hover)]"
+            >
+              <span class="text-lg text-[var(--text)]">{tag.name}</span>
+              <span class="font-sans text-sm text-[var(--muted)]">
+                {tag.count} {tag.count === 1 ? 'post' : 'posts'}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="mt-8 text-[var(--muted)]">
+        No tags yet. Add a <code>tags</code> array in your post frontmatter to populate this archive.
+      </p>
+    )
+  }
+</BaseLayout>
+

@@ -4,7 +4,8 @@ description: "My Inbox Zero routine uses archiving, filters, unsubscribe habits,
 excerpt: "My Inbox Zero routine uses archiving, filters, unsubscribe habits, and task handoffs so important emails stay visible while daily clutter stays under control."
 coverImage: "/images/posts/how-i-achieve-inbox-zero/cover-085717612d.webp"
 pubDate: 2024-06-02
-category: "Notes"
+category: "Productivity"
+tags: ["inbox-zero", "email-management", "workflow", "focus"]
 newsletter: true
 draft: false
 ---

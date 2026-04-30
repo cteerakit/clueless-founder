@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogListItem from '../../components/BlogListItem.astro';
+import { SITE_TITLE } from '../../consts';
+import { slugifySegment } from '../../utils/slugify';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const tags = Array.from(new Set(posts.flatMap((post) => post.data.tags.map((tag) => tag.trim())))).filter(Boolean);
+
+  return tags.map((tag) => ({
+    params: { tag: slugifySegment(tag) },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts
+  .filter((post) => post.data.tags.some((entry) => slugifySegment(entry) === slugifySegment(tag)))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+  title={`${tag} — Tags — ${SITE_TITLE}`}
+  description={`Browse all posts tagged "${tag}" from Clueless Founder.`}
+  canonicalPath={`/tags/${slugifySegment(tag)}/`}
+>
+  <section class="border-b border-[var(--line)] pb-10">
+    <p class="font-sans text-xs uppercase tracking-wider text-[var(--muted)]">Tag</p>
+    <h1 class="mt-3 font-serif text-4xl text-[var(--text)] md:text-5xl">{tag}</h1>
+    <p class="mt-4 max-w-2xl text-base text-[var(--muted)] md:text-lg">
+      {posts.length} {posts.length === 1 ? 'post' : 'posts'} with this tag.
+    </p>
+  </section>
+
+  <ul class="mt-8 divide-y divide-[var(--line)]">
+    {posts.map((post) => <BlogListItem post={post} />)}
+  </ul>
+</BaseLayout>
+

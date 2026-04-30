@@ -4,7 +4,8 @@ description: "I tested vibe coding as a non-technical founder and learned where 
 excerpt: "I tested vibe coding as a non-technical founder and learned where AI helps fast, where it breaks, and what core product and data skills no-coders still need."
 coverImage: "/images/posts/vibe-coding-as-a-no-coder/cover-7450ee95b9.webp"
 pubDate: 2025-06-12
-category: "Notes"
+category: "Product"
+tags: ["vibe-coding", "ai-coding", "no-code", "experimentation"]
 newsletter: true
 draft: false
 ---

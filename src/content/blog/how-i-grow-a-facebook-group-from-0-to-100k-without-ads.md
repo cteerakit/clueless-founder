@@ -4,7 +4,8 @@ description: "I grew a Facebook group from zero to 100K without ads by niching d
 excerpt: "I grew a Facebook group from zero to 100K without ads by niching down, posting consistently, using smart distribution, and managing trust as it scaled."
 coverImage: "/images/posts/how-i-grow-a-facebook-group-from-0-to-100k-without-ads/cover-399a7c9b8f.webp"
 pubDate: 2025-12-10
-category: "Notes"
+category: "Marketing"
+tags: ["facebook-groups", "community-growth", "organic-growth", "social-media"]
 newsletter: true
 draft: false
 ---

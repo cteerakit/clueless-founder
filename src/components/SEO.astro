@@ -27,6 +27,24 @@ const site = Astro.site ?? new URL('http://localhost:4321');
 const canonical = new URL(canonicalPath.replace(/^\//, ''), site).href;
 const ogImageSource = image ?? '/landscape_Cover2.avif';
 const ogImage = new URL(ogImageSource.replace(/^\//, ''), site).href;
+const siteOrigin = site.origin;
+const siteName = 'Clueless Founder';
+const logoUrl = new URL('logo-trans.png', site).href;
+const authorName = 'Teerakit Chantrakul';
+const authorUrl = new URL('about/', site).href;
+const authorImage = new URL('teerakit-profile.png', site).href;
+const organizationId = `${siteOrigin}/#organization`;
+const personId = `${authorUrl}#person`;
+const socialProfiles = [
+  'https://www.linkedin.com/newsletters/clueless-founder-7161585325901819904/',
+  'https://x.com/cteerakit',
+  'https://github.com/cteerakit',
+  'https://medium.com/@cteerakit',
+  'https://substack.com/@cteerakit',
+  'https://www.linkedin.com/in/cteerakit/',
+  'https://www.instagram.com/cteerakit/',
+  'https://www.facebook.com/cteerakit/',
+];
 
 const postingLd =
   jsonLd === 'BlogPosting' && post
@@ -38,17 +56,62 @@ const postingLd =
         datePublished: post.data.pubDate.toISOString(),
         dateModified: (modifiedDate ?? post.data.pubDate).toISOString(),
         author: {
-          '@type': 'Person',
-          name: post.data.author,
+          '@id': personId,
         },
         publisher: {
-          '@type': 'Organization',
-          name: 'Clueless Founder',
+          '@id': organizationId,
         },
         mainEntityOfPage: {
           '@type': 'WebPage',
           '@id': canonical,
         },
+      }
+    : null;
+
+const webSiteLd =
+  jsonLd === 'WebSite'
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: siteName,
+        url: siteOrigin,
+        description,
+        inLanguage: 'en',
+        publisher: {
+          '@id': organizationId,
+        },
+      }
+    : null;
+
+const organizationLd =
+  jsonLd === 'WebSite' || jsonLd === 'BlogPosting'
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': organizationId,
+        name: siteName,
+        url: siteOrigin,
+        logo: {
+          '@type': 'ImageObject',
+          url: logoUrl,
+        },
+        sameAs: socialProfiles,
+      }
+    : null;
+
+const personLd =
+  jsonLd === 'WebSite' || jsonLd === 'BlogPosting'
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        '@id': personId,
+        name: authorName,
+        url: authorUrl,
+        image: {
+          '@type': 'ImageObject',
+          url: authorImage,
+        },
+        sameAs: socialProfiles,
       }
     : null;
 ---
@@ -72,4 +135,13 @@ const postingLd =
 
 {postingLd && (
   <script type="application/ld+json" is:inline set:html={JSON.stringify(postingLd)} />
+)}
+{webSiteLd && (
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(webSiteLd)} />
+)}
+{organizationLd && (
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(organizationLd)} />
+)}
+{personLd && (
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(personLd)} />
 )}

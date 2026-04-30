@@ -4,7 +4,8 @@ description: "I share why I chose Google Tasks over other to-do apps by prioriti
 excerpt: "I share why I chose Google Tasks over other to-do apps by prioritizing simplicity, recurring reminders, cross-device access, and Google Calendar integration."
 coverImage: "/images/posts/ended-using-google-tasks/cover-e248ed24bb.webp"
 pubDate: 2024-08-10
-category: "Notes"
+category: "Productivity"
+tags: ["task-management", "google-tasks", "productivity-system", "workflow"]
 newsletter: true
 draft: false
 ---

@@ -4,7 +4,8 @@ description: "If your team still relies on Line for work, this post compares bet
 excerpt: "If your team still relies on Line for work, this post compares better chat options like Slack, Teams, Google Chat, Lark, and Discord with practical trade-offs."
 coverImage: "/images/posts/stop-using-line-at-work-use-these-instead/cover-a75b3aefa0.webp"
 pubDate: 2024-02-19
-category: "Notes"
+category: "Operations"
+tags: ["team-communication", "workplace-tools", "collaboration", "security"]
 newsletter: true
 draft: false
 ---

@@ -4,7 +4,8 @@ description: "This guide covers common security mistakes, from weak passwords to
 excerpt: "This guide covers common security mistakes, from weak passwords to phishing, and gives simple actions you can take today to better protect your online accounts."
 coverImage: "/images/posts/dumbest-ways-to-get-hacked/cover-a3222b39d4.webp"
 pubDate: 2025-04-02
-category: "Notes"
+category: "Operations"
+tags: ["cybersecurity", "founder-ops", "password-security", "risk-management", "security"]
 newsletter: true
 draft: false
 ---

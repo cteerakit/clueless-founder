@@ -4,7 +4,8 @@ description: "After hands-on testing, I explain why Google Workspace fits my tea
 excerpt: "After hands-on testing, I explain why Google Workspace fits my team better than Microsoft 365 for browser-first work, collaboration, and integrations."
 coverImage: "/images/posts/google-workspace-vs-microsoft-365/cover-698ebb2007.webp"
 pubDate: 2024-10-01
-category: "Notes"
+category: "Productivity"
+tags: ["google-workspace", "microsoft-365", "collaboration", "business-tools"]
 newsletter: true
 draft: false
 ---

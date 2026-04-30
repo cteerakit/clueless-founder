@@ -4,7 +4,8 @@ description: "This is my fast, founder-friendly process for designing a good-eno
 excerpt: "This is my fast, founder-friendly process for designing a good-enough logo, from concept and typography to color systems, variants, exports, and handoff assets."
 coverImage: "/images/posts/how-to-design-a-good-enough-logo/cover-7bc570a63a.webp"
 pubDate: 2024-05-01
-category: "Notes"
+category: "Marketing"
+tags: ["logo-design", "branding", "startup-design", "design-basics", "design"]
 newsletter: true
 draft: false
 ---

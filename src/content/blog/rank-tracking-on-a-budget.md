@@ -4,7 +4,8 @@ description: "I compare budget-friendly rank tracking options and show how to co
 excerpt: "I compare budget-friendly rank tracking options and show how to combine Search Console, Looker Studio, and self-hosted tools when premium SEO suites are costly."
 coverImage: "/images/posts/rank-tracking-on-a-budget/cover-625d55e1b3.webp"
 pubDate: 2025-05-02
-category: "Notes"
+category: "Marketing"
+tags: ["seo", "rank-tracking", "bootstrapper", "organic-growth"]
 newsletter: true
 draft: false
 ---

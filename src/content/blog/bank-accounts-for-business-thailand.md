@@ -4,7 +4,8 @@ description: "I share my real experience opening Thai business bank accounts at 
 excerpt: "I share my real experience opening Thai business bank accounts at SCB, KTB, and KBank, including document requirements, branch restrictions, and app usability."
 coverImage: "/images/posts/bank-accounts-for-business-thailand/cover-d7c75f0a74.webp"
 pubDate: 2024-11-01
-category: "Notes"
+category: "Operations"
+tags: ["business-banking", "thailand", "operations", "founder-journey", "finance"]
 newsletter: true
 draft: false
 ---

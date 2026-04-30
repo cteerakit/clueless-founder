@@ -4,7 +4,8 @@ description: "One year after launching Telepath, I review growth metrics, key mi
 excerpt: "One year after launching Telepath, I review growth metrics, key mistakes, and my 2025 focus on organic traffic, stronger data capture, and sustainable revenue."
 coverImage: "/images/posts/telepath-one-year-later/cover-0e645add01.webp"
 pubDate: 2025-01-01
-category: "Notes"
+category: "Product"
+tags: ["telepath", "startup-update", "retrospective", "founder-journey"]
 newsletter: true
 draft: false
 ---

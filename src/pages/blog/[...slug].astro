@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SEO from '../../components/SEO.astro';
 import BlogListItem from '../../components/BlogListItem.astro';
 import { estimateReadTime } from '../../utils/reading';
+import { slugifySegment } from '../../utils/slugify';
 
 export const prerender = true;
 
@@ -28,6 +29,8 @@ const excerpt = post.data.excerpt ?? post.data.description;
 const coverImage = post.data.coverImage;
 const coverMedium = coverImage?.replace('.webp', '-w896.webp');
 const coverLarge = coverImage?.replace('.webp', '-w1120.webp');
+const categorySlug = slugifySegment(post.data.category);
+const tags = post.data.tags ?? [];
 ---
 
 <BaseLayout showDefaultSeo={false}>
@@ -46,6 +49,21 @@ const coverLarge = coverImage?.replace('.webp', '-w1120.webp');
     jsonLd="BlogPosting"
     post={post}
   />
+  <div
+    id="reading-progress-track"
+    class="pointer-events-none fixed top-0 left-0 right-0 z-40 h-1 bg-transparent transition-opacity duration-300"
+    aria-hidden="true"
+  >
+    <div
+      id="reading-progress-bar"
+      class="h-full w-0 bg-[var(--text)] transition-[width] duration-100 ease-linear"
+      role="progressbar"
+      aria-label="Reading progress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="0"
+    ></div>
+  </div>
 
   <article
     class="prose prose-base md:prose-lg prose-neutral max-w-none dark:prose-invert
@@ -65,7 +83,14 @@ const coverLarge = coverImage?.replace('.webp', '-w1120.webp');
       prose-figcaption:text-sm prose-figcaption:text-neutral-400 dark:prose-figcaption:text-neutral-500"
   >
     <header class="not-prose mb-12">
-      <p class="text-xs uppercase tracking-wider text-[var(--muted)]">{post.data.category}</p>
+      <p class="text-xs uppercase tracking-wider text-[var(--muted)]">
+        <a
+          href={`/category/${categorySlug}/`}
+          class="font-sans text-xs uppercase tracking-wider text-[var(--muted)] no-underline transition-colors hover:text-[var(--text)]"
+        >
+          {post.data.category}
+        </a>
+      </p>
       <h1 class="mt-3 text-3xl font-normal leading-tight text-[var(--text)] md:text-5xl">{post.data.title}</h1>
       <p class="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">{excerpt}</p>
       <div class="mt-4 flex flex-wrap items-center gap-x-1 gap-y-1 font-sans text-sm text-[var(--muted)]">
@@ -98,11 +123,70 @@ const coverLarge = coverImage?.replace('.webp', '-w1120.webp');
           />
         )
       }
+      {
+        tags.length > 0 && (
+          <ul class="mt-6 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <li>
+                <a
+                  href={`/tags/${slugifySegment(tag)}/`}
+                  class="inline-flex items-center rounded-full border border-[var(--line)] px-3 py-1 font-sans text-xs text-[var(--muted)] transition-colors hover:bg-[var(--hover)] hover:text-[var(--text)]"
+                >
+                  #{tag}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
     </header>
 
     <Content />
   </article>
   <script is:inline>
+    const setupReadingProgress = () => {
+      const track = document.getElementById('reading-progress-track');
+      const bar = document.getElementById('reading-progress-bar');
+      const article = document.querySelector('article.prose');
+      if (!track || !bar || !article) return;
+      if (window.__readingProgressAbortController) {
+        window.__readingProgressAbortController.abort();
+      }
+      const controller = new AbortController();
+      window.__readingProgressAbortController = controller;
+
+      const updateProgress = () => {
+        const articleRect = article.getBoundingClientRect();
+        const start = window.scrollY + articleRect.top;
+        const total = article.scrollHeight - window.innerHeight;
+        if (total <= 0) {
+          bar.style.width = '100%';
+          bar.setAttribute('aria-valuenow', '100');
+          track.style.opacity = '0';
+          return;
+        }
+        const current = window.scrollY - start;
+        const progress = Math.min(Math.max((current / total) * 100, 0), 100);
+        bar.style.width = `${progress}%`;
+        bar.setAttribute('aria-valuenow', String(Math.round(progress)));
+        track.style.opacity = progress >= 100 ? '0' : '1';
+      };
+
+      let ticking = false;
+      const onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          updateProgress();
+          ticking = false;
+        });
+      };
+
+      updateProgress();
+      window.addEventListener('scroll', onScroll, { passive: true, signal: controller.signal });
+      window.addEventListener('resize', onScroll, { passive: true, signal: controller.signal });
+    };
+
     const applyIntrinsicSize = () => {
       const images = document.querySelectorAll('article.prose img:not([width]):not([height])');
       images.forEach((image) => {
@@ -118,7 +202,9 @@ const coverLarge = coverImage?.replace('.webp', '-w1120.webp');
         }
       });
     };
+    setupReadingProgress();
     applyIntrinsicSize();
+    document.addEventListener('astro:page-load', setupReadingProgress);
     document.addEventListener('astro:page-load', applyIntrinsicSize);
   </script>
 

@@ -4,7 +4,8 @@ description: "I show how I use Buzzkill with Google Calendar to create loud, per
 excerpt: "I show how I use Buzzkill with Google Calendar to create loud, persistent meeting alerts on Android that cut through distractions and prevent missed meetings."
 coverImage: "/images/posts/never-miss-a-meeting-again/cover-a12c1a1801.webp"
 pubDate: 2025-03-02
-category: "Notes"
+category: "Productivity"
+tags: ["calendar", "scheduling", "meetings", "workflow"]
 newsletter: true
 draft: false
 ---

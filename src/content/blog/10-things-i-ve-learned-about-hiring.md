@@ -4,7 +4,8 @@ description: "After years of hiring mistakes, I share ten hard lessons on cultur
 excerpt: "After years of hiring mistakes, I share ten hard lessons on culture, screening, and decisions that helped me avoid bad hires and build stronger teams."
 coverImage: "/images/posts/10-things-i-ve-learned-about-hiring/cover-c51bc0b67e.webp"
 pubDate: 2025-11-17
-category: "Notes"
+category: "Entrepreneurship"
+tags: ["hiring", "recruiting", "team-building", "leadership"]
 newsletter: true
 draft: false
 ---

@@ -4,7 +4,8 @@ description: "I built a working job board prototype with no-code tools, sharing 
 excerpt: "I built a working job board prototype with no-code tools, sharing what worked across frontend and backend, where limits appeared, and what I would change next."
 coverImage: "/images/posts/i-built-a-job-board-using-no-code-tools/cover-7e2d460a5f.webp"
 pubDate: 2024-02-05
-category: "Notes"
+category: "Product"
+tags: ["no-code", "job-board", "product-build", "founder-journey"]
 newsletter: true
 draft: false
 ---
