@@ -1,0 +1,54 @@
+---
+interface Props {
+  term: string;
+}
+
+const { term } = Astro.props;
+
+const giscusRepo = import.meta.env.PUBLIC_GISCUS_REPO;
+const giscusRepoId = import.meta.env.PUBLIC_GISCUS_REPO_ID;
+const giscusCategory = import.meta.env.PUBLIC_GISCUS_CATEGORY;
+const giscusCategoryId = import.meta.env.PUBLIC_GISCUS_CATEGORY_ID;
+const giscusMapping = import.meta.env.PUBLIC_GISCUS_MAPPING ?? 'pathname';
+const giscusStrict = import.meta.env.PUBLIC_GISCUS_STRICT ?? '0';
+const giscusReactionsEnabled = import.meta.env.PUBLIC_GISCUS_REACTIONS_ENABLED ?? '1';
+const giscusEmitMetadata = import.meta.env.PUBLIC_GISCUS_EMIT_METADATA ?? '0';
+const giscusInputPosition = import.meta.env.PUBLIC_GISCUS_INPUT_POSITION ?? 'top';
+const giscusTheme = import.meta.env.PUBLIC_GISCUS_THEME ?? 'preferred_color_scheme';
+const giscusLang = import.meta.env.PUBLIC_GISCUS_LANG ?? 'en';
+const hasGiscusConfig = Boolean(giscusRepo && giscusRepoId && giscusCategory && giscusCategoryId);
+---
+
+<section class="not-prose mt-12" aria-label="Comments">
+  <p class="text-xs uppercase tracking-wider text-[var(--muted)]">Comments</p>
+  {
+    hasGiscusConfig ? (
+      <div class="mt-4 rounded-[var(--radius-ui)] border border-[var(--line)] bg-[var(--bg)] p-4 md:p-6">
+        <script
+          is:inline
+          src="https://giscus.app/client.js"
+          data-repo={giscusRepo}
+          data-repo-id={giscusRepoId}
+          data-category={giscusCategory}
+          data-category-id={giscusCategoryId}
+          data-mapping={giscusMapping}
+          data-term={term}
+          data-strict={giscusStrict}
+          data-reactions-enabled={giscusReactionsEnabled}
+          data-emit-metadata={giscusEmitMetadata}
+          data-input-position={giscusInputPosition}
+          data-theme={giscusTheme}
+          data-lang={giscusLang}
+          crossorigin="anonymous"
+          async
+        ></script>
+      </div>
+    ) : (
+      <div class="mt-4 rounded-[var(--radius-ui)] border border-[var(--line)] bg-[var(--hover)] p-4 md:p-6">
+        <p class="text-sm text-[var(--muted)]">
+          Comments are temporarily unavailable while Giscus is being configured.
+        </p>
+      </div>
+    )
+  }
+</section>

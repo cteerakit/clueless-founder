@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SEO from '../../components/SEO.astro';
 import BlogListItem from '../../components/BlogListItem.astro';
+import Comments from '../../components/Comments.astro';
 import { estimateReadTime } from '../../utils/reading';
 import { slugifySegment } from '../../utils/slugify';
 
@@ -174,6 +175,7 @@ const tocHeadings = headings.filter((heading) => heading.depth >= 2 && heading.d
 
     <Content />
   </article>
+  <Comments term={post.id} />
   <script is:inline>
     const setupReadingProgress = () => {
       const track = document.getElementById('reading-progress-track');
