@@ -2,7 +2,7 @@
 title: "How to design a ‘good enough’ logo"
 description: "This is my fast, founder-friendly process for designing a good-enough logo, from concept and typography to color systems, variants, exports, and handoff assets."
 excerpt: "This is my fast, founder-friendly process for designing a good-enough logo, from concept and typography to color systems, variants, exports, and handoff assets."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/58cd9b37-a0ba-423a-be00-dd097165c2c0/image.png"
+coverImage: "/images/posts/how-to-design-a-good-enough-logo/cover-7bc570a63a.webp"
 pubDate: 2024-05-01
 category: "Notes"
 newsletter: true

@@ -2,7 +2,7 @@
 title: "Finding the Right Home for n8n"
 description: "I compare n8n hosting options across n8n Cloud, managed and unmanaged VPS, and local setups to help you choose the best mix of cost, control, and simplicity."
 excerpt: "I compare n8n hosting options across n8n Cloud, managed and unmanaged VPS, and local setups to help you choose the best mix of cost, control, and simplicity."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f64a0e73-60d3-429b-8262-65cf0c100864/761shots_so.png"
+coverImage: "/images/posts/finding-the-right-home-for-n8n/cover-ac38af1b79.webp"
 pubDate: 2025-07-03
 category: "Notes"
 newsletter: true
@@ -15,7 +15,7 @@ There are several ways to get n8n up and running, and I’ve tried a few. Each h
 
 ## 1. n8n Cloud: The "Easy Button"
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b580e299-232e-4b1c-8dce-461d333dc30b/unnamed.png)
+![](/images/posts/finding-the-right-home-for-n8n/inline-01-f090f2bea5.webp)
 
 This is hands-down the simplest way to use n8n. It's like signing up for any online service – no technical setup required. You just create an account, and you’re ready to build workflows.
 
@@ -31,7 +31,7 @@ Since n8n is open-source, you can host it yourself. A VPS means you rent a virtu
 
 ### 2.1 Unmanaged VPS
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/05892703-6471-448b-9547-bd04a76135f9/unnamed.png)
+![](/images/posts/finding-the-right-home-for-n8n/inline-02-2f5fdbf92e.webp)
 
 This is for the technically savvy. You get a raw server (usually Linux) and handle everything yourself—installation, security, and updates.
 
@@ -39,7 +39,7 @@ It's **cheaper** but requires you to be technical. [DigitalOcean](https://www.di
 
 ### 2.2 Managed VPS (My current setup)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/849a9c30-2986-4ef6-bc1a-a00735cb38bd/unnamed.png)
+![](/images/posts/finding-the-right-home-for-n8n/inline-03-2e37be7090.webp)
 
 This is a great middle ground. A company handles the server setup and much of the maintenance for you, but you still pay less than n8n Cloud. The experience is similar to n8n Cloud but with better pricing for what you get.
 
@@ -47,7 +47,7 @@ This is a great middle ground. A company handles the server setup and much of th
 
 ## 3. Hosting on Your Own Computer: For Testing and Local Use
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2b589dc0-4be7-43eb-bec0-abc5b2a0daea/unnamed.png)
+![](/images/posts/finding-the-right-home-for-n8n/inline-04-c67d7b1e82.webp)
 
 You can simply download n8n and run it on your laptop or desktop. This is **free to use**, with no limits other than your hardware, and it's excellent for testing or trying out new workflows.
 

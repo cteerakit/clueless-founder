@@ -2,7 +2,7 @@
 title: "STOP using WordPress in 2024"
 description: "I explain why I stopped recommending WordPress for new sites, including hidden maintenance costs, plugin dependency risks, and better modern alternatives."
 excerpt: "I explain why I stopped recommending WordPress for new sites, including hidden maintenance costs, plugin dependency risks, and better modern alternatives."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/9a547899-c4be-4bf6-9eeb-6c47a6716e2a/image.png"
+coverImage: "/images/posts/stop-using-wordpress-in-2024/cover-dcc862c854.webp"
 pubDate: 2024-01-29
 category: "Notes"
 newsletter: true
@@ -37,7 +37,7 @@ WordPress tries to be everything, but not good at anything. If you want to build
 
 ### Webflow — for business websites
 
-![](https://miro.medium.com/v2/resize:fit:700/1*dr9hV-fPp73tTNXz56E5iA.png)
+![](/images/posts/stop-using-wordpress-in-2024/inline-01-03b6a8d735.webp)
 
 [Webflow](https://webflow.com/) is by far the most powerful website builder. It is sad to see very few people using it in my country. It has all the functionality you need to create a professional website built into the platform. It produces clean code which helps with website speed and SEO.
 
@@ -45,7 +45,7 @@ With all the greatness, here comes the downsides. Webflow is a complex tool with
 
 ### Shopify — for e-commerce websites
 
-![](https://miro.medium.com/v2/resize:fit:700/1*mj94055cqOa11HjdVao6PQ.png)
+![](/images/posts/stop-using-wordpress-in-2024/inline-02-06e04431c5.webp)
 
 [Shopify](https://www.shopify.com/) is not only a website builder, but an e-commerce platform. While you can use WordPress + WooCommerce, you will get into the maintenance hell again. Shopify removes all those hassles and lets you focus on the most important aspect of e-commerce business, selling.
 
@@ -53,7 +53,7 @@ Since the platform is standardized, you may find it limited in customizability. 
 
 ### Framer — for personal or small business websites
 
-![](https://miro.medium.com/v2/resize:fit:700/1*DyKnzvjTWDzNEPkQPVTZPQ.png)
+![](/images/posts/stop-using-wordpress-in-2024/inline-03-083f89d1ac.webp)
 
 [Framer](https://www.framer.com/) is the easiest way to design and publish a website. Designers may prefer Framer over Webflow because of the simple design process.
 
@@ -63,7 +63,7 @@ Framer is new in town so they still miss a few functionalities. But if you are a
 
 ### Ghost — for blogs
 
-![](https://miro.medium.com/v2/resize:fit:700/1*KhiUIK7OOz29CibVLpMYXg.png)
+![](/images/posts/stop-using-wordpress-in-2024/inline-04-488bdc9d89.webp)
 
 [Ghost](https://ghost.org/) is a powerful app for professional publishers. While WordPress was originally built to be a blogging platform, it lacks many features to call it a modern publishing platform.
 

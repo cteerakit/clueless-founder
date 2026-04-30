@@ -2,7 +2,7 @@
 title: "Do You Still Read Books in 2025?"
 description: "I explain how I read in 2025 using AI discovery, summary filtering, digital reading tools, and modern tracking habits to learn more while reading fewer books."
 excerpt: "I explain how I read in 2025 using AI discovery, summary filtering, digital reading tools, and modern tracking habits to learn more while reading fewer books."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/83b899f3-0fa0-41d3-acfd-9a398b8d68e6/Cover.png"
+coverImage: "/images/posts/do-you-still-read-books-in-2025/cover-6c1703299a.webp"
 pubDate: 2025-09-25
 category: "Notes"
 newsletter: true

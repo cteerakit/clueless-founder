@@ -2,7 +2,7 @@
 title: "How to get business emails for free"
 description: "I break down practical ways to get business email for free, from Lark for teams to Cloudflare Email Routing for solo founders, with key security trade-offs."
 excerpt: "I break down practical ways to get business email for free, from Lark for teams to Cloudflare Email Routing for solo founders, with key security trade-offs."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/bb4a5078-5845-4177-b907-0a9e1c639ffb/image.png"
+coverImage: "/images/posts/how-to-get-business-emails-for-free/cover-c89b648fad.webp"
 pubDate: 2024-02-12
 category: "Notes"
 newsletter: true

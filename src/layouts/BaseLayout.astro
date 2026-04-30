@@ -68,8 +68,8 @@ const {
         class="site-header sticky top-0 z-30 -mx-6 bg-[var(--bg)] px-6 pt-4"
       >
         <header class="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--line)] pb-4">
-          <a href="/" class="inline-flex items-center hover:opacity-80">
-            <img src="/logo-trans.png" alt={SITE_TITLE} class="h-8 w-auto dark:invert" />
+          <a href="/" class="inline-flex items-center hover:opacity-80" aria-label={`Go to ${SITE_TITLE} home`}>
+            <img src="/logo-trans.png" alt={SITE_TITLE} class="h-8 w-auto dark:invert" width="512" height="512" />
           </a>
           <nav class="flex items-center gap-6 font-sans text-sm text-[var(--muted)]">
             <a href="/about/" class="transition-colors hover:text-[var(--text)]">About</a>
@@ -150,7 +150,7 @@ const {
                 aria-label="Visit Teerakit on Medium"
                 title="Medium"
               >
-                <img src="/icons/medium-theme.svg" alt="" aria-hidden="true" role="presentation" class="h-4 w-4" loading="lazy" />
+                <img src="/icons/medium-theme.svg" alt="" aria-hidden="true" role="presentation" class="h-4 w-4" loading="lazy" width="16" height="16" />
               </a>
               <a
                 href="https://substack.com/@cteerakit"
@@ -160,7 +160,7 @@ const {
                 aria-label="Visit Clueless Founder on Substack"
                 title="Substack"
               >
-                <img src="/icons/substack-theme.svg" alt="" aria-hidden="true" role="presentation" class="h-4 w-4" loading="lazy" />
+                <img src="/icons/substack-theme.svg" alt="" aria-hidden="true" role="presentation" class="h-4 w-4" loading="lazy" width="16" height="16" />
               </a>
             </div>
           </div>
@@ -350,7 +350,6 @@ const {
         };
 
         window.addEventListener('pagehide', saveScrollPosition);
-        window.addEventListener('beforeunload', saveScrollPosition);
         document.addEventListener('visibilitychange', () => {
           if (document.visibilityState === 'hidden') saveScrollPosition();
         });

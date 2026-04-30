@@ -2,7 +2,7 @@
 title: "Never miss a meeting again"
 description: "I show how I use Buzzkill with Google Calendar to create loud, persistent meeting alerts on Android that cut through distractions and prevent missed meetings."
 excerpt: "I show how I use Buzzkill with Google Calendar to create loud, persistent meeting alerts on Android that cut through distractions and prevent missed meetings."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c16b9777-7a80-47d0-a148-cccaccf52e3a/336shots_so.png"
+coverImage: "/images/posts/never-miss-a-meeting-again/cover-a12c1a1801.webp"
 pubDate: 2025-03-02
 category: "Notes"
 newsletter: true
@@ -17,7 +17,7 @@ Google Calendar and other scheduling tools have built-in notifications, but they
 
 ## Enter Buzzkill: A Smarter Way to Get Notified
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/761364f3-feb0-429b-96f2-db7d67c06db8/image.png)
+![](/images/posts/never-miss-a-meeting-again/inline-01-5d9a494ff8.webp)
 
 [Buzzkill](https://play.google.com/store/apps/details) is a notification filtering app that lets you create custom alerts based on specific triggers. Buzzkill can actually do a lot more, but we’ll focus on meeting notifications.
 

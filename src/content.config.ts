@@ -8,7 +8,12 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     excerpt: z.string().optional(),
-    coverImage: z.url().optional(),
+    coverImage: z
+      .string()
+      .refine((value) => value.startsWith('/') || /^https?:\/\//.test(value), {
+        message: 'coverImage must be an absolute URL or a root-relative path',
+      })
+      .optional(),
     pubDate: z.coerce.date(),
     category: z.string(),
     author: z.string().default('Teerakit Chantrakul'),

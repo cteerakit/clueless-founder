@@ -2,7 +2,7 @@
 title: "STOP using Line at work! Use these instead"
 description: "If your team still relies on Line for work, this post compares better chat options like Slack, Teams, Google Chat, Lark, and Discord with practical trade-offs."
 excerpt: "If your team still relies on Line for work, this post compares better chat options like Slack, Teams, Google Chat, Lark, and Discord with practical trade-offs."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/04540ab0-f92c-49b8-85e1-f966582265a9/image.png"
+coverImage: "/images/posts/stop-using-line-at-work-use-these-instead/cover-a75b3aefa0.webp"
 pubDate: 2024-02-19
 category: "Notes"
 newsletter: true
@@ -19,7 +19,7 @@ There are many better tools for this. Let’s see what can we use to communicate
 
 ## Slack
 
-![](https://miro.medium.com/v2/resize:fit:700/0*MHG-l3j9XsiYr92K)
+![](/images/posts/stop-using-line-at-work-use-these-instead/inline-01-a976012b68.webp)
 
 I used [Slack](https://slack.com/) a while ago and still revisit it from time to time. Feature-wise, Slack is probably the best of all. It’s free and easy to use. And it integrates with pretty much any cloud software out there. If you have a good setup, you can do most of your work without leaving Slack.
 
@@ -33,7 +33,7 @@ If you don’t mind juggling between many apps, or you just need a business chat
 
 ## Microsoft Teams
 
-![](https://miro.medium.com/v2/resize:fit:700/0*D3j3PfCz9IdJAzMu)
+![](/images/posts/stop-using-line-at-work-use-these-instead/inline-02-f201ee2b47.webp)
 
 If you already subscribe to Microsoft 365, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) is probably the best option as you get to use it for free. It tightly integrates with the Microsoft ecosystem that most people are familiar with.
 
@@ -45,7 +45,7 @@ If you already love Microsoft Word, Excel, and PowerPoint, Teams is a no-brainer
 
 ## Google Chat
 
-![](https://miro.medium.com/v2/resize:fit:700/0*ytGBsppxYhfPsUrr)
+![](/images/posts/stop-using-line-at-work-use-these-instead/inline-03-dd3efd5359.webp)
 
 Similar to Teams, [Google Chat](https://workspace.google.com/products/chat/) comes with Google Workspace, integrating with all of Google’s ecosystem. I find Google’s suite is much better on the web compared to others.
 
@@ -55,7 +55,7 @@ The downside, it’s pretty barebone. You don’t get fancy features like others
 
 ## Lark
 
-![](https://miro.medium.com/v2/resize:fit:696/0*VWSVbNUg_1TliPiD)
+![](/images/posts/stop-using-line-at-work-use-these-instead/inline-04-ad56d10c78.webp)
 
 I came across [Lark](https://www.larksuite.com/) not long ago and I’m surprised at how powerful it is. Lark Messenger is a part of Lark Suite. Similar to Microsoft 365 and Google Workspace, Lark Suite has all the tools you need for your daily work, some even more powerful than its competitors.
 
@@ -67,7 +67,7 @@ If you are on a budget but still want powerful software, Lark is definitely a go
 
 ## Discord
 
-![](https://miro.medium.com/v2/resize:fit:700/0*SptTyf47EYEMlJx4)
+![](/images/posts/stop-using-line-at-work-use-these-instead/inline-05-6afa754f5e.webp)
 
 [Discord](https://discord.com/) is built for gamers but we can use it for work too. It can be a good free alternative to Slack. It keeps all your chat history. It has powerful voice chat and video calls. And it’s free.
 

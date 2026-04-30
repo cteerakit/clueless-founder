@@ -2,7 +2,7 @@
 title: "What I learned from running a digital agency for 7 years"
 description: "After closing my agency after seven years, I share hard lessons on cash flow, hiring, positioning, client boundaries, and building a business beyond yourself."
 excerpt: "After closing my agency after seven years, I share hard lessons on cash flow, hiring, positioning, client boundaries, and building a business beyond yourself."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/6feaeb25-a8e9-490b-b12e-d6b31a2eb74d/1_ng9bSwY49U848ap7bQzJKg.png"
+coverImage: "/images/posts/what-i-learned-from-running-a-digital-agency-for-7-years/cover-f2291dcbab.webp"
 pubDate: 2024-01-07
 category: "Notes"
 newsletter: true

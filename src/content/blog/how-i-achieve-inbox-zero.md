@@ -2,7 +2,7 @@
 title: "How I achieve Inbox Zero (plus 7 tips I actually use daily)"
 description: "My Inbox Zero routine uses archiving, filters, unsubscribe habits, and task handoffs so important emails stay visible while daily clutter stays under control."
 excerpt: "My Inbox Zero routine uses archiving, filters, unsubscribe habits, and task handoffs so important emails stay visible while daily clutter stays under control."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/1c05d7c7-a6ae-4f82-9ec3-762d8966378b/image.png"
+coverImage: "/images/posts/how-i-achieve-inbox-zero/cover-085717612d.webp"
 pubDate: 2024-06-02
 category: "Notes"
 newsletter: true

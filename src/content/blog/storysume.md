@@ -2,7 +2,7 @@
 title: "Reinventing the Resume for 2025: Introducing \"Storysume\""
 description: "Storysume is my mobile-first resume concept for 2025, designed to be concise, readable, and safer to share publicly while bridging static CVs and full profiles."
 excerpt: "Storysume is my mobile-first resume concept for 2025, designed to be concise, readable, and safer to share publicly while bridging static CVs and full profiles."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c912df4a-34c7-40e4-a231-13c74fe03d21/76_1x_shots_so.png"
+coverImage: "/images/storysume/cover.webp"
 pubDate: 2025-07-23
 category: "Notes"
 newsletter: true
@@ -49,7 +49,7 @@ So, the reinvented resume needs to be:
 
 ## Introducing "Storysume"
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/1507c8ae-0926-4bd3-936c-6ad06413e43f/unnamed.png)
+![](/images/storysume/preview-1.webp)
 
 This new format isn't meant to replace the traditional resume entirely, especially for large corporations with ATS. However, for the majority of companies that rely on human review, and for situations where you want to quickly share your profile with a human – a friend, a direct recruiter, or even on social media – this format is perfect. It's designed to be easily consumable on any device.
 
@@ -59,6 +59,6 @@ While I believe that in the future, traditional resume formats will be obsolete 
 
 Telepath shares this vision of ultimately replacing resumes entirely with universally usable digital profiles. But in the meantime, we can leverage something in between for the right situation.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f0ecf911-2b5b-4819-b12f-4e1d41da8334/unnamed.png)
+![](/images/storysume/preview-2.webp)
 
 You can generate your [Storysume](https://telepath.work/storysume) today from your profile on Telepath. Check it out and let me know what you think!

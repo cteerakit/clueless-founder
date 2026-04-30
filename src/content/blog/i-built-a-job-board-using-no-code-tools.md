@@ -2,7 +2,7 @@
 title: "I built a job board using no-code tools"
 description: "I built a working job board prototype with no-code tools, sharing what worked across frontend and backend, where limits appeared, and what I would change next."
 excerpt: "I built a working job board prototype with no-code tools, sharing what worked across frontend and backend, where limits appeared, and what I would change next."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/829a4e75-00ea-40c9-84fd-8855f315d56f/image.png"
+coverImage: "/images/posts/i-built-a-job-board-using-no-code-tools/cover-7e2d460a5f.webp"
 pubDate: 2024-02-05
 category: "Notes"
 newsletter: true
@@ -37,7 +37,7 @@ As I will be building a prototype, plus my inability to code, and laziness in de
 
 Building a directory with Pory is easy, and free to get started. It connects with Airtable natively. In only a few hours, I created a functional job board. ([https://telepath.pory.app/](https://telepath.pory.app/))
 
-![](https://miro.medium.com/v2/resize:fit:700/1*qDBvaZ_6MQ9lWicitKBJ4w.png)
+![](/images/posts/i-built-a-job-board-using-no-code-tools/inline-01-cb77627b4b.webp)
 
 After playing around with it, I found a few problems that come with Pory.
 
@@ -55,7 +55,7 @@ This part is unnecessary early as you can replace it with a simple Google Form. 
 
 For those reasons, I built the platform using [Glide](https://www.glideapps.com/) as a tool for recruiter to manage their job posts. Glide is perfect for this case. It is easy to build, connects with Airtable, beautifully designed. One downside is the platform you build will not get indexed, which is fine for this use case. ([https://telepath-recruiter.glide.page/](https://telepath-recruiter.glide.page/))
 
-![](https://miro.medium.com/v2/resize:fit:700/1*BMBVn0KamkOHfMoz-UweYg.png)
+![](/images/posts/i-built-a-job-board-using-no-code-tools/inline-02-260fb4adf4.webp)
 
 The experience is great so far. I will probably use this for a while until the product needs more complex features.
 
@@ -63,7 +63,7 @@ The experience is great so far. I will probably use this for a while until the p
 
 I use [Airtable](https://airtable.com/) as a central database to collect job posts as both of the previous tools connect to it. The database will be small for a while, so I don’t need to worry too much about this.
 
-![](https://miro.medium.com/v2/resize:fit:700/1*8YyViq5g3O3qF62IbYVicA.png)
+![](/images/posts/i-built-a-job-board-using-no-code-tools/inline-03-f590478e38.webp)
 
 However, in the far future, I will eventually run into limitations and need to migrate to a production-grade backend system like Firebase, Supabase, or Xano as it will need to cover other stuff like authentication, and security. Luckily, Glide will connect to those as well. But for now, it will do just fine.
 

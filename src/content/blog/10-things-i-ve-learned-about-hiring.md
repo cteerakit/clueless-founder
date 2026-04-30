@@ -2,7 +2,7 @@
 title: "10 things I've learned about hiring"
 description: "After years of hiring mistakes, I share ten hard lessons on culture, screening, and decisions that helped me avoid bad hires and build stronger teams."
 excerpt: "After years of hiring mistakes, I share ten hard lessons on culture, screening, and decisions that helped me avoid bad hires and build stronger teams."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/54d757c3-66b9-497b-a622-c0042f2f8c7d/Cover__1_.png"
+coverImage: "/images/posts/10-things-i-ve-learned-about-hiring/cover-c51bc0b67e.webp"
 pubDate: 2025-11-17
 category: "Notes"
 newsletter: true

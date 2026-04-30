@@ -2,7 +2,7 @@
 title: "I've been posing on social media every day for 30 days. Here's what I learned."
 description: "After posting daily for 30 days on LinkedIn, X, and Threads, I analyzed the data and learned how audience fit and content type changed my reach and engagement."
 excerpt: "After posting daily for 30 days on LinkedIn, X, and Threads, I analyzed the data and learned how audience fit and content type changed my reach and engagement."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/81867a94-b963-452a-b16f-8ce33958d9e8/cover.png"
+coverImage: "/images/posts/what-i-learned-from-posting-on-social-media/cover-d90915a847.webp"
 pubDate: 2024-09-14
 category: "Notes"
 newsletter: true
@@ -35,19 +35,19 @@ I kept this schedule for 30 days. Here are the results.
 
 I receive a lot of views from LinkedIn. However, this is kinda biased as I have more followers to start with. While on X and Threads, I’m pretty much nobody. Threads doesn’t provide view data sadly so I’m gonna skip this and analyze the other two.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8aaef352-9895-4bfc-8564-44d9ab57471e/graphy-export-1726315293.png)
+![](/images/posts/what-i-learned-from-posting-on-social-media/inline-01-5e4b55e28b.webp)
 
 
 
 LinkedIn seems to have much more exposure. But if we look at the ratio between engagement and views, X is doing a bit better (2% on LinkedIn vs 2.5% on X). Let’s look a bit deeper at each channel.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4a7d8098-0719-436e-af5a-6d9a9e1bdfc5/graphy-export-1726315355.png)
+![](/images/posts/what-i-learned-from-posting-on-social-media/inline-02-30502da02b.webp)
 
 
 
 Now this becomes more interesting. When we break it down by date, LinkedIn has a significant declining trend. The more I post, the fewer views I get. I must be doing something wrong here.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e366662a-36cb-4398-8159-1f737f777674/graphy-export-1726315354.png)
+![](/images/posts/what-i-learned-from-posting-on-social-media/inline-03-5cd8578bdf.webp)
 
 
 
@@ -55,13 +55,13 @@ On X, it has a similar declining trend but is not very obvious, aligning with th
 
 Let’s have a look at each content type.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/30208e47-2374-440b-b1f3-496de97a70a9/graphy-export-1726319176.png)
+![](/images/posts/what-i-learned-from-posting-on-social-media/inline-04-a6d8fa9730.webp)
 
 
 
 On LinkedIn, #thoughts has the most views on average and #bookquote has the most engagement. People didn’t seem to care about the products I shared.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/16548a8a-5138-4848-bf7a-02fef85caf62/graphy-export-1726320048.png)
+![](/images/posts/what-i-learned-from-posting-on-social-media/inline-05-4e1981f448.webp)
 
 
 

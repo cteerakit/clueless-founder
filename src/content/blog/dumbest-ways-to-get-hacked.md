@@ -2,7 +2,7 @@
 title: "The Dumbest Ways to Get Hacked (That You’re Probably Doing)"
 description: "This guide covers common security mistakes, from weak passwords to phishing, and gives simple actions you can take today to better protect your online accounts."
 excerpt: "This guide covers common security mistakes, from weak passwords to phishing, and gives simple actions you can take today to better protect your online accounts."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/8a5fc24a-208f-4814-ae1a-ffe8391d7986/Cover.png"
+coverImage: "/images/posts/dumbest-ways-to-get-hacked/cover-a3222b39d4.webp"
 pubDate: 2025-04-02
 category: "Notes"
 newsletter: true

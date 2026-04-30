@@ -48,6 +48,8 @@ const excerpt = post.data.excerpt ?? post.data.description;
           class="order-first aspect-video w-full rounded-[var(--radius-ui)] object-cover md:order-none md:w-56"
           loading={prioritizeImage ? 'eager' : 'lazy'}
           fetchpriority={prioritizeImage ? 'high' : 'auto'}
+          width="1280"
+          height="720"
         />
       )
     }

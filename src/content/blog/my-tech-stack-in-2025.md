@@ -2,7 +2,7 @@
 title: "My tech stack in 2025"
 description: "This is my 2025 tech stack for building and running lean businesses, covering productivity, product, marketing, finance, and the tools I trust most day to day."
 excerpt: "This is my 2025 tech stack for building and running lean businesses, covering productivity, product, marketing, finance, and the tools I trust most day to day."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/2e7bfce6-9d55-4a6c-b2fe-f214489ad271/Cover.png"
+coverImage: "/images/posts/my-tech-stack-in-2025/cover-9db2487679.webp"
 pubDate: 2025-02-02
 category: "Notes"
 newsletter: true

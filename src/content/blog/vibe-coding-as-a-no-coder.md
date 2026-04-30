@@ -2,7 +2,7 @@
 title: "Vibe Coding as a No-Coder: My Honest Experiment"
 description: "I tested vibe coding as a non-technical founder and learned where AI helps fast, where it breaks, and what core product and data skills no-coders still need."
 excerpt: "I tested vibe coding as a non-technical founder and learned where AI helps fast, where it breaks, and what core product and data skills no-coders still need."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/53b7bf62-ca61-443b-8685-8cbb560f277e/d.png"
+coverImage: "/images/posts/vibe-coding-as-a-no-coder/cover-7450ee95b9.webp"
 pubDate: 2025-06-12
 category: "Notes"
 newsletter: true
@@ -21,7 +21,7 @@ Since I can only code in basic HTML and CSS, this was a massive draw. My goal wa
 
 ## My Tool of Choice: Lovable
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/beff3c18-2c61-4b21-bbc7-b855a34568b4/image.png)
+![](/images/posts/vibe-coding-as-a-no-coder/inline-01-d33beb5e18.webp)
 
 The market is buzzing with "vibe coding" tools right now. As a no-coder, I needed something genuinely accessible. I chose **Lovable**. It promised a low technical barrier, perfect for someone who just wants to build without getting tangled in code.
 
@@ -33,7 +33,7 @@ My first attempt involved a simple day planning tool. While I am a Todoist user,
 
 I started with a super simple prompt: "Create a task management tool." Lovable responded quickly, generating a UI, a Kanban board, and task adding functionality. Sounds great, right? Not quite.
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/78adb4dd-cf9c-41c2-a887-268bf08fe42e/image.png)
+![](/images/posts/vibe-coding-as-a-no-coder/inline-02-4f0ac40100.webp)
 
 The first major hurdle hit immediately: **data persistence**. My tasks vanished every time I refreshed the page, meaning data was not being saved. Thankfully, Lovable integrates smoothly with **Supabase**, a PostgreSQL database. Linking my project to Supabase solved this. Now, tasks saved to the app were stored in the database and reappeared on refresh.
 

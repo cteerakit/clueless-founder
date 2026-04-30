@@ -2,7 +2,7 @@
 title: "Where to buy a domain name in 2024"
 description: "I compare domain registrars for 2024, including Cloudflare, Spaceship, and Porkbun, with practical advice on pricing, renewals, usability, and lock-in risks."
 excerpt: "I compare domain registrars for 2024, including Cloudflare, Spaceship, and Porkbun, with practical advice on pricing, renewals, usability, and lock-in risks."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/d00d5f67-5e16-4d71-b919-ac941de474b1/image.png"
+coverImage: "/images/posts/where-to-buy-a-domain-name-in-2024/cover-27e113d804.webp"
 pubDate: 2024-01-20
 category: "Notes"
 newsletter: true
@@ -11,7 +11,7 @@ draft: false
 
 I had been a [Google Domains](https://domains.google/) customer for years, keeping all domain names for clients and mine. It was probably the best registrar at the time. It was cheap and easy to use. Until this happened…
 
-![](https://miro.medium.com/v2/resize:fit:700/1*Enl4MzRofsjdrwT9lo2MDA.png)
+![](/images/posts/where-to-buy-a-domain-name-in-2024/inline-01-e9e1d9f1f1.webp)
 
 > Google announced in July 2023 that it would shut down its domain registrar business, Google Domains. On September 7, 2023, Squarespace acquired all domain registrations and related customer accounts from Google Domains.
 
@@ -23,7 +23,7 @@ Fast forward to 2024, if I want to register a new domain name, let’s see how I
 
 First, you need to check whether the name you want is available. [Namecheap Beast Mode](https://www.namecheap.com/domains/registration/results/) is the easiest way to discover available domain names.
 
-![](https://miro.medium.com/v2/resize:fit:700/1*dPMv58_Iqj3sR1eGe7hYrA.png)
+![](/images/posts/where-to-buy-a-domain-name-in-2024/inline-02-856684195a.webp)
 
 Since most of the .com domain is no longer available, we need to find other TLDs (Top-level domains). Some of the most popular are .co .io .so.
 
@@ -51,7 +51,7 @@ Choosing a registrar will be different for each based on your priorities. Here a
 
 ### Cloudflare
 
-![](https://miro.medium.com/v2/resize:fit:700/1*MOhB8QcqvQZN8bUKm9UHow.png)
+![](/images/posts/where-to-buy-a-domain-name-in-2024/inline-03-c1ff58518e.webp)
 
 [Cloudflare](https://www.cloudflare.com/products/registrar/) is my registrar of choice this year. The price is the cheapest in the market as they don’t charge an additional fee ($9.15/y for a .com domain). Additionally, I use their DNS and CDN for all my websites. So it’s an easy choice for me.
 
@@ -61,7 +61,7 @@ Another is you can’t change the nameserver, basically forcing you to use Cloud
 
 ### Spaceship
 
-![](https://miro.medium.com/v2/resize:fit:700/1*43PcXBuhHoPAHksi7Jjmxg.png)
+![](/images/posts/where-to-buy-a-domain-name-in-2024/inline-04-ffb1b2208c.webp)
 
 Spaceship is a new guy in town (It’s owned by Namecheap) with the second-best price ($9.30/y). They arguably have the best user interface among the three.
 
@@ -69,7 +69,7 @@ The reason I don’t use it is that it is so new that I’m not too sure about h
 
 ### Porkbun
 
-![](https://miro.medium.com/v2/resize:fit:700/1*veJ7PCqeFUePjoXNRg723g.png)
+![](/images/posts/where-to-buy-a-domain-name-in-2024/inline-05-e2bfca90b2.webp)
 
 [Porkbun](https://porkbun.com/products/domains) is another good provider, with a similar price to Cloudflare and Spaceship (at $10.37/y). The reason why I don’t use Porkbun is purely aesthetic. I hate their platform’s user interface. If you can get over that, it’s a good place to store your domains.
 

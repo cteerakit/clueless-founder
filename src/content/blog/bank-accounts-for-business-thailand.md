@@ -2,7 +2,7 @@
 title: "I tried to open bank accounts for business in 2024 in Thailand. Here's my experience."
 description: "I share my real experience opening Thai business bank accounts at SCB, KTB, and KBank, including document requirements, branch restrictions, and app usability."
 excerpt: "I share my real experience opening Thai business bank accounts at SCB, KTB, and KBank, including document requirements, branch restrictions, and app usability."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/795e62da-26d3-469a-bd5d-c95767062693/cover.png"
+coverImage: "/images/posts/bank-accounts-for-business-thailand/cover-d7c75f0a74.webp"
 pubDate: 2024-11-01
 category: "Notes"
 newsletter: true
@@ -13,7 +13,7 @@ I recently registered a new company. To continue doing any kind of financial act
 
 ## SCB (Siam Commercial Bank)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/cf7c75c4-cf72-4287-ac1c-204fccac3cf6/scb.png)
+![](/images/posts/bank-accounts-for-business-thailand/inline-01-069b3c292a.webp)
 
 SCB was my first choice as I was with them when I ran my previous company. Nowadays, you don’t interact with the bank but with the software they provide. And their software for business (SCB Business Anywhere) is quite intuitive.
 
@@ -30,7 +30,7 @@ For those reasons, despite having great experience with them, I’m unable to co
 
 ## KTB (Krungthai Bank)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/04be2740-c972-40b1-aa45-4d2faf989b52/ktb.png)
+![](/images/posts/bank-accounts-for-business-thailand/inline-02-291ced1e8c.webp)
 
 KTB was my next attempt. This one is required for me as I need an account for the Digital Startup program. You can open an account with them regardless of the company's age and registered address, which is cool!
 
@@ -46,7 +46,7 @@ One last thing, you need 500 THB, in cash only. So I must walk to the ATM and wi
 
 ## KBank (Kasikorn Bank)
 
-![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b87ddb68-6a69-4994-ac7d-9dd2bea45c36/kbank.png)
+![](/images/posts/bank-accounts-for-business-thailand/inline-03-45cb26950b.webp)
 
 I have no prior business experience with KBank, only personal ones. It’s one of the easiest to open an account with, requiring the same sets of documents as SCB, but without any of their restrictions.
 

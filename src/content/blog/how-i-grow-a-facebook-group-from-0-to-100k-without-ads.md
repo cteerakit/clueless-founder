@@ -2,7 +2,7 @@
 title: "How I grow a Facebook group from 0 to 100K (without ads)"
 description: "I grew a Facebook group from zero to 100K without ads by niching down, posting consistently, using smart distribution, and managing trust as it scaled."
 excerpt: "I grew a Facebook group from zero to 100K without ads by niching down, posting consistently, using smart distribution, and managing trust as it scaled."
-coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/7975ffc3-e58e-49ca-ad2f-a2690d3d04cf/Cover.png"
+coverImage: "/images/posts/how-i-grow-a-facebook-group-from-0-to-100k-without-ads/cover-399a7c9b8f.webp"
 pubDate: 2025-12-10
 category: "Notes"
 newsletter: true

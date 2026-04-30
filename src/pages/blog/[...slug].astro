@@ -28,6 +28,11 @@ const excerpt = post.data.excerpt ?? post.data.description;
 ---
 
 <BaseLayout showDefaultSeo={false}>
+  {post.data.coverImage && (
+    <Fragment slot="head">
+      <link rel="preload" as="image" href={post.data.coverImage} fetchpriority="high" />
+    </Fragment>
+  )}
   <SEO
     slot="head"
     title={`${post.data.title} — Clueless Founder`}
@@ -82,6 +87,9 @@ const excerpt = post.data.excerpt ?? post.data.description;
             alt={post.data.title}
             class="mt-8 w-full rounded-[var(--radius-ui)] object-cover"
             loading="eager"
+            fetchpriority="high"
+            width="1280"
+            height="720"
           />
         )
       }
@@ -89,6 +97,25 @@ const excerpt = post.data.excerpt ?? post.data.description;
 
     <Content />
   </article>
+  <script is:inline>
+    const applyIntrinsicSize = () => {
+      const images = document.querySelectorAll('article.prose img:not([width]):not([height])');
+      images.forEach((image) => {
+        const setSize = () => {
+          if (!image.naturalWidth || !image.naturalHeight) return;
+          image.setAttribute('width', String(image.naturalWidth));
+          image.setAttribute('height', String(image.naturalHeight));
+        };
+        if (image.complete) {
+          setSize();
+        } else {
+          image.addEventListener('load', setSize, { once: true });
+        }
+      });
+    };
+    applyIntrinsicSize();
+    document.addEventListener('astro:page-load', applyIntrinsicSize);
+  </script>
 
   <section class="not-prose mt-8">
     <div class="rounded-[var(--radius-ui)] border border-[var(--line)] bg-[var(--hover)] p-8">
