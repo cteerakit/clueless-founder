@@ -25,12 +25,15 @@ const continueReadingPosts = posts.filter((entry) => entry.id !== post.id).slice
 const canonicalPath = `/blog/${post.id}/`;
 const readTime = estimateReadTime(post.body ?? '');
 const excerpt = post.data.excerpt ?? post.data.description;
+const coverImage = post.data.coverImage;
+const coverMedium = coverImage?.replace('.webp', '-w896.webp');
+const coverLarge = coverImage?.replace('.webp', '-w1120.webp');
 ---
 
 <BaseLayout showDefaultSeo={false}>
-  {post.data.coverImage && (
+  {coverImage && (
     <Fragment slot="head">
-      <link rel="preload" as="image" href={post.data.coverImage} fetchpriority="high" />
+      <link rel="preload" as="image" href={coverMedium} fetchpriority="high" />
     </Fragment>
   )}
   <SEO
@@ -81,15 +84,17 @@ const excerpt = post.data.excerpt ?? post.data.description;
         <span>{readTime} min read</span>
       </div>
       {
-        post.data.coverImage && (
+        coverImage && (
           <img
-            src={post.data.coverImage}
+            src={coverMedium}
+            srcset={`${coverMedium} 896w, ${coverLarge} 1120w`}
+            sizes="(min-width: 768px) 768px, 100vw"
             alt={post.data.title}
             class="mt-8 w-full rounded-[var(--radius-ui)] object-cover"
             loading="eager"
             fetchpriority="high"
-            width="1280"
-            height="720"
+            width="896"
+            height="504"
           />
         )
       }

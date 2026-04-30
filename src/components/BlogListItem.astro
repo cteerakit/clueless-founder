@@ -10,6 +10,10 @@ type Props = {
 
 const { post, prioritizeImage = false, deferLoad = false } = Astro.props;
 const excerpt = post.data.excerpt ?? post.data.description;
+const coverImage = post.data.coverImage;
+const coverSmall = coverImage?.replace('.webp', '-w448.webp');
+const coverMedium = coverImage?.replace('.webp', '-w672.webp');
+const coverLarge = coverImage?.replace('.webp', '-w896.webp');
 ---
 
 <li
@@ -41,15 +45,17 @@ const excerpt = post.data.excerpt ?? post.data.description;
       </span>
     </span>
     {
-      post.data.coverImage && (
+      coverImage && (
         <img
-          src={post.data.coverImage}
+          src={coverMedium}
+          srcset={`${coverSmall} 448w, ${coverMedium} 672w, ${coverLarge} 896w`}
+          sizes="(min-width: 768px) 224px, 100vw"
           alt={post.data.title}
           class="order-first aspect-video w-full rounded-[var(--radius-ui)] object-cover md:order-none md:w-56"
           loading={prioritizeImage ? 'eager' : 'lazy'}
           fetchpriority={prioritizeImage ? 'high' : 'auto'}
-          width="1280"
-          height="720"
+          width="672"
+          height="378"
         />
       )
     }

@@ -10,7 +10,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const INITIAL_POSTS = 10;
-const lcpImageSrc = posts[0]?.data.coverImage;
+const lcpImageSrc = posts[0]?.data.coverImage?.replace('.webp', '-w672.webp');
 
 ---
 
