@@ -3,7 +3,7 @@ title: "How to get business emails for free"
 description: "The email was invented in 1971 by [Ray Tomlinson](https://www.google.com/search). That was 50 years ago and we still use it today as a formal way to communic..."
 excerpt: "The email was invented in 1971 by [Ray Tomlinson](https://www.google.com/search). That was 50 years ago and we still use it today as a formal way to communic..."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/bb4a5078-5845-4177-b907-0a9e1c639ffb/image.png"
-pubDate: 2024-07-23
+pubDate: 2024-02-12
 category: "Notes"
 newsletter: true
 draft: false
@@ -21,25 +21,25 @@ Therefore, I have been searching for a solid way to get business emails at the l
 
 Keep reading if you are still using @[gmail.com](https://gmail.com) or @[outlook.com](https://outlook.com) for your business.
 
-## For big teams
+### For big teams
 
 If you are not a technical person, you will need to sign up for a kind of service. This is the only way so that you don’t have to maintain the server, etc. Luckily, some services are offering free tier for business emails.
 
 My preferred one is [Lark](https://www.larksuite.com/en_sg). Lark is a collaboration platform developed by ByteDance (It’s basically a translated version of Feishu).
 
-![](https://miro.medium.com/v2/resize:fit:700/0*roKY36fygUzrACno)
+
 
 Lark is pretty much like Google Workspace and Microsoft 365. It has all the similar tools like Docs, Sheets, Messenger, and most importantly in our case, business emails. Their free plan is very generous too, with up to 50 users.
 
 Google Workspace costs $12 per user. If you run a team of 50 people, that will cost you $600 per month. So Lark can potentially save you a lot of money.
 
-## For small teams
+### For small teams
 
 If you are a technical person and don’t mind getting your hands dirty, you can set up an email routing.
 
 Instead of creating a separate inbox for business, we will be utilizing our personal Gmail inbox to send and receive business emails using [Cloudflare Email Routing](https://www.cloudflare.com/developer-platform/email-routing/) .
 
-![](https://miro.medium.com/v2/resize:fit:700/0*6R05G1mSxnbcF-_w)
+
 
 What it does is that it forwards emails coming into the business address to the personal Gmail inbox. We then set up Gmail inbox to be able to send emails using the business address. This way we can send and receive both ways.
 
@@ -49,7 +49,7 @@ It’s a bit complex to set up. And you need to set up each email individually. 
 
 I’m currently using this method as I’m running solo. If you are running a small team, say up to 5 people, this method is still manageable. However, if you are working with a bigger team, I recommend going with Lark.
 
-# Your turn
+## Your turn
 
 Depending on your preference, all the options above will give you professional business email addresses.
 

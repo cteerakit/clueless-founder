@@ -26,21 +26,23 @@ The crazy thing is, online threats are just as real as physical ones. Getting ha
 ## How You’re Making It Easy for Hackers
 
 Most people don’t get hacked because hackers are geniuses. They get hacked because they make it way too easy. If you’re doing any of these, you’re basically inviting trouble:
-Using Weak or Reused Passwords – "123456" isn’t a password; it’s an invitation. And if you use the same password everywhere, one leak can take down everything.
-Ignoring Two-Factor Authentication (2FA) – It’s one extra step that stops hackers in their tracks, yet so many people skip it.
-Falling for Phishing Scams – That “urgent” email from your bank? Probably fake. Click the wrong link, and you just handed over your data.
-Neglecting Updates – Old software = open doors for hackers. Updates patch security flaws, so stop hitting “Remind Me Later.”
-Oversharing Online – The more personal details you post, the easier it is for hackers to guess your passwords or impersonate you.
+
+- **Using Weak or Reused Passwords** — "123456" isn’t a password; it’s an invitation. And if you use the same password everywhere, one leak can take down everything.
+- **Ignoring Two-Factor Authentication (2FA)** — It’s one extra step that stops hackers in their tracks, yet so many people skip it.
+- **Falling for Phishing Scams** — That “urgent” email from your bank? Probably fake. Click the wrong link, and you just handed over your data.
+- **Neglecting Updates** — Old software = open doors for hackers. Updates patch security flaws, so stop hitting “Remind Me Later.”
+- **Oversharing Online** — The more personal details you post, the easier it is for hackers to guess your passwords or impersonate you.
 
 ## Simple Fixes to Keep Your Accounts Safe
 
 The good news? You don’t need to be a tech expert to lock things down. Here’s what you can do right now:
-Get a Password Manager – Strong, unique passwords for every account, without having to remember them all.
-Turn on 2FA – It’s annoying, but not as annoying as losing access to your accounts.
-Stay Skeptical of Emails & Links – If something feels off, don’t click. When in doubt, check directly with the source.
-Keep Everything Updated – Your phone, apps, and computer need the latest security patches. Don’t delay updates.
-Limit What You Share Online – The less personal info floating around, the harder it is for hackers to target you.
-Back Up Important Data – If the worst happens, you’ll have a copy of what matters most.
+
+- **Get a Password Manager** — Strong, unique passwords for every account, without having to remember them all.
+- **Turn on 2FA** — It’s annoying, but not as annoying as losing access to your accounts.
+- **Stay Skeptical of Emails & Links** — If something feels off, don’t click. When in doubt, check directly with the source.
+- **Keep Everything Updated** — Your phone, apps, and computer need the latest security patches. Don’t delay updates.
+- **Limit What You Share Online** — The less personal info floating around, the harder it is for hackers to target you.
+- **Back Up Important Data** — If the worst happens, you’ll have a copy of what matters most.
 
 ## Online Security Is a Life Skill
 

@@ -16,8 +16,9 @@ It was invented in an era before computers, mobile phones, and the internet. Yet
 ## The Problems with Today's Resume
 
 Let's look at how resumes are used now. No one really creates physical paper resumes anymore. We generate them as PDFs or Word files and send them digitally. Employers then process these files in one of two ways:
-Human Review: A person reads the resume on a screen – a desktop monitor or, increasingly, a mobile phone. Very few people print out every resume they receive.
-ATS (Applicant Tracking System): The file is fed into software that scrapes information from the "paper-like" PDF and reformats it to be searchable and easier for recruiters to read.
+
+- **Human Review:** A person reads the resume on a screen – a desktop monitor or, increasingly, a mobile phone. Very few people print out every resume they receive.
+- **ATS (Applicant Tracking System):** The file is fed into software that scrapes information from the "paper-like" PDF and reformats it to be searchable and easier for recruiters to read.
 
 This raises a crucial question: why are we creating resumes in a format that's so inconvenient that we need special software to make them usable?
 
@@ -40,10 +41,11 @@ This is where the gap lies: something between a static paper resume and an advan
 Considering how media has evolved to fit the mobile screen vertically (think YouTube Shorts, TikTok, Instagram Stories), it makes sense that a modern resume should adopt a vertical format, like an Instagram Story, designed to fit a mobile screen perfectly.
 
 So, the reinvented resume needs to be:
-Mobile-friendly: It must fit a mobile screen, be easily readable without zooming.
-Concise: You can't fit an entire traditional resume onto one mobile screen while keeping it readable. It needs to contain only the most important information, making it quick and easy to grasp a candidate's key qualifications.
-Engaging: It should be quick, easy, and offer vibrant customization (like changing colors) to express your unique personality while upholding a professional image.
-Secure: Crucially, it should allow users to opt out of sensitive information like phone numbers and email addresses for public sharing.
+
+- **Mobile-friendly:** It must fit a mobile screen, be easily readable without zooming.
+- **Concise:** You can't fit an entire traditional resume onto one mobile screen while keeping it readable. It needs to contain only the most important information, making it quick and easy to grasp a candidate's key qualifications.
+- **Engaging:** It should be quick, easy, and offer vibrant customization (like changing colors) to express your unique personality while upholding a professional image.
+- **Secure:** Crucially, it should allow users to opt out of sensitive information like phone numbers and email addresses for public sharing.
 
 ## Introducing "Storysume"
 

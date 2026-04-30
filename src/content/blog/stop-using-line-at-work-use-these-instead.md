@@ -3,7 +3,7 @@ title: "STOP using Line at work! Use these instead"
 description: "Chat apps are essential ways to communicate among team members nowadays. It’s fast, convenient, and instant. However, I’m surprised how many teams are still ..."
 excerpt: "Chat apps are essential ways to communicate among team members nowadays. It’s fast, convenient, and instant. However, I’m surprised how many teams are still ..."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/04540ab0-f92c-49b8-85e1-f966582265a9/image.png"
-pubDate: 2024-07-23
+pubDate: 2024-02-19
 category: "Notes"
 newsletter: true
 draft: false
@@ -17,7 +17,7 @@ Regardless of how bad it is, many teams are still using it. This could be becaus
 
 There are many better tools for this. Let’s see what can we use to communicate with our teammates effectively and professionally.
 
-# Slack
+## Slack
 
 ![](https://miro.medium.com/v2/resize:fit:700/0*MHG-l3j9XsiYr92K)
 
@@ -31,7 +31,7 @@ If you decide to go with the paid plan, it doesn’t give everything you need ei
 
 If you don’t mind juggling between many apps, or you just need a business chat app for your team, then Slack’s free plan might fit you.
 
-# Microsoft Teams
+## Microsoft Teams
 
 ![](https://miro.medium.com/v2/resize:fit:700/0*D3j3PfCz9IdJAzMu)
 
@@ -43,7 +43,7 @@ It also doesn’t play well with other tools. You might find it limiting when tr
 
 If you already love Microsoft Word, Excel, and PowerPoint, Teams is a no-brainer.
 
-# Google Chat
+## Google Chat
 
 ![](https://miro.medium.com/v2/resize:fit:700/0*ytGBsppxYhfPsUrr)
 
@@ -53,7 +53,7 @@ One advantage of Google Chat is, it’s not exclusive to paid Google Workspace u
 
 The downside, it’s pretty barebone. You don’t get fancy features like others. If simple chat is all you need, then you will like it.
 
-# Lark
+## Lark
 
 ![](https://miro.medium.com/v2/resize:fit:696/0*VWSVbNUg_1TliPiD)
 
@@ -65,7 +65,7 @@ Unlike Google Workspace, Lark is similar to Microsoft 365 where it works well on
 
 If you are on a budget but still want powerful software, Lark is definitely a good option to consider.
 
-# Discord
+## Discord
 
 ![](https://miro.medium.com/v2/resize:fit:700/0*SptTyf47EYEMlJx4)
 
@@ -75,7 +75,7 @@ However, as it is designed to be a chat for gaming, it doesn’t integrate with 
 
 If you already use Discord for games, it can be a challenge to separate your work and personal life. You wouldn’t want your boss to see that you are in a boss fight in Elden Ring, do you?
 
-# Which chat app should you use?
+## Which chat app should you use?
 
 I’ve tried all of the above. They all have their unique advantages and trade-offs. But you need to pick only one for your team and this is my suggestion.
 

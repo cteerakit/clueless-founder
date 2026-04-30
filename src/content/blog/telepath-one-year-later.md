@@ -3,7 +3,7 @@ title: "Telepath: One Year Later"
 description: "It has been nearly a year since I launched Telepath, a job board website designed for remote workers in Thailand. This feels like the right moment to reflect..."
 excerpt: "It has been nearly a year since I launched Telepath, a job board website designed for remote workers in Thailand. This feels like the right moment to reflect..."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/6f855092-1dfc-4aa4-b874-c744d766127e/Cover.png"
-pubDate: 2024-12-29
+pubDate: 2025-01-01
 category: "Notes"
 newsletter: true
 draft: false
@@ -16,28 +16,32 @@ Telepath was launched to the public in February 2024. In the beginning, it was a
 ## Achievements
 
 Here’s what Telepath has accomplished over the past year:
-30,618 website users
-2,311 registered users
-615 jobs posted
-1,207 company profiles created
-385 recorded applications
-2,473 unrecorded application clicks
-233 social media followers
-44,404 community members
+
+- 30,618 website users
+- 2,311 registered users
+- 615 jobs posted
+- 1,207 company profiles created
+- 385 recorded applications
+- 2,473 unrecorded application clicks
+- 233 social media followers
+- 44,404 community members
 
 ## Challenges
-Profitability: Telepath is not yet profitable. The silver lining is that the platform’s maintenance requirements are minimal.
-Growth Strategy: To conserve resources, we rely on organic growth, which demands consistent effort and patience.
+
+- **Profitability:** Telepath is not yet profitable. The silver lining is that the platform’s maintenance requirements are minimal.
+- **Growth Strategy:** To conserve resources, we rely on organic growth, which demands consistent effort and patience.
 
 ## Lessons Learned
-Data Collection is Crucial: In the early days, I chose not to require user registration for job applications, prioritizing user experience. This decision led to a significant loss of valuable data. Moving forward, data collection will be a priority.
-Start Social Media Early: While I successfully grew a Facebook group, I overlooked other platforms such as Instagram, YouTube, and TikTok. Building a social media presence takes time, so it’s best to start as early as possible.
+
+- **Data Collection is Crucial:** In the early days, I chose not to require user registration for job applications, prioritizing user experience. This decision led to a significant loss of valuable data. Moving forward, data collection will be a priority.
+- **Start Social Media Early:** While I successfully grew a Facebook group, I overlooked other platforms such as Instagram, YouTube, and TikTok. Building a social media presence takes time, so it’s best to start as early as possible.
 
 ## Looking Ahead
 
 As we enter 2025, I am focusing on two main objectives:
-Organic Growth: Increasing platform users enhances its value. Since we can’t afford to pay for all traffic, I’ll prioritize organic strategies, including SEO, social media, and video content.
-Sales: Revenue is essential for sustainability. I plan to engage more with customers to better understand their needs and shape the platform’s direction.
+
+- **Organic Growth:** Increasing platform users enhances its value. Since we can’t afford to pay for all traffic, I’ll prioritize organic strategies, including SEO, social media, and video content.
+- **Sales:** Revenue is essential for sustainability. I plan to engage more with customers to better understand their needs and shape the platform’s direction.
 
 ## Final Thoughts
 

@@ -36,9 +36,10 @@ Buzzkill allows me to filter notifications based on keywords. I’ve set a rule 
 ### 3. Ensuring I See the Notification
 
 To make sure I actually acknowledge the alert, I’ve customized it to:
-Play a loud sound, even if my phone is on silent
-Vibrate continuously until I dismiss it
-Show a full-screen notification instead of just a banner
+
+- Play a loud sound, even if my phone is on silent
+- Vibrate continuously until I dismiss it
+- Show a full-screen notification instead of just a banner
 
 ### 4. Backup Reminder for Extra Security
 

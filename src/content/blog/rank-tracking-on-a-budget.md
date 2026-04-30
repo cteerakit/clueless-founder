@@ -21,9 +21,7 @@ But I found some tools that are okay to use.
 
 ### [Semrush](https://www.semrush.com/)
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdOLaozs-SXF2j4uwgjMhVWnSPXBBrmoGkKcVH_cs5HUdv11CmlQOe4kZ52PTNC8vC5b-Bx21xj_lqTG-hcVdrZ191GbMmBzE2E5vaB0CowJr2HNghLBqhOJ-AfrHCXpVEY05ML3Q)
-
-Semrush Position Tracker
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdOLaozs-SXF2j4uwgjMhVWnSPXBBrmoGkKcVH_cs5HUdv11CmlQOe4kZ52PTNC8vC5b-Bx21xj_lqTG-hcVdrZ191GbMmBzE2E5vaB0CowJr2HNghLBqhOJ-AfrHCXpVEY05ML3Q?key=ySFwzclk5uFPJNNmPR9uLwRF)
 
 Their free plan lets you track 10 keywords for one website. Sounds okay, right? Nope. It's limited to one language, one location, and one device type. So, yeah, not that great.
 
@@ -31,9 +29,7 @@ I've been using Semrush's free plan for a while now. But their cheapest paid pla
 
 ### [Mangools](https://mangools.com/)
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeSfo7uvUAsTtP-Qby10ydInPxoPQjht8LyHDOjInSlT0zqs-PhMV7X84cCsbPCQgSBVUb5te9YQHivWlSj58iMr4qlr2YTyZM8iBqmKtsf-kq0U71lyvo_Y9BVdtH7WIjuZCLU6A)
-
-Mangools Rank Tracking
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeSfo7uvUAsTtP-Qby10ydInPxoPQjht8LyHDOjInSlT0zqs-PhMV7X84cCsbPCQgSBVUb5te9YQHivWlSj58iMr4qlr2YTyZM8iBqmKtsf-kq0U71lyvo_Y9BVdtH7WIjuZCLU6A?key=ySFwzclk5uFPJNNmPR9uLwRF)
 
 Similar deal. You can track 5 keywords, but you've got the same restrictions as Semrush – location, language, device.
 
@@ -47,9 +43,7 @@ After realizing I'd get more actionable insights by blindfolding myself and gues
 
 ### [Google Search Console](https://search.google.com/search-console) + [Looker Studio](https://lookerstudio.google.com)
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdBEjnOaxBDbpswosHad33ygDGAL7fMb5kAn5hsko2TVWCkU3VPxmFf979CHAyUK466u0HRC_nRAUftaKkW7Wok_nDP3D5Ihx6Wnrl9DwouFB7mFoWlq9E7tI-lTOL_kmLtA_wJ)
-
-Looker Studio
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdBEjnOaxBDbpswosHad33ygDGAL7fMb5kAn5hsko2TVWCkU3VPxmFf979CHAyUK466u0HRC_nRAUftaKkW7Wok_nDP3D5Ihx6Wnrl9DwouFB7mFoWlq9E7tI-lTOL_kmLtA_wJ?key=ySFwzclk5uFPJNNmPR9uLwRF)
 
 This is the peanut butter and jelly of free SEO. Google Search Console tells you what keywords are bringing in traffic and your average position. It doesn't track the specific keywords you want, but it shows you the actual search queries people are using.
 
@@ -59,9 +53,7 @@ The downside? It takes time to set up and keep updated. But if you’ve got the 
 
 ### [SerpBear](https://docs.serpbear.com/) (Self-hosted, open-source)
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfjKU4NIBrzAvFSGXnGVmqvKHQDE9804Zur6d9CeXKDJLTogwOfwtMLJu75tX5ybj73lHW5VZOqXyD2nuQ2Q3ARX7I4-X3dCx4a4tS0VdIBwLK9AyCe6C213K2r7Eidpxq_7J0uww)
-
-SerpBear
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfjKU4NIBrzAvFSGXnGVmqvKHQDE9804Zur6d9CeXKDJLTogwOfwtMLJu75tX5ybj73lHW5VZOqXyD2nuQ2Q3ARX7I4-X3dCx4a4tS0VdIBwLK9AyCe6C213K2r7Eidpxq_7J0uww?key=ySFwzclk5uFPJNNmPR9uLwRF)
 
 This one's for the techy people. SerpBear is an open-source rank tracker that you host yourself. No limits on keywords. No credit system. No BS usage caps.
 

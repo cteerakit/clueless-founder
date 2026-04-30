@@ -3,7 +3,7 @@ title: "I've been posing on social media every day for 30 days. Here's what I le
 description: "I recently came to realize how building an audience is an unfair advantage in business, and life in general. Having a strong social media presence is vital f..."
 excerpt: "I recently came to realize how building an audience is an unfair advantage in business, and life in general. Having a strong social media presence is vital f..."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/81867a94-b963-452a-b16f-8ce33958d9e8/cover.png"
-pubDate: 2024-08-31
+pubDate: 2024-09-14
 category: "Notes"
 newsletter: true
 draft: false
@@ -17,16 +17,17 @@ I have little to no audience so I use this as an advantage to just go and test t
 
 ## My approach
 
-My first post of this series started on Aug 13 and continued for a month. I’ve made a total of 30 posts. Each post had been published on 3 platforms: LinkedIn, X, and Threads. All platforms get the same content. Most of my posts were either texts or images.
+My first post of this series started on Aug 13 and continued for a month. I’ve made a total of **30 posts**. Each post had been published on 3 platforms: **LinkedIn, X, and Threads**. All platforms get the same content. Most of my posts were either texts or images.
 
 At first, I tried to post daily. But it’s too difficult and time-consuming to just sit and come up with what to post each day. So I organized my posts into themes. This way, I know exactly what kind of content to post each day and was able to prepare them in advance.
-Mon (5 PM): #productoftheweek - Share 1 new product I found useful
-Tue (5 PM): #buildinpublic - Share the progress of my project
-Wed (5 PM): #usefulwebsite - Share website I found useful
-Thu (5 PM): #buildinpublic
-Fri (12 PM): #thoughts - Questions on whatever is on my mind
-Sat (12 PM): #thoughts
-Sun (7 AM): #bookquote - Share a quote from a book I read
+
+- Mon (5 PM): #productoftheweek — Share 1 new product I found useful
+- Tue (5 PM): #buildinpublic — Share the progress of my project
+- Wed (5 PM): #usefulwebsite — Share website I found useful
+- Thu (5 PM): #buildinpublic
+- Fri (12 PM): #thoughts — Questions on whatever is on my mind
+- Sat (12 PM): #thoughts
+- Sun (7 AM): #bookquote — Share a quote from a book I read
 
 I kept this schedule for 30 days. Here are the results.
 
@@ -36,19 +37,19 @@ I receive a lot of views from LinkedIn. However, this is kinda biased as I have 
 
 ![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/8aaef352-9895-4bfc-8564-44d9ab57471e/graphy-export-1726315293.png)
 
-Overview
+
 
 LinkedIn seems to have much more exposure. But if we look at the ratio between engagement and views, X is doing a bit better (2% on LinkedIn vs 2.5% on X). Let’s look a bit deeper at each channel.
 
 ![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4a7d8098-0719-436e-af5a-6d9a9e1bdfc5/graphy-export-1726315355.png)
 
-Views on LinkedIn
+
 
 Now this becomes more interesting. When we break it down by date, LinkedIn has a significant declining trend. The more I post, the fewer views I get. I must be doing something wrong here.
 
 ![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/e366662a-36cb-4398-8159-1f737f777674/graphy-export-1726315354.png)
 
-Views on X
+
 
 On X, it has a similar declining trend but is not very obvious, aligning with the engagement rate.
 
@@ -56,13 +57,13 @@ Let’s have a look at each content type.
 
 ![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/30208e47-2374-440b-b1f3-496de97a70a9/graphy-export-1726319176.png)
 
-LinkedIn content type
+
 
 On LinkedIn, #thoughts has the most views on average and #bookquote has the most engagement. People didn’t seem to care about the products I shared.
 
 ![](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/16548a8a-5138-4848-bf7a-02fef85caf62/graphy-export-1726320048.png)
 
-X content type
+
 
 While on X, #buildinpublic has the most views and engagement. Interestingly, #bookquote which has the highest engagement on Linkedin, gets absolutely zero engagement on X.
 

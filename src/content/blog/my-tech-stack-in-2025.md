@@ -3,7 +3,7 @@ title: "My tech stack in 2025"
 description: "Over the years, I’ve tested countless tools and platforms, refining my stack to suit my specific needs. Here’s a look at the tools that power my work in 2025."
 excerpt: "Over the years, I’ve tested countless tools and platforms, refining my stack to suit my specific needs. Here’s a look at the tools that power my work in 2025."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/2e7bfce6-9d55-4a6c-b2fe-f214489ad271/Cover.png"
-pubDate: 2024-12-25
+pubDate: 2025-02-02
 category: "Notes"
 newsletter: true
 draft: false
@@ -12,59 +12,11 @@ draft: false
 Over the years, I’ve tested countless tools and platforms, refining my stack to suit my specific needs. Here’s a look at the tools that power my work in 2025.
 
 This stack gears toward solopreneurs and small teams with some specific criteria.
-It has a free plan. I want to be flexible and try it out in a real environment (and I think you should too). Too often, the software looks nice, but nobody on the team uses it. I want to make sure that it is actually useful to the team before settling in.
-It has to work on a browser. Since I travel a lot, the idea is that it should work on any device, anywhere in the world. Desktop and mobile apps are optional but good to have.
+
+- **It has a free plan.** I want to be flexible and try it out in a real environment (and I think you should too). Too often, the software looks nice, but nobody on the team uses it. I want to make sure that it is actually useful to the team before settling in.
+- **It has to work on a browser.** Since I travel a lot, the idea is that it should work on any device, anywhere in the world. Desktop and mobile apps are optional but good to have.
 
 This one is going to be a bit long. Feel free to jump to the area that you are interested in.
-
-
-
-## Table of Contents
-[1. Productivity](#1-productivity)
-
-[Office software: Google Workspace](#office-software-google-workspace)
-[Project management: Todoist](#project-management-todoist)
-[Team communication: Discord](#team-communication-discord)
-[Knowledge base: Google Docs + Gitbook](#knowledge-base-google-docs-gitbook)
-[Note-taking: Google Keep](#notetaking-google-keep)
-[AI: Gemini + ChatGPT](#ai-gemini-chat-gpt)
-[Automation: Make + Relay](#automation-make-relay)
-[2. Product Development](#2-product-development)
-
-[Front-end: Toddle](#frontend-toddle)
-[Back-end: Supabase](#backend-supabase)
-[Internal tool: Retool](#internal-tool-retool)
-[Content Management System (CMS): Hygraph + Content …](#content-management-system-cms-hygra)
-[Planning: Linear](#planning-linear)
-[Product analytics: PostHog](#product-analytics-post-hog)
-[Notification: Mailersend + Loops](#notification-mailersend-loops)
-[Payment: Stripe](#payment-stripe)
-[Tag management: Cloudflare Zaraz + Google Tag Mana …](#tag-management-cloudflare-zaraz-goo)
-[3. Design](#3-design)
-
-[General-purpose: Figma](#generalpurpose-figma)
-[UI Framework: Shadcn/ui](#ui-framework-shadcnui)
-[Design Materials: Lucide](#design-materials-lucide)
-[4. Marketing](#4-marketing)
-
-[Marketing analytics: Google Analytics](#marketing-analytics-google-analytic)
-[Email marketing: MailerLite](#email-marketing-mailer-lite)
-[Search Engine Optimization (SEO): Search Console + …](#search-engine-optimization-seo-sear)
-[Content marketing: Publer](#content-marketing-publer)
-[Advertising: Google Ads + Meta](#advertising-google-ads-meta)
-[Dashboard: Datapad](#dashboard-datapad)
-[5. Sales & Customer Support](#5-sales-customer-support)
-
-[Customer Relationship Management (CRM): Attio](#customer-relationship-management-cr)
-[Outreach: Apollo](#outreach-apollo)
-[Scheduling: Cal.com](#scheduling-calcom)
-[Customer support: Helpscout](#customer-support-helpscout)
-[6. Financial Management](#6-financial-management)
-
-[Bookkeeping: Peak](#bookkeeping-peak)
-[Banking: K BIZ](#banking-k-biz)
-[eSign: Documenso](#e-sign-documenso)
-[Conclusion](#conclusion)
 
 
 
@@ -84,15 +36,7 @@ Sadly, there’s no project management tool in their suite, so I need another to
 
 I can’t recommend Microsoft 365 from my personal experience. Read more below.
 
-[https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365](https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365)
-
-
-
-[Why I choose Google Workspace over Microsoft 365 www.cluelessfounder.com/p/google-workspace-vs-microsoft-365](https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365)
-
-
-
-[https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365](https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365)
+[Why I choose Google Workspace over Microsoft 365](https://www.cluelessfounder.com/p/google-workspace-vs-microsoft-365)
 
 Lark is another good option and it’s getting more popular. However, it doesn’t fit me for the same reasons as Microsoft 365. Not all apps work on a browser. You will need to download the desktop app to experience the full functionality. And they integrate with nothing but themselves. If those are not the problem for you, I highly recommend you to try Lark.
 
@@ -156,15 +100,7 @@ In my roadmap, I will need to build native apps on Android and iOS too. [Flutter
 
 If you want to build a simple website, I highly recommend Webflow. I no longer recommend using WordPress. If you want to know why, read this one below.
 
-[https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024](https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024)
-
-
-
-[STOP using WordPress in 2024 WordPress powers more than 43% of the web. Today I will try to convince you why you shouldn’t use it anymore in 2024. www.cluelessfounder.com/p/stop-using-wordpress-in-2024](https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024)
-
-
-
-[https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024](https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024)
+[STOP using WordPress in 2024](https://www.cluelessfounder.com/p/stop-using-wordpress-in-2024)
 
 ### Back-end: [Supabase](https://supabase.com/)
 
@@ -314,15 +250,7 @@ While I prefer [Xero](https://www.xero.com/)’s integration with other apps, Pe
 
 I prefer [SCB Business Anywhere](https://www.scb.co.th/th/corporate-banking/digital-banking-services/business-anywhere.html) over K BIZ. But due to my limitations, K BIZ is my best bet. Read my experience about this below.
 
-[https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand](https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand)
-
-
-
-[I tried to open bank accounts for business in 2024 in Thailand. Here's my experience. I’ve tried opening accounts with 3 banks: SCB, KTB, and KBank. www.cluelessfounder.com/p/bank-accounts-for-business-thailand](https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand)
-
-
-
-[https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand](https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand)
+[I tried to open bank accounts for business in 2024 in Thailand](https://www.cluelessfounder.com/p/bank-accounts-for-business-thailand)
 
 ### eSign: [Documenso](https://documenso.com/)
 

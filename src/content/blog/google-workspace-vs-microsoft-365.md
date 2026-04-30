@@ -15,22 +15,6 @@ I used Google Workspace for my previous company, very satisfied with it. But I w
 
 This article is based purely on my personal experience using both platforms as a user. I mostly cover the user experience and may not cover technical security aspects. If you work in a big corporation, please consult your IT.
 
-## Table of Contents
-[What I like about Google Workspace (and I don’t ab …](#what-i-like-about-google-workspace-)
-
-[Cloud-native](#cloudnative)
-[Reliability](#reliability)
-[Third-party integrations](#thirdparty-integrations)
-[You need a Google account anyway](#you-need-a-google-account-anyway)
-[What Google Workspace lacks (and Microsft 365’s do …](#what-google-workspace-lacks-and-mic)
-
-[Familiarity](#familiarity)
-[Project management tool](#project-management-tool)
-[Pricing](#pricing)
-[Conclusion](#conclusion)
-
-
-
 ## What I like about Google Workspace (and I don’t about Microsoft 365)
 
 ### Cloud-native
@@ -78,10 +62,11 @@ Don’t get me wrong, you can pretty much do the same integration with Microsoft
 ### You need a Google account anyway
 
 In your business journey, you will end up using at least one of the Google Services, especially if your company has a marketing team (which you should!). To use that service, you will need a Google account including:
-[Google Analytics](https://marketingplatform.google.com/about/analytics/) - if you have a website
-[Google Ads](https://ads.google.com/) - if you run an advertising campaign
-[Google Search Console](https://search.google.com/search-console/about) - if you do SEO
-[Google Business Profile](https://www.google.com/intl/en_us/business/) - if you want to have a pin on Google Maps
+
+- [Google Analytics](https://marketingplatform.google.com/about/analytics/) — if you have a website
+- [Google Ads](https://ads.google.com/) — if you run an advertising campaign
+- [Google Search Console](https://search.google.com/search-console/about) — if you do SEO
+- [Google Business Profile](https://www.google.com/intl/en_us/business/) — if you want to have a pin on Google Maps
 
 While you can use any email to create a Google account, it’s seamless to just have your email as a Google account. You need a Google account one day, but you may never need a Microsoft account.
 
@@ -116,10 +101,11 @@ Microsoft 365 is easier to adopt and balances online and offline work, while Goo
 People are not very good at change. Most will prefer Microsoft 365 and do it offline, the old-fashioned way. Some may prefer the cloud path, where everything is truly connected. This depends on how you want your company culture to be.
 
 My recommendations are:
-If you already have a running company and have already chosen one, just go on with it. The differences may not be worth the time and resources migrating.
-If you have a running small company (a few hundred employees) with young employees (Gen Y and below), choose Google Workspace.
-If your team works mostly online, choose Google Workspace, otherwise go with Microsoft 365.
-If you have a big company, you might already be on Microsoft 365.
-If you are starting a new company, choose Google Workspace.
+
+- If you already have a running company and have already chosen one, just go on with it. The differences may not be worth the time and resources migrating.
+- If you have a running small company (a few hundred employees) with young employees (Gen Y and below), choose Google Workspace.
+- If your team works mostly online, choose Google Workspace, otherwise go with Microsoft 365.
+- If you have a big company, you might already be on Microsoft 365.
+- If you are starting a new company, choose Google Workspace.
 
 Have you tried any? Let me know your thoughts.

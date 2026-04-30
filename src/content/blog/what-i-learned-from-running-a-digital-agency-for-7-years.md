@@ -3,7 +3,7 @@ title: "What I learned from running a digital agency for 7 years"
 description: "I recently shut down Friday Digital, a digital agency I started 7 years ago. I love this company and the people. They’re like children to me and it’s sad to ..."
 excerpt: "I recently shut down Friday Digital, a digital agency I started 7 years ago. I love this company and the people. They’re like children to me and it’s sad to ..."
 coverImage: "https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/6feaeb25-a8e9-490b-b12e-d6b31a2eb74d/1_ng9bSwY49U848ap7bQzJKg.png"
-pubDate: 2024-07-14
+pubDate: 2024-01-07
 category: "Notes"
 newsletter: true
 draft: false
@@ -11,19 +11,19 @@ draft: false
 
 I recently shut down Friday Digital, a digital agency I started 7 years ago. I love this company and the people. They’re like children to me and it’s sad to see them go. But the show must go on. All I can do now is realize my mistakes and move on.
 
-# Why I made the call
+## Why I made the call
 
 The shutdown was not entirely necessary. There are ways to keep the company alive and well. I could down-size the team. I could cut costs. I could bring in outside investment. But I didn’t take it. Instead, I decided to stop everything. Let’s break down why.
 
-## Bleeding cash
+### Bleeding cash
 
 We were low on cash as millions sitting in credit terms. We also started to run on negatives, bleeding cash each month. Overall, the business was nothing near healthy.
 
-## Passion lost
+### Passion lost
 
 When things don’t go as planned for a long time, you start to feel tired. I used to go to the office feeling energized and refreshed. But now I go to the office not to innovate, but to keep things not broken. And I lose all my energy doing so. Eventually, I lost my will.
 
-## AI is coming
+### AI is coming
 
 AI’s output is a prediction based on what has already happened. That’s why AI is so good with operational tasks where it repeats things over and over again. It never eats, never sleeps, and never makes mistakes which suites to replace operational labor. This means businesses that serve operations will be disrupted and are going away sooner than you think.
 
@@ -31,19 +31,17 @@ Many things will be replaced by AI in the coming years. The majority of what we 
 
 So to beat an AI, you need to do something that has never been done before. For a digital agency business, those are the Strategy and Creativity sides. I saw this coming, but I wasn’t prepared enough. Unfortunately, our runway was not long enough to test the new model.
 
-## The decision is made
+### The decision is made
 
 If I had faced these problems one by one, I might have decided differently. But facing everything at once allowed me to make the decision easier.
 
 Even if I managed to survive, without the pivot, the company would eventually die. So instead of fixing a dying company, why not just start a new one now? and for those reasons, I’m out.
 
-# What could I do better?
-
-/
+## What could I do better?
 
 Now comes the mistakes I made. If I were to start a new company, I need to address these mistakes ASAP. Let’s see what are they.
 
-## Build audience from day 1
+### Build audience from day 1
 
 It is great to have a lot of referrals where clients and friends keep bringing you leads. But this will eventually dry out. And not everyone they refer to you will be a good fit.
 
@@ -57,17 +55,20 @@ Marketing is going backward with privacy concerns. Paid ads used to be so effect
 
 If we’re not buying audiences, then we should build one. Kevin Kelly said you only need 1,000 true fans. If you added one fan a day, it would take three years. That’s why you should start now.
 
-## Boring but necessary stuff
+### Boring but necessary stuff
 
 If your business doesn’t pay you, you just get yourself a hobby. If it does and you still go to work every single day, you just get yourself a job. I got myself a job.
 
-There are 2 important questions that every business owner should try to answer. 1) Can your business survive without you? 2) Can your business grow without you?
+There are 2 important questions that every business owner should try to answer.
+
+1. Can your business survive without you?
+2. Can your business grow without you?
 
 To answer those questions, you need to stop working in your business, and start working on your business. I made this mistake myself, spending many years doing and managing client’s work myself. While I enjoy doing so, I waste so much time not building up my business.
 
 Instead, what I should do is create a system that allows my team to deliver great work without me. This can be in the form of documents, learning materials, tutorials, processes, SOPs, and training. Remember, your job is not to do the great work, your job is to unblock your team to do the great work.
 
-## Niche down
+### Niche down
 
 Imagine you have cancer. You don’t want to go to a generalized doctor. You would want to go to a doctor who specializes in cancer treatment, or even better, to those who already cure patients successfully.
 
@@ -77,7 +78,7 @@ I made this mistake by taking the generalized path. Doing so my company ended up
 
 Niching down will also make it easier to package your deliverables. As you will have the same type of clients having the same problems. The solution will likely be the same. It’s more manageable to perfect one solution for one group of clients.
 
-## It’s okay to say no
+### It’s okay to say no
 
 An agency is similar to a school. Schools are great not because they have good programs or amazing teachers. It’s because they attract smart students.
 
@@ -93,21 +94,24 @@ The agencies’ job is to manage those expectations. Some are manageable, some a
 
 There will be some times when you need to bring in the cash. But whenever possible, do not take in bad clients. You will regret it.
 
-## Rely on the law, not trust
+### Rely on the law, not trust
 
 Many new founders are optimistic, just like me, and trust that people are good and honest. Turns out there are a lot more bad guys than good guys. Many may look like good guys. But they are bad ones in disguise. Try giving them an opportunity and they will turn bad so fast.
 
 Regardless, you can’t choose to work with good guys all the time. You will eventually run into bad guys in disguise so you need to be prepared to protect yourself.
 
-Business relationships rely on trust. This is bullshit. You should always rely on the law. These are things you should consider when running a B2B company.
-Make sure a contract is signed by authorized directors. If they don’t want to sign the contract or let their subordinates sign instead, they’re probably up to something shady.
-Don’t provide long credit terms if not necessary. Make it due immediately for the first invoice. For the rest, NET 45 is more than reasonable, NET 90 is max.
-Do not accept that late payment is normal. A good client will respect you as a vendor and pay you on time. Make sure you have a limit on when to stop working.
-Don’t keep working if they don’t pay their invoices unless they issue a dated cheque. Otherwise, I guarantee you that half of those times you will be working for free.
+Business relationships rely on trust. This is bullshit. You should always rely on the law.
+
+These are things you should consider when running a B2B company:
+
+- Make sure a contract is signed by authorized directors. If they don’t want to sign the contract or let their subordinates sign instead, they’re probably up to something shady.
+- Don’t provide long credit terms if not necessary. Make it due immediately for the first invoice. For the rest, NET 45 is more than reasonable, NET 90 is max.
+- Do not accept that late payment is normal. A good client will respect you as a vendor and pay you on time. Make sure you have a limit on when to stop working.
+- Don’t keep working if they don’t pay their invoices unless they issue a dated cheque. Otherwise, I guarantee you that half of those times you will be working for free.
 
 I made this mistake by trusting my clients too much, especially when it comes to personal connection. If you allow them to cheat, most of them will gladly take the opportunity. Clients from personal connections are the ones I end up losing money on the most. So don’t let your guard down.
 
-## Build good culture
+### Build good culture
 
 Agencies rely on the process and the people executing it. Without the team behind it, the business is nothing. I believe I did quite well in this part. Our culture is pretty much close to the way I want it to be. For those who are new to culture building. Here are some advice.
 
@@ -117,7 +121,7 @@ Once you have good people in, you can start building a good environment for them
 
 However, there will be some bad days as people make mistakes all the time. Make sure you leave some room for them to fail and grow. But not too much. Some people make mistakes and improve. Some keep repeating the mistakes. This hurt your business in the long run. When you find it, you also need to have the courage to let them go.
 
-## Hire slow, fire fast
+### Hire slow, fire fast
 
 You can’t be unemployed in this era. If you are, the problem is not the world, it’s probably you. In the modern world, information is so easily accessible. Opportunities are lying around for you to pick up. This goes the same for the job market.
 
@@ -131,6 +135,6 @@ Instead, we should hire slow by recruiting passively. Accepting job applications
 
 And when they join the company, set clear goals to evaluate if they fit the position. If they don’t, don’t force them into a different role. I made this mistake so many times, and regret it every single time. Just fire them fast. It is always better to fire one person than to fatigue your entire team. If you want to be compassionate, then be compassionate for your hard-working team.
 
-# That’s all
+## That’s all
 
 There are a lot more small things I learned along the way. But these are important things I can think of right now. If you happen to be a fellow agency founder, feel free to add the points I may have missed.
