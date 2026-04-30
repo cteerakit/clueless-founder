@@ -73,7 +73,7 @@ const tocHeadings = headings.filter((heading) => heading.depth >= 2 && heading.d
         aria-label="Table of contents"
       >
         <p class="font-sans text-[0.65rem] uppercase tracking-[0.2em] text-[var(--muted)]">On this page</p>
-        <nav class="mt-4 max-h-[calc(100vh-8rem)] overflow-y-auto">
+        <nav class="toc-scroll-hidden mt-4 max-h-[calc(100vh-8rem)] overflow-y-auto">
           <ol class="space-y-2">
             {tocHeadings.map((heading) => (
               <li>
@@ -328,4 +328,13 @@ const tocHeadings = headings.filter((heading) => heading.depth >= 2 && heading.d
       </section>
     )
   }
+  <style is:global>
+    .toc-scroll-hidden {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .toc-scroll-hidden::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
 </BaseLayout>
