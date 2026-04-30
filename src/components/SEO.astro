@@ -25,7 +25,8 @@ const {
 
 const site = Astro.site ?? new URL('http://localhost:4321');
 const canonical = new URL(canonicalPath.replace(/^\//, ''), site).href;
-const ogImage = image ? new URL(image.replace(/^\//, ''), site).href : undefined;
+const ogImageSource = image ?? '/landscape_Cover2.avif';
+const ogImage = new URL(ogImageSource.replace(/^\//, ''), site).href;
 
 const postingLd =
   jsonLd === 'BlogPosting' && post

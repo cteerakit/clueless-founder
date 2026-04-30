@@ -241,4 +241,11 @@ input[type='button'],
 input[type='submit'],
 input[type='reset'] {
   cursor: pointer;
+  font-family: var(--font-sans);
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
 }
