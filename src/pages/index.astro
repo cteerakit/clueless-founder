@@ -9,6 +9,7 @@ export const prerender = true;
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const INITIAL_POSTS = 6;
 const lcpImageSrc = posts[0]?.data.coverImage;
 
 ---
@@ -26,7 +27,62 @@ const lcpImageSrc = posts[0]?.data.coverImage;
 
   <ul class="divide-y divide-[var(--line)]">
     {
-      posts.map((post, index) => <BlogListItem post={post} prioritizeImage={index === 0} />)
+      posts.map((post, index) => (
+        <BlogListItem
+          post={post}
+          prioritizeImage={index === 0}
+          deferLoad={index >= INITIAL_POSTS}
+        />
+      ))
     }
   </ul>
+  <div id="feed-sentinel" class="py-6 text-center text-sm text-[var(--muted)]">Loading more posts...</div>
+  <noscript>
+    <style>
+      [data-infinite-item='true'] { display: list-item !important; }
+      #feed-sentinel { display: none; }
+    </style>
+  </noscript>
+  <script>
+    const hiddenItems = Array.from(document.querySelectorAll("[data-infinite-item='true']"));
+    const sentinel = document.getElementById('feed-sentinel');
+    const BATCH_SIZE = 4;
+    let index = 0;
+
+    const revealNextBatch = () => {
+      const batch = hiddenItems.slice(index, index + BATCH_SIZE);
+      batch.forEach((item) => {
+        item.style.display = 'list-item';
+        item.removeAttribute('aria-hidden');
+        item.removeAttribute('data-infinite-item');
+      });
+      index += batch.length;
+      if (index >= hiddenItems.length && sentinel) {
+        sentinel.remove();
+      }
+    };
+
+    if (!hiddenItems.length) {
+      sentinel?.remove();
+    } else if (!('IntersectionObserver' in window)) {
+      revealNextBatch();
+      while (index < hiddenItems.length) {
+        revealNextBatch();
+      }
+    } else if (sentinel) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) {
+            return;
+          }
+          revealNextBatch();
+          if (index >= hiddenItems.length) {
+            observer.disconnect();
+          }
+        },
+        { rootMargin: '200px 0px' },
+      );
+      observer.observe(sentinel);
+    }
+  </script>
 </BaseLayout>

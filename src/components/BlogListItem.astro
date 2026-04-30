@@ -1,18 +1,22 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { estimateReadTime } from '../utils/reading';
-import { ArrowUpRight } from '@lucide/astro';
 
 type Props = {
   post: CollectionEntry<'blog'>;
   prioritizeImage?: boolean;
+  deferLoad?: boolean;
 };
 
-const { post, prioritizeImage = false } = Astro.props;
+const { post, prioritizeImage = false, deferLoad = false } = Astro.props;
 const excerpt = post.data.excerpt ?? post.data.description;
 ---
 
-<li>
+<li
+  data-infinite-item={deferLoad ? 'true' : undefined}
+  aria-hidden={deferLoad ? 'true' : undefined}
+  style={deferLoad ? 'display: none;' : undefined}
+>
   <a
     href={`/blog/${post.id}/`}
     class="-mx-4 flex flex-col justify-between gap-4 px-4 py-4 transition-colors hover:bg-[var(--hover)] md:flex-row"
@@ -20,12 +24,8 @@ const excerpt = post.data.excerpt ?? post.data.description;
     <span class="min-w-0 flex-1">
       <span class="block text-xl font-medium text-[var(--text)]">{post.data.title}</span>
       <span class="mt-2 block max-w-2xl text-sm leading-relaxed text-[var(--muted)]">{excerpt}</span>
-    </span>
-    <span
-      class="flex w-full shrink-0 items-start justify-between gap-3 md:w-auto md:items-center md:justify-start md:gap-4"
-    >
       <span
-        class="flex flex-wrap items-center justify-start gap-x-1 text-left font-sans text-sm text-[var(--muted)] md:justify-end md:pt-1"
+        class="mt-2 flex flex-wrap items-center justify-start gap-x-1 text-left font-sans text-sm text-[var(--muted)]"
       >
         <time class="tabular-nums" datetime={post.data.pubDate.toISOString()}>
           {
@@ -38,9 +38,6 @@ const excerpt = post.data.excerpt ?? post.data.description;
         </time>
         <span aria-hidden="true">•</span>
         <span>{estimateReadTime(post.body ?? '')} min read</span>
-      </span>
-      <span class="text-[var(--muted)]" aria-hidden="true">
-        <ArrowUpRight size={20} stroke-width={1.5} />
       </span>
     </span>
     {
