@@ -249,3 +249,16 @@ textarea,
 select {
   font-family: var(--font-sans);
 }
+
+/* Mobile tap feedback for links. */
+@media (hover: none) and (pointer: coarse) {
+  a[href] {
+    -webkit-tap-highlight-color: color-mix(in srgb, var(--text) 16%, transparent);
+    transition: opacity 120ms ease, background-color 120ms ease;
+  }
+
+  a[href]:active {
+    opacity: 0.72;
+    background-color: color-mix(in srgb, var(--hover) 88%, transparent);
+  }
+}
