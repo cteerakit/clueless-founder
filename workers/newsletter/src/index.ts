@@ -66,21 +66,24 @@ export default {
       return json({ ok: false, error: 'Origin not allowed' }, { status: 403, headers: corsHeaders });
     }
 
-    const publicKey = normalizeApiKey(env.PLUNK_PUBLIC_KEY);
-    const secretKey = normalizeApiKey(env.PLUNK_SECRET_KEY);
+    const rawPublicKey = normalizeApiKey(env.PLUNK_PUBLIC_KEY);
+    const rawSecretKey = normalizeApiKey(env.PLUNK_SECRET_KEY);
+    const publicKey = rawPublicKey.startsWith('pk_') ? rawPublicKey : '';
+    const secretKey = rawSecretKey.startsWith('sk_') ? rawSecretKey : '';
+
     if (!publicKey && !secretKey) {
       return json(
         { ok: false, error: 'Server is not configured (missing Plunk API key).' },
         { status: 500, headers: corsHeaders },
       );
     }
-    if (publicKey && !publicKey.startsWith('pk_')) {
+    if (rawPublicKey && !publicKey && !secretKey) {
       return json(
         { ok: false, error: 'Server is not configured (invalid PLUNK_PUBLIC_KEY format).' },
         { status: 500, headers: corsHeaders },
       );
     }
-    if (secretKey && !secretKey.startsWith('sk_')) {
+    if (rawSecretKey && !secretKey && !publicKey) {
       return json(
         { ok: false, error: 'Server is not configured (invalid PLUNK_SECRET_KEY format).' },
         { status: 500, headers: corsHeaders },
