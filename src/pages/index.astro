@@ -9,7 +9,7 @@ export const prerender = true;
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-const INITIAL_POSTS = 6;
+const INITIAL_POSTS = 10;
 const lcpImageSrc = posts[0]?.data.coverImage;
 
 ---
@@ -55,7 +55,7 @@ const lcpImageSrc = posts[0]?.data.coverImage;
     const setupLoadMorePosts = () => {
       const hiddenItems = Array.from(document.querySelectorAll("[data-infinite-item='true']"));
       const loadMoreButton = document.getElementById('load-more-posts');
-      const BATCH_SIZE = 4;
+      const BATCH_SIZE = 5;
       let index = 0;
 
       const revealNextBatch = () => {

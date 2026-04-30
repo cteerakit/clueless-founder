@@ -37,6 +37,14 @@ const getCorsHeaders = (origin: string | null, allowedOrigins: string[]) => {
   };
 };
 
+const normalizeApiKey = (value?: string) => {
+  const trimmed = value?.trim() ?? '';
+  if (!trimmed) return '';
+  // Support accidentally quoted secrets, e.g. "sk_xxx" or 'pk_xxx'.
+  const unquoted = trimmed.replace(/^['"]+|['"]+$/g, '').trim();
+  return unquoted;
+};
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const origin = request.headers.get('Origin');
@@ -58,10 +66,23 @@ export default {
       return json({ ok: false, error: 'Origin not allowed' }, { status: 403, headers: corsHeaders });
     }
 
-    const key = env.PLUNK_SECRET_KEY?.trim() || env.PLUNK_PUBLIC_KEY?.trim();
-    if (!key) {
+    const publicKey = normalizeApiKey(env.PLUNK_PUBLIC_KEY);
+    const secretKey = normalizeApiKey(env.PLUNK_SECRET_KEY);
+    if (!publicKey && !secretKey) {
       return json(
         { ok: false, error: 'Server is not configured (missing Plunk API key).' },
+        { status: 500, headers: corsHeaders },
+      );
+    }
+    if (publicKey && !publicKey.startsWith('pk_')) {
+      return json(
+        { ok: false, error: 'Server is not configured (invalid PLUNK_PUBLIC_KEY format).' },
+        { status: 500, headers: corsHeaders },
+      );
+    }
+    if (secretKey && !secretKey.startsWith('sk_')) {
+      return json(
+        { ok: false, error: 'Server is not configured (invalid PLUNK_SECRET_KEY format).' },
         { status: 500, headers: corsHeaders },
       );
     }
@@ -73,21 +94,33 @@ export default {
       return json({ ok: false, error: 'Please provide a valid email address.' }, { status: 400, headers: corsHeaders });
     }
 
-    const plunkResponse = await fetch('https://next-api.useplunk.com/v1/track', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${key}`,
-        'Content-Type': 'application/json',
+    const trackBody = {
+      email,
+      event: 'newsletter_signup',
+    };
+    const contactsBody = {
+      email,
+      subscribed: true,
+      data: {
+        source: 'newsletter_modal',
       },
-      body: JSON.stringify({
-        email,
-        event: 'newsletter_signup',
-        subscribed: true,
-      }),
-    });
+    };
 
-    const rawText = await plunkResponse.text();
-    const data = (() => {
+    const sendToPlunk = async (url: string, key: string, body: unknown) =>
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${key}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+
+    let plunkUrl = publicKey ? 'https://next-api.useplunk.com/v1/track' : 'https://next-api.useplunk.com/contacts';
+    let plunkResponse = await sendToPlunk(plunkUrl, publicKey ?? secretKey!, publicKey ? trackBody : contactsBody);
+
+    let rawText = await plunkResponse.text();
+    let data = (() => {
       if (!rawText) return {};
       try {
         return JSON.parse(rawText);
@@ -98,15 +131,52 @@ export default {
       success?: boolean;
       error?: { message?: string } | string;
       message?: string;
+      suggestion?: string;
+      errors?: Array<{ field?: string; message?: string }>;
     };
 
+    if (publicKey && secretKey && plunkResponse.status === 400 && !rawText) {
+      plunkUrl = 'https://next-api.useplunk.com/contacts';
+      plunkResponse = await sendToPlunk(plunkUrl, secretKey, contactsBody);
+      const fallbackRawText = await plunkResponse.text();
+      data = (() => {
+        if (!fallbackRawText) return {};
+        try {
+          return JSON.parse(fallbackRawText);
+        } catch {
+          return {};
+        }
+      })() as typeof data;
+      if (plunkResponse.ok && data.success !== false) {
+        return json({ ok: true }, { status: 200, headers: corsHeaders });
+      }
+      if (!fallbackRawText) {
+        // Keep best-known provider payload for logs below.
+        rawText = '';
+      } else {
+        rawText = fallbackRawText;
+      }
+    }
+
     if (!plunkResponse.ok || data.success === false) {
+      const firstFieldError = data.errors?.find((entry) => entry?.message)?.message;
       const providerMessage =
         typeof data.error === 'string'
           ? data.error
-          : data.error?.message ?? data.message ?? (rawText && !rawText.startsWith('<') ? rawText : undefined);
+          : data.error?.message ??
+            firstFieldError ??
+            data.suggestion ??
+            data.message ??
+            (rawText && !rawText.startsWith('<') ? rawText : undefined);
+      const normalized = (providerMessage ?? '').toLowerCase();
+      const isAlreadySubscribed =
+        normalized.includes('already') && (normalized.includes('exist') || normalized.includes('subscribed'));
+      if (isAlreadySubscribed) {
+        return json({ ok: true }, { status: 200, headers: corsHeaders });
+      }
       // Keep provider diagnostics in Worker logs for faster issue triage.
       console.error('Plunk subscription failed', {
+        url: plunkUrl,
         status: plunkResponse.status,
         body: rawText,
       });
