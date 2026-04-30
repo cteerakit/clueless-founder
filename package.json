@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "astro": "astro",
+    "images:optimize-covers": "node scripts/optimize-blog-covers.mjs",
     "deploy:pages": "npm run build && wrangler pages deploy dist --project-name clueless-founder",
     "deploy:newsletter-worker": "wrangler deploy --config workers/newsletter/wrangler.jsonc"
   },
@@ -26,6 +27,7 @@
     "astro": "^6.1.9",
     "gray-matter": "^4.0.3",
     "marked": "^18.0.2",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.2.4",
     "wrangler": "^4.85.0",
     "zod": "^4.3.6"

@@ -283,6 +283,8 @@ const {
 
         let lastY = window.scrollY;
         const threshold = 8;
+        let ticking = false;
+        let isHidden = false;
 
         const updateHeaderVisibility = () => {
           if (!header) return;
@@ -290,18 +292,32 @@ const {
           const delta = currentY - lastY;
 
           if (currentY <= 0 || delta < -threshold) {
-            header.classList.remove('site-header--hidden');
+            if (isHidden) {
+              header.classList.remove('site-header--hidden');
+              isHidden = false;
+            }
           } else if (delta > threshold) {
-            header.classList.add('site-header--hidden');
+            if (!isHidden) {
+              header.classList.add('site-header--hidden');
+              isHidden = true;
+            }
           }
 
           lastY = currentY;
+          ticking = false;
         };
 
-        window.addEventListener('scroll', updateHeaderVisibility, { passive: true });
+        const onScroll = () => {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(updateHeaderVisibility);
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
         document.addEventListener('astro:page-load', () => {
           header = document.getElementById('site-header');
           if (!header) return;
+          isHidden = header.classList.contains('site-header--hidden');
           updateHeaderVisibility();
           lastY = window.scrollY;
         });
