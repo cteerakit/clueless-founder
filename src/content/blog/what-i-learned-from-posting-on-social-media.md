@@ -1,5 +1,5 @@
 ---
-title: "I've been posing on social media every day for 30 days. Here's what I learned."
+title: "I've been posting on social media every day for 30 days. Here's what I learned."
 description: "After posting daily for 30 days on LinkedIn, X, and Threads, I analyzed the data and learned how audience fit and content type changed my reach and engagement."
 excerpt: "After posting daily for 30 days on LinkedIn, X, and Threads, I analyzed the data and learned how audience fit and content type changed my reach and engagement."
 coverImage: "/images/posts/what-i-learned-from-posting-on-social-media/cover-d90915a847.webp"
