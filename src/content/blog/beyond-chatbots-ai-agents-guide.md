@@ -1,7 +1,7 @@
 ---
-title: "Beyond chatbots: my ultimate hands-on guide to AI agents (and how to choose the right one)"
-description: "A hands-on comparison of AI agents from Gemini, Claude Co-work, Codex, Manus, and more — plus the productivity stack I actually run today."
-excerpt: "A hands-on comparison of AI agents from Gemini, Claude Co-work, Codex, Manus, and more — plus the productivity stack I actually run today."
+title: "Beyond chatbots: my guide to AI agents (and how to choose the right one)"
+description: "A comparison of AI agents from Gemini, Claude Co-work, Codex, Manus, and more — plus the productivity stack I actually run today."
+excerpt: "A comparison of AI agents from Gemini, Claude Co-work, Codex, Manus, and more — plus the productivity stack I actually run today."
 coverImage: "/images/posts/beyond-chatbots-ai-agents-guide/cover-502b0e98b2.webp"
 pubDate: 2026-06-08
 category: "Productivity"
